@@ -1,0 +1,6 @@
+package com.sfofana.app.service;
+
+public interface UserService {
+
+	
+}

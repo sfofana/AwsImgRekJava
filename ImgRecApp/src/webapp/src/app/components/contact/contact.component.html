@@ -1,0 +1,68 @@
+<section class="sec1">
+
+    <div class="container z-depth-1 my-5 px-0">
+
+        <!--Section: Content-->
+        <section class="panel p-5 my-md-5 text-center">
+      
+          <!-- Section heading -->
+          <h3 class="text-center font-weight-bold text-dark mt-5 mb-3">Contact Me</h3>
+    
+          <form class="mb-5 mx-md-5" action="">
+      
+            <div class="row">
+              <div class="col-md-4 mb-4">
+      
+                <!-- Name -->
+                <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" placeholder="Name">
+      
+              </div>
+              <div class="col-md-4 mb-4">
+      
+                <!-- Email -->
+                <input type="email" id="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Email">
+      
+              </div>
+              <div class="col-md-4 mb-4">
+      
+                <!-- Phone -->
+                <input type="number" id="phone" class="form-control" [(ngModel)]="phone" name="phone" placeholder="Phone (optional)">
+      
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-12 mb-4">
+      
+                <!-- Subject -->
+                <input type="text" id="subject" [(ngModel)]="subject" name="subject" class="form-control" placeholder="Subject">
+      
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-md-12">
+      
+                <div class="form-group mb-4">
+                  <textarea class="form-control rounded" id="message" rows="3" (keyup.enter)="submit()" [(ngModel)]="message" name="message" placeholder="Message"></textarea>
+                </div>
+      
+                <div class="text-center">
+                  <button type="submit" mdbBtn class="btn waves-light" (click)="submit()">Submit</button>
+                </div>
+                <div class="spacer d-flex justify-content-center">
+                  <p class="success" *ngIf="success">{{success}}</p>
+                  <p class="invalid" *ngIf="invalid">{{invalid}}</p>
+                </div>
+              </div>
+            </div>
+      
+          </form>
+      
+        </section>
+        <!--Section: Content-->
+      
+      
+      </div>
+
+</section>

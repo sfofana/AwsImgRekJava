@@ -1,0 +1,5 @@
+package com.sfofana.app.component;
+
+public class SecurityConfiguration {
+
+}

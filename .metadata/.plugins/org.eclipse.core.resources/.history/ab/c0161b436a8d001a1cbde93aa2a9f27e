@@ -1,0 +1,7 @@
+package com.sfofana.app.service;
+
+public interface UserService {
+
+	public Object compareFacesResults();
+	public Object processImageUpload();
+}

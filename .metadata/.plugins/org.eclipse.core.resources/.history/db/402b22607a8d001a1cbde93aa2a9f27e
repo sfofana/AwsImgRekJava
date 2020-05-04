@@ -1,0 +1,9 @@
+package com.sfofana.app.service;
+
+import org.springframework.web.multipart.MultipartFile;
+
+public interface UserService {
+
+	public Object compareFacesResults();
+	public Object processImageUpload(File files);
+}

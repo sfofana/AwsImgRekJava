@@ -1,0 +1,11 @@
+server.port=9000
+aws.access.key=AKIAVYZ46OA35AMGOFVC
+aws.secret.key=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
+aws.s3.bucket=imgrecappsfofana
+auth.username=sfofana
+auth.password=UofH2011
+basedir=./static
+
+spring.servlet.multipart.max-file-size=128MB
+spring.servlet.multipart.max-request-size=128MB
+spring.servlet.multipart.enabled=true
