@@ -13,6 +13,7 @@ export class UploadComponent implements OnInit {
   private name: string;
   formData = new FormData();
   private valid: string;
+  private validFile: FormData;
   private message: string;
   private upload: Upload;
 
@@ -30,9 +31,10 @@ export class UploadComponent implements OnInit {
   }
 
   uploadFiles(){
-    console.log("uplod files");
+    console.log(this.formData);
     this.valid = this.validate.validUpload(this.name);
-    if(this.valid){
+    this.validFile = this.validate.validFile(this.formData);
+    if(this.valid && this.validFile){
       this.service.upload(this.valid, this.formData).subscribe(data =>{ 
         this.upload = data;
         this.message = data.process;
@@ -40,5 +42,6 @@ export class UploadComponent implements OnInit {
     } 
     this.name = "";
     this.message = "";
+    this.formData = new FormData();
   }
 }

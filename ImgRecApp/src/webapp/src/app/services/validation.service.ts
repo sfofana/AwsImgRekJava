@@ -37,4 +37,12 @@ export class ValidationService {
       return null;
     }
   }
+
+  public validFile(file: FormData) : FormData {
+    if(file){
+      return file;
+    } else{
+      return null;
+    }
+  }
 }

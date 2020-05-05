@@ -31,6 +31,8 @@ export class CompareComponent implements OnInit {
     this.valid = this.validate.validCompare(this.faces);
     if(this.valid){
       this.service.compareFaces(this.valid).subscribe(data => this.faces = data, error => this.message = "There is no similarity");
-    }   
+    } 
+    this.img1 = "";
+    this.img2 = "";
   }
 }

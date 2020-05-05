@@ -101,23 +101,27 @@ public class UserServiceImpl implements UserService {
 												.withCredentials(new AWSStaticCredentialsProvider(credentials))
 												.withRegion("us-east-2").build();
 		
-		Upload upload = new Upload(fileName, "Internal Error");
-		String filePath = System.getProperty("user.dir") + "/" +fileName +".jpg";
-		System.out.println(System.getProperty("user.dir"));
-		try {
-			file.transferTo(new File(filePath));
-			File output = new File(filePath);
+		Upload upload = new Upload(fileName, "Image was not successully uploaded.. try agian");
+		if(file == null) {
+			upload.setProcess("Please choose a image you wish to upload");
+		} else {
+			String filePath = System.getProperty("user.dir") + "/" +fileName +".jpg";
+			System.out.println(System.getProperty("user.dir"));
 			try {
-				s3.putObject(bucket, "temp"+filePath, output);
-				upload.setProcess("File Successfully Uploaded");
-			} catch (AmazonServiceException e) {
-				System.out.println("Internal Server Error "+e);
+				file.transferTo(new File(filePath));
+				File output = new File(filePath);
+				try {
+					s3.putObject(bucket, "temp"+filePath, output);
+					upload.setProcess("File successfully uploaded");
+				} catch (AmazonServiceException e) {
+					System.out.println("Internal Server Error");
+				}
+			} catch (IllegalStateException | IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
-		} catch (IllegalStateException | IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
 		}
-		
+			
 		return upload;
 	}
 	
