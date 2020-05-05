@@ -102,7 +102,7 @@ public class UserServiceImpl implements UserService {
 												.withRegion("us-east-2").build();
 		
 		Upload upload = new Upload(fileName, "Image was not successully uploaded.. try agian");
-		if(file == null) {
+		if(file.isEmpty()) {
 			upload.setProcess("Please choose a image you wish to upload");
 		} else {
 			String filePath = System.getProperty("user.dir") + "/" +fileName +".jpg";
