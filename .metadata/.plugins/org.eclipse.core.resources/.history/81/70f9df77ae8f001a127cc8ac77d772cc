@@ -1,0 +1,17 @@
+package com.sfofana.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sfofana.app.model.Upload;
+
+@SpringBootApplication
+public class ImgRecAppApplication {
+
+	public static void main(String[] args) throws Exception{
+		SpringApplication.run(ImgRecAppApplication.class, args);
+		Upload u = null;
+		System.out.println("null check");
+		System.out.println(u.getName());
+	   }
+}

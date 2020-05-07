@@ -19,6 +19,7 @@
 
           <h5 *ngIf="faces.results > 70" class="success">{{faces.results | number:'2.1-2'}}% similarity</h5> 
           <h5 *ngIf="faces.results < 70" class="success">Less than 70% similarity</h5>
+          <h5 *ngIf="message" class="success">{{message}}</h5>
 
         </div>
         <!--Grid column-->
