@@ -850,8 +850,8 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     emailUrl: 'https://node-jsfofana-bank-v2.herokuapp.com/api/v1/email/send',
-    upload: 'http://ec2-3-17-26-55.us-east-2.compute.amazonaws.com:9000/api/v1/upload',
-    compare: 'http://ec2-3-17-26-55.us-east-2.compute.amazonaws.com:9000/api/v1/compare'
+    upload: 'http://3.17.152.168/api/v1/upload',
+    compare: 'http://3.17.152.168/api/v1/compare'
 };
 /*
  * For easier debugging in development mode, you can import the following file
