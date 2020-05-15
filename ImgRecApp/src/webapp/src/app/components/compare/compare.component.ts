@@ -4,6 +4,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ValidationService } from 'src/app/services/validation.service';
 import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
+import { ɵNAMESPACE_URIS } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-compare',
@@ -14,6 +15,7 @@ export class CompareComponent implements OnInit, OnDestroy {
 
   private img1: string;
   private img2: string;
+  private names: string[];
   private faces: Compare;
   private images: string[] = [];
   private details: string[] = [];
@@ -35,13 +37,16 @@ export class CompareComponent implements OnInit, OnDestroy {
   }
 
   compareFaces(){
-    this.faces = {
-      name1: this.img1,
-      name2: this.img2
-    };
+    this.names = [];
     this.images = [];
     this.details = [];
     this.results = 0;
+
+    this.names.push(this.img1);
+    this.names.push(this.img2);
+    this.faces = {
+      names: this.names
+    };
 
     this.valid = this.validate.validCompare(this.faces);
     if(this.valid){

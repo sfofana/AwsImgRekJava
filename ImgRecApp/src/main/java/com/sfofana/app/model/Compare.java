@@ -15,8 +15,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Compare {
 
-	private String name1;
-	private String name2;
+	private List<String> names;
 	private List<String> images;
 	private List<String> details;
 	private double results;

@@ -23,7 +23,7 @@ export class ValidationService {
   }
 
   public validCompare(faces: Compare) : Compare {
-    if(faces.name1 && faces.name2){
+    if(faces.names[0] && faces.names[1]){
       return faces;
     } else{
       return null;

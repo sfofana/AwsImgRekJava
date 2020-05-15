@@ -1,6 +1,5 @@
 export interface Compare {
-    name1: string;
-    name2: string;
+    names: string[];
     images?: string[];
     details?: string[];
     results?: number;

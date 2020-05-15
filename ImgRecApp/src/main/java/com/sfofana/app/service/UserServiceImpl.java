@@ -60,20 +60,23 @@ public class UserServiceImpl implements UserService {
 												.withCredentials(new AWSStaticCredentialsProvider(credentials))
 												.withRegion("us-east-2").build();
 		
-		String img1 = "temp" + System.getProperty("user.dir") + "/" +faces.getName1()+".jpg";
-		String img2 = "temp" + System.getProperty("user.dir") + "/" +faces.getName2()+".jpg";
+		List<String> names = new ArrayList<String>();
+		String img2;
+		faces.getNames().forEach(data -> {
+			names.add("temp" + System.getProperty("user.dir") + "/" + data +".jpg");
+		});
 		try {
 			CompareFacesRequest compareFacesRequest = new CompareFacesRequest()
 					.withSourceImage(
 							new Image()
 							.withS3Object(new S3Object()
-									.withName(img1)
+									.withName(names.get(0))
 									.withBucket(bucket)
 									)
 							).withTargetImage(
 							new Image()
 							.withS3Object(new S3Object()
-									.withName(img2)
+									.withName(names.get(1))
 									.withBucket(bucket)
 									)
 							).withSimilarityThreshold(similarityThreshold);
@@ -91,7 +94,7 @@ public class UserServiceImpl implements UserService {
 			}
 		} catch (Exception e) {
 			System.out.println("Faces don't match");
-			faces.setResults(0);
+			faces.setResults(50);
 		}
 		return getImageData(faces);
 	}
@@ -104,37 +107,25 @@ public class UserServiceImpl implements UserService {
 												.withCredentials(new AWSStaticCredentialsProvider(credentials))
 												.withRegion("us-east-2").build();
 		
-		String file1 = System.getProperty("user.dir") + "/" +faces.getName1() +".jpg";
-		String file2 = System.getProperty("user.dir") + "/" +faces.getName2() +".jpg";
-		com.amazonaws.services.s3.model.S3Object content1 = null;
-		com.amazonaws.services.s3.model.S3Object content2 = null;
 		List<String> images = new ArrayList<String>();
 		List<String> details = new ArrayList<String>();
-		try {
-			content1 = s3.getObject(bucket, "temp"+file1);
-			String face1 = Base64.encodeAsString(IOUtils.toByteArray(content1.getObjectContent()));
-			images.add(face1);
-			details.add(faces.getName1());
-		} catch (AmazonServiceException e) {
-			details.add("There is no image with the name: " + faces.getName1());
-			System.out.println("Internal Server Error");
-		} catch (IOException e) {
-			System.out.println("Internal Server Error");
-			e.printStackTrace();
-		}
-		try {
-			content2 = s3.getObject(bucket, "temp"+file2);
-			String face2 = Base64.encodeAsString(IOUtils.toByteArray(content2.getObjectContent()));
-			images.add(face2);
-			details.add(faces.getName2());
-		} catch (AmazonServiceException e) {
-			details.add("There is no image with the name: " + faces.getName2());
-			System.out.println("Internal Server Error");
-		} catch (IOException e) {
-			System.out.println("Internal Server Error");
-			e.printStackTrace();
-		}
-		
+		faces.getNames().forEach(data ->{
+			String file = System.getProperty("user.dir") + "/" + data +".jpg";
+			com.amazonaws.services.s3.model.S3Object content = null;			
+			try {
+				content = s3.getObject(bucket, "temp"+file);
+				String face = Base64.encodeAsString(IOUtils.toByteArray(content.getObjectContent()));
+				images.add(face);
+				details.add(data);
+			} catch (AmazonServiceException e) {
+				details.add("There is no image with the name: " + data);
+				System.out.println("Internal Server Error");
+			} catch (IOException e) {
+				System.out.println("Internal Server Error");
+				e.printStackTrace();
+			}
+		});
+				
 		faces.setImages(images);
 		faces.setDetails(details);
 		return faces;
