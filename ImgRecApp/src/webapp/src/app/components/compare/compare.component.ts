@@ -54,7 +54,10 @@ export class CompareComponent implements OnInit, OnDestroy {
         this.details = data.details;
         this.results = data.results;
         this.isSpinning = false;
-      }, error => this.message = "Internal error.. retry or contact me");
+      }, error => {
+        this.message = "Internal error.. retry or contact me";
+        this.isSpinning = false;
+      });
     } 
     if(!this.img1 || !this.img2){
       this.message = "Please enter both names of faces to compare";

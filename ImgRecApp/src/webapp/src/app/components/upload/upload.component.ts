@@ -59,7 +59,10 @@ export class UploadComponent implements OnInit, OnDestroy {
         this.image = this.fileType+data.image;
         this.isSpinning = false;
       }, 
-      error => this.message = "Internal error.. retry or contact me");
+      error => {
+        this.message = "Internal error.. retry or contact me";
+        this.isSpinning = false;
+      });
     } 
     if(!this.name){
       this.message = "Please enter name for image";
