@@ -37,11 +37,11 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.Compare"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.s3.transfer.Upload"/>
-    <fullyQualifiedTypeName name="com.sfofana.app.model.Upload"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.sfofana.app.model.Upload"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
 </qualifiedTypeNameHistroy>

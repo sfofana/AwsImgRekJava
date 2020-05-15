@@ -1,5 +1,7 @@
 package com.sfofana.app.model;
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.AllArgsConstructor;
@@ -15,5 +17,7 @@ public class Compare {
 
 	private String name1;
 	private String name2;
+	private List<String> images;
+	private List<String> details;
 	private double results;
 }

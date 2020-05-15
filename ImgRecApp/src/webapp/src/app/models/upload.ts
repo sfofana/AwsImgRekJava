@@ -1,4 +1,5 @@
 export interface Upload {
     name: string;
     process?: string;
+    image?: string;
 }
