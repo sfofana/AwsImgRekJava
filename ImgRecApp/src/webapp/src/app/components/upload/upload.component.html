@@ -13,14 +13,17 @@
           <h3 class="font-weight-bold">AWS Rekognition</h3>
 
                 <p class="text-muted">Upload the images you wish to compare faces with</p>
-                Name: <input [(ngModel)]="name" (keyup.enter)="uploadFiles()" class="btn-md ml-0 mb-5" type="text">
-                <input class="btn btn-md ml-0 mb-5" type="file" (change)="fileChange($event.target.files)">
-                <a class="btn btn-info btn-md ml-0 mb-5" (click)="uploadFiles()" role="button">Upload</a>
+                <p>Name: <input mdbInput [(ngModel)]="name" (keyup.enter)="uploadFiles()" class="btn-md ml-0 mb-5" type="text">
+                <input mdbInput class="btn btn-md ml-0 mb-5" type="file" (change)="fileChange($event.target.files)">
+                <a class="btn btn-info btn-md ml-0 mb-5" 
+                [@animator]="button" (@animator.done)="btnReset()"
+                (click)="uploadFiles(); btnAnimate('heartBeat')" role="button">Upload</a></p>
 
                 <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
 
-                   <h5 *ngIf="message" class="success">{{message}}</h5> 
-                   <table *ngIf="image" mdbTable class="view display overlay z-depth-1-half">
+                  <h5 *ngIf="results" class="success" [@animator]="bouncer">{{results}}</h5> 
+                   <h5 *ngIf="message" class="invalid" [@animator]="shaker">{{message}}</h5> 
+                   <table *ngIf="image" mdbTable class="view display overlay z-depth-1-half" [@animator]="zoomIn">
                     <thead>
                       <tr>
                         <th class="success">{{display | titlecase}}</th>

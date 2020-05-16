@@ -26,8 +26,8 @@
 
 </nav> 
 
-<section>
-  <router-outlet></router-outlet>
+<section [@animator]="preparedRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </section>
 
 <!-- Footer -->

@@ -5,9 +5,9 @@ import { UploadComponent } from './components/upload/upload.component';
 import { CompareComponent } from './components/compare/compare.component';
 
 const routes: Routes = [ 
-  {path: 'upload',component: UploadComponent},
+  {path: 'upload',component: UploadComponent, data:{animation: 'isLeft'}},
   {path: 'compare',component: CompareComponent},
-  {path: 'contact',component: ContactComponent},
+  {path: 'contact',component: ContactComponent, data:{animation: 'isRight'}},
   {path: '**',pathMatch: 'full',redirectTo: 'upload'}
 ];
 

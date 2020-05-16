@@ -48,12 +48,15 @@
                 </div>
       
                 <div class="text-center">
-                  <button type="submit" mdbBtn class="btn waves-light" (click)="submit()">Submit</button>
+                  <button type="submit" mdbBtn class="btn waves-light" 
+                  [@animator]="button" (@animator.done)="btnReset()" 
+                  (click)="submit(); btnAnimate('heartBeat')">Submit
+                </button>
                 </div>
                 <div class="spacer d-flex justify-content-center">
                   <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
-                  <p class="success" *ngIf="success">{{success}}</p>
-                  <p class="invalid" *ngIf="invalid">{{invalid}}</p>
+                  <p class="success" *ngIf="success" [@animator]="bouncer">{{success}}</p>
+                  <p class="invalid" *ngIf="invalid" [@animator]="bouncer">{{invalid}}</p>
                 </div>
               </div>
             </div>

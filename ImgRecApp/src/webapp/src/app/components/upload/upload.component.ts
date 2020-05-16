@@ -4,13 +4,21 @@ import { ValidationService } from '../../services/validation.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
-import { environment } from '../../../environments/environment';
-import { DomSanitizer } from '@angular/platform-browser';
+import * as keyframe from '../../animations/animation';
+import { trigger, keyframes, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  styleUrls: ['./upload.component.scss'],
+  animations: [
+    trigger('animator', [
+      transition('* => heartBeat', animate(1000, keyframes(keyframe.heartBeat))),
+      transition('* => bounce', animate(650, keyframes(keyframe.bounce))),
+      transition('* => zoom', animate(300, keyframes(keyframe.zoomIn))),
+      transition('* => shake', animate(500, keyframes(keyframe.shake)))
+    ])
+  ]
 })
 export class UploadComponent implements OnInit, OnDestroy {
 
@@ -19,10 +27,16 @@ export class UploadComponent implements OnInit, OnDestroy {
   private valid: string;
   private validFile: FormData;
   private display: string;
+  private results: string;
   private message: string;
   private image: string;
   private readonly fileType: string = "data:image/png;base64,";
   private upload: Upload;
+
+  private button = "";
+  private bouncer = "bounce";
+  private zoomIn = "zoom";
+  private shaker = "shake";
   private isSpinning = false;
 
   constructor(
@@ -45,6 +59,7 @@ export class UploadComponent implements OnInit, OnDestroy {
   uploadFiles(){ 
     this.display = "";
     this.image = "";
+    this.results = "";
     
     this.valid = this.validate.validUpload(this.name);
     this.validFile = this.validate.validFile(this.formData);
@@ -55,7 +70,7 @@ export class UploadComponent implements OnInit, OnDestroy {
       .subscribe(data =>{ 
         this.upload = data;
         this.display = data.name;
-        this.message = data.process;
+        this.results = data.process;
         this.image = this.fileType+data.image;
         this.isSpinning = false;
       }, 
@@ -71,6 +86,16 @@ export class UploadComponent implements OnInit, OnDestroy {
     }
     this.name = "";    
     this.formData = new FormData();
+  }
+
+  btnAnimate(state: string){
+    if(!this.button){
+      this.button = state;
+    }
+  }
+
+  btnReset(){
+    this.button = "";
   }
 
   ngOnDestroy(): void {

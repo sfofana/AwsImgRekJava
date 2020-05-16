@@ -4,12 +4,21 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ValidationService } from 'src/app/services/validation.service';
 import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
-import { ɵNAMESPACE_URIS } from '@angular/platform-browser';
+import * as keyframe from '../../animations/animation';
+import { trigger, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-compare',
   templateUrl: './compare.component.html',
-  styleUrls: ['./compare.component.scss']
+  styleUrls: ['./compare.component.scss'],
+  animations: [
+    trigger('animator', [
+      transition('* => heartBeat', animate(1000, keyframes(keyframe.heartBeat))),
+      transition('* => bounce', animate(650, keyframes(keyframe.bounce))),
+      transition('* => zoom', animate(300, keyframes(keyframe.zoomIn))),
+      transition('* => shake', animate(500, keyframes(keyframe.shake)))
+    ])
+  ]
 })
 export class CompareComponent implements OnInit, OnDestroy {
 
@@ -22,6 +31,11 @@ export class CompareComponent implements OnInit, OnDestroy {
   private results: number;
   private valid: Compare;
   private message: string;
+
+  private button = "";
+  private bouncer = "bounce";
+  private zoomIn = "zoom";
+  private shaker = "shake";
   private isSpinning = false;
   private readonly fileType: string = "data:image/png;base64,";
 
@@ -41,6 +55,7 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.images = [];
     this.details = [];
     this.results = 0;
+    this.message = "";
 
     this.names.push(this.img1);
     this.names.push(this.img2);
@@ -72,6 +87,16 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.img1 = "";
     this.img2 = "";
     
+  }
+
+  btnAnimate(state: string){
+    if(!this.button){
+      this.button = state;
+    }
+  }
+
+  btnReset(){
+    this.button = "";
   }
 
   ngOnDestroy(): void {

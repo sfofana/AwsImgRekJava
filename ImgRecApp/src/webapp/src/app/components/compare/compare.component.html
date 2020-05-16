@@ -15,27 +15,35 @@
           <p class="text-muted">Compare faces and review the results</p>
           <p>1st Image: <input [(ngModel)]="img1" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
             2nd Image: <input [(ngModel)]="img2" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
-          <a class="btn btn-info btn-md ml-0 mb-5" (click)="compareFaces()" role="button">Compare</a></p>
+          <a class="btn btn-info btn-md ml-0 mb-5" 
+          [@animator]="button" (@animator.done)="btnReset()" 
+          (click)="compareFaces(); btnAnimate('heartBeat')" role="button">Compare
+          </a></p>
 
           <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
 
           <div *ngIf="results > 1">
-            <h5 *ngIf="results > 70" class="success">{{results | number:'2.1-2'}}% similarity</h5> 
-            <h5 *ngIf="results < 70" class="invalid">Less than 70% similarity</h5>
+            <h5 *ngIf="results > 70" class="success" [@animator]="bouncer">{{results | number:'2.1-2'}}% similarity</h5> 
+            <h5 *ngIf="results < 70" class="invalid" [@animator]="shaker">Less than 70% similarity</h5>
           </div>      
-          <h5 *ngIf="message" class="success">{{message}}</h5>
-          <table mdbTable class="view display overlay z-depth-1-half">
-            <thead>
-              <tr>
-                <th *ngFor="let detail of details" class="success">{{detail | titlecase}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th *ngFor="let image of images"><img [src]="image" class="img-fluid"></th>
-              </tr>             
-            </tbody>
-          </table>
+
+          <h5 *ngIf="message" class="invalid" [@animator]="shaker">{{message}}</h5>
+
+          <div *ngIf="details.length > 0" [@animator]="zoomIn">
+            <table mdbTable class="view display overlay z-depth-1-half">
+              <thead>
+                <tr>
+                  <th *ngFor="let detail of details" class="success">{{detail | titlecase}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th *ngFor="let image of images"><img [src]="image" class="img-fluid"></th>
+                </tr>             
+              </tbody>
+            </table>
+          </div>
+          
           
         </div>
         <!--Grid column-->

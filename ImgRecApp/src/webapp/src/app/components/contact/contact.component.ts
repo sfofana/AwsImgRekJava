@@ -4,11 +4,19 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { ValidationService } from 'src/app/services/validation.service';
 import { Email } from 'src/app/models/email';
 import { takeUntil } from 'rxjs/operators';
+import * as keyframe from '../../animations/animation';
+import { trigger, keyframes, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('animator', [
+      transition('* => heartBeat', animate(1000, keyframes(keyframe.heartBeat))),
+      transition('* => bounce', animate(500, keyframes(keyframe.bounce)))
+    ])
+  ]
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
@@ -21,7 +29,10 @@ export class ContactComponent implements OnInit, OnDestroy {
   private invalid: string;
   private mail = new Email();
   private validMail = new Email();
+
   private isSpinning = false;
+  private button = "";
+  private bouncer = "bounce";
 
   constructor(
     private service: UserService, 
@@ -63,6 +74,16 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.message="";
     this.success="";
     this.invalid="";
+  }
+
+  btnAnimate(state: string){
+    if(!this.button){
+      this.button = state;
+    }
+  }
+
+  btnReset(){
+    this.button = "";
   }
 
   ngOnDestroy(): void {
