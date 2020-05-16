@@ -15,6 +15,7 @@ import { SubjectService } from './services/subject.service';
 import { UploadComponent } from './components/upload/upload.component';
 import { CompareComponent } from './components/compare/compare.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
+import { AnimationService } from './services/animation.service';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { HttpInterceptorService } from './services/http-interceptor.service';
     UserService,
     ValidationService,
     SubjectService,
+    AnimationService,
     {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]

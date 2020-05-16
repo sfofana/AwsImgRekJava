@@ -5,6 +5,7 @@ import { ValidationService } from 'src/app/services/validation.service';
 import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
+import { AnimationService } from '../../services/animation.service';
 import { trigger, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
@@ -16,7 +17,10 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
       transition('* => heartBeat', animate(1000, keyframes(keyframe.heartBeat))),
       transition('* => bounce', animate(650, keyframes(keyframe.bounce))),
       transition('* => zoom', animate(300, keyframes(keyframe.zoomIn))),
-      transition('* => shake', animate(500, keyframes(keyframe.shake)))
+      transition('* => shake', animate(500, keyframes(keyframe.shake))),
+      transition('* => tada', animate(1000, keyframes(keyframe.tada))),
+      transition('* => rotate', animate(300, keyframes(keyframe.rotateIn))),
+      transition('* => popup', animate(300, keyframes(keyframe.slideInUp)))
     ])
   ]
 })
@@ -36,13 +40,17 @@ export class CompareComponent implements OnInit, OnDestroy {
   private bouncer = "bounce";
   private zoomIn = "zoom";
   private shaker = "shake";
+  private chart = "";
+  private cog = "";
+  private cloud = "";
   private isSpinning = false;
   private readonly fileType: string = "data:image/png;base64,";
 
   constructor(
     private service: UserService, 
     private memory: SubjectService,
-    private validate: ValidationService
+    private validate: ValidationService,
+    private animation: AnimationService
     ) { }
   
   ngOnInit() {
@@ -90,13 +98,19 @@ export class CompareComponent implements OnInit, OnDestroy {
   }
 
   btnAnimate(state: string){
-    if(!this.button){
-      this.button = state;
-    }
+    this.button = this.animation.btnAnimate(state);
   }
 
-  btnReset(){
-    this.button = "";
+  chartAnimate(state: string){
+    this.chart = this.animation.chartAnimate(state);
+  }
+
+  cogAnimate(state: string){
+    this.cog = this.animation.cogAnimate(state);
+  }
+
+  cloudAnimate(state: string){
+    this.cloud = this.animation.cloudAnimate(state);
   }
 
   ngOnDestroy(): void {

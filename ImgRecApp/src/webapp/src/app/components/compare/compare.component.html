@@ -16,8 +16,8 @@
           <p>1st Image: <input [(ngModel)]="img1" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
             2nd Image: <input [(ngModel)]="img2" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
           <a class="btn btn-info btn-md ml-0 mb-5" 
-          [@animator]="button" (@animator.done)="btnReset()" 
-          (click)="compareFaces(); btnAnimate('heartBeat')" role="button">Compare
+          [@animator]="button" (@animator.done)="btnAnimate('stop')" 
+          (click)="compareFaces(); btnAnimate('start')" role="button">Compare
           </a></p>
 
           <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
@@ -53,45 +53,41 @@
 
 
       <!--Grid row-->
-      <div class="row">
-
-        <!--First column-->
-        <div class="col-lg-3 col-md-6">
-          <i class="fas fa-gem fa-3x blue-text"></i>
- 
-          <p class="font-weight-bold my-3">Feature One</p>
-
-          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <!--/First column-->
+      <div class="row">       
 
         <!--Second column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-chart-area fa-3x teal-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-chart-area fa-3x green-text"
+            [@animator]="chart" (@animator.done)="chartAnimate('stop')" 
+            (mouseover)="chartAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Two</p>
+            <p class="font-weight-bold my-3">Microservices</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Using Spring Boot and .NET Core</p>
         </div>
         <!--/Second column-->
 
         <!--Third column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-cogs fa-3x indigo-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-cogs fa-3x grey-text"
+            [@animator]="cog" (@animator.done)="cogAnimate('stop')" 
+            (mouseover)="cogAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Three</p>
+            <p class="font-weight-bold my-3">Rekognition</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Results are processed and displayed</p>
         </div>
         <!--/Third column-->
 
         <!--Fourth column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-cloud-upload-alt fa-3x deep-purple-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-cloud-upload-alt fa-3x blue-text"
+            [@animator]="cloud" (@animator.done)="cloudAnimate('stop')" 
+            (mouseover)="cloudAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Four</p>
+            <p class="font-weight-bold my-3">Cloud</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Compare images from a cloud storage bucket</p>
         </div>
         <!--/Fourth column-->
 

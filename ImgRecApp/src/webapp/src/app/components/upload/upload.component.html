@@ -16,8 +16,8 @@
                 <p>Name: <input mdbInput [(ngModel)]="name" (keyup.enter)="uploadFiles()" class="btn-md ml-0 mb-5" type="text">
                 <input mdbInput class="btn btn-md ml-0 mb-5" type="file" (change)="fileChange($event.target.files)">
                 <a class="btn btn-info btn-md ml-0 mb-5" 
-                [@animator]="button" (@animator.done)="btnReset()"
-                (click)="uploadFiles(); btnAnimate('heartBeat')" role="button">Upload</a></p>
+                [@animator]="button" (@animator.done)="btnReset('stop')"
+                (click)="uploadFiles(); btnAnimate('start')" role="button">Upload</a></p>
 
                 <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
 
@@ -46,43 +46,39 @@
       <!--Grid row-->
       <div class="row">
 
-        <!--First column-->
-        <div class="col-lg-3 col-md-6">
-          <i class="fas fa-gem fa-3x blue-text"></i>
- 
-          <p class="font-weight-bold my-3">Feature One</p>
-
-          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <!--/First column-->
-
         <!--Second column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-chart-area fa-3x teal-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-chart-area fa-3x deep-purple-text"
+            [@animator]="chart" (@animator.done)="chartAnimate('stop')"
+            (mouseover)="chartAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Two</p>
+            <p class="font-weight-bold my-3">Microservices</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Using Spring Boot and .NET Core</p>
         </div>
         <!--/Second column-->
 
         <!--Third column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-cogs fa-3x indigo-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-cogs fa-3x red-text"
+            [@animator]="cog" (@animator.done)="cogAnimate('stop')"
+            (mouseover)="cogAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Three</p>
+            <p class="font-weight-bold my-3">Upload</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Upload images to a cloud storage bucket</p>
         </div>
         <!--/Third column-->
 
         <!--Fourth column-->
-        <div class="col-lg-3 col-md-6">
-            <i class="fas fa-cloud-upload-alt fa-3x deep-purple-text"></i>
+        <div class="col-lg-4 col-md-6">
+            <i class="fas fa-cloud-upload-alt fa-3x teal-text"
+            [@animator]="cloud" (@animator.done)="cloudAnimate('stop')"
+            (mouseover)="cloudAnimate('start')"></i>
 
-            <p class="font-weight-bold my-3">Feature Four</p>
+            <p class="font-weight-bold my-3">Cloud</p>
   
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-muted">Images are saved to the cloud storage bucket</p>
         </div>
         <!--/Fourth column-->
 

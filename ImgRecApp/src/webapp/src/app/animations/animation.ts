@@ -7,12 +7,12 @@ export const pulse = [
 ]
 
 export const fadeInLeft = [
-    style({opacity: 0, transform: 'translate3d(-100%, 0, 0)', offset: 0}),
+    style({opacity: 0, transform: 'translate3d(-25%, 0, 0)', offset: 0}),
     style({opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1})
 ]
 
 export const fadeInRight = [
-    style({opacity: 0, transform: 'translate3d(100%, 0, 0)', offset: 0}),
+    style({opacity: 0, transform: 'translate3d(25%, 0, 0)', offset: 0}),
     style({opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1})
 ]
 
@@ -62,4 +62,21 @@ export const shake = [
     style({transform: 'translate3d(-10px, 0, 0)', offset: .7}),
     style({transform: 'translate3d(10px, 0, 0)', offset: .8}),
     style({transform: 'translate3d(-10px, 0, 0)', offset: .9})
+]
+
+export const tada = [
+    style({transform: 'scale3d(1, 1, 1)', offset: .1}),
+    style({transform: 'scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)', offset: .2}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .3}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .4}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .5}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .6}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .7}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .8}),
+    style({transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .9})
+]
+
+export const rotateIn = [
+    style({opacity: .5, transform: 'rotate3d(0, 0, 1, -200deg)', offset: 0}),
+    style({opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1})
 ]

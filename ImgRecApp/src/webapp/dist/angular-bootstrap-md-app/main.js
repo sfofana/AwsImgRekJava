@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark\">\r\n\r\n  <!-- Collapse button -->\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#basicExampleNav\"\r\n    aria-controls=\"basicExampleNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <!-- Collapsible content -->\r\n  <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\">\r\n    <div class=\"container\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link waves-light text-light\" routerLink=\"/upload\" mdbWavesEffect>Upload</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link waves-light text-light\" routerLink=\"/compare\" mdbWavesEffect>Compare Faces</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link waves-light text-light\" routerLink=\"/contact\" mdbWavesEffect>Contact <mdb-icon fas icon=\"envelope\" class=\"white-text\"></mdb-icon></a>\r\n    </li>\r\n    </ul>\r\n    </div>\r\n  </div>\r\n  <!-- Collapsible content -->\r\n\r\n</nav> \r\n\r\n<section [@animator]=\"preparedRoute(outlet)\">\r\n  <router-outlet #outlet=\"outlet\"></router-outlet>\r\n</section>\r\n\r\n<!-- Footer -->\r\n<footer class=\"footer font-small\">\r\n \r\n  <!-- Footer Elements -->\r\n  <div class=\"container\">\r\n\r\n    <!-- Grid row-->\r\n    <div class=\"row\">\r\n\r\n      <!-- Grid column -->\r\n      <div class=\"col-md-12 py-5\">\r\n        <div class=\"mb-5 flex-center\">\r\n          <!--Linkedin -->\r\n          <a class=\"li-ic\" href=\"http://linkedin.com/in/sufyan-fofana-2a743584\" target=\"_blank\">\r\n            <i class=\"fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x\"> </i>\r\n          </a>\r\n          <!--GitHub-->\r\n          <a class=\"ins-ic\" href=\"https://github.com/sfofana/AwsImgRekJava\" target=\"_blank\">\r\n            <i class=\"fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x\"> </i>\r\n          </a>\r\n          <!--Youtube-->\r\n          <a class=\"pin-ic\" href=\"https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g\" target=\"_blank\">\r\n            <i class=\"fab fa-youtube fa-lg white-text fa-2x\"> </i>\r\n          </a>\r\n        </div>\r\n      </div>\r\n      <!-- Grid column -->\r\n\r\n    </div>\r\n    <!-- Grid row-->\r\n\r\n  </div>\r\n  <!-- Footer Elements -->\r\n\r\n  <!-- Copyright -->\r\n  <div class=\"foot text-center py-3\">\r\n    \r\n  </div>\r\n  <!-- Copyright -->\r\n\r\n</footer>\r\n<!-- Footer -->\r\n\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark\">\r\n\r\n  <!-- Collapse button -->\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#basicExampleNav\"\r\n    aria-controls=\"basicExampleNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <!-- Collapsible content -->\r\n  <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\">\r\n    <div class=\"container\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item\">\r\n            <a class=\"nav-link waves-light text-light\" routerLink=\"/upload\" mdbWavesEffect\r\n            [@animator]=\"upload\" (@animator.done)=\"upAnimate('stop')\" \r\n            (mouseover)=\"upAnimate('start')\">Upload</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link waves-light text-light\" routerLink=\"/compare\" mdbWavesEffect\r\n          [@animator]=\"compare\" (@animator.done)=\"compAnimate('stop')\" \r\n          (mouseover)=\"compAnimate('start')\">Compare Faces</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link waves-light text-light\" routerLink=\"/contact\" mdbWavesEffect\r\n        [@animator]=\"contact\" (@animator.done)=\"contAnimate('stop')\" \r\n        (mouseover)=\"contAnimate('start')\">Contact <mdb-icon fas icon=\"envelope\" class=\"white-text\"></mdb-icon></a>\r\n    </li>\r\n    </ul>\r\n    </div>\r\n  </div>\r\n  <!-- Collapsible content -->\r\n\r\n</nav> \r\n\r\n<section [@animator]=\"preparedRoute(outlet)\">\r\n  <router-outlet #outlet=\"outlet\"></router-outlet>\r\n</section>\r\n\r\n<!-- Footer -->\r\n<footer class=\"footer font-small\">\r\n \r\n  <!-- Footer Elements -->\r\n  <div class=\"container\">\r\n\r\n    <!-- Grid row-->\r\n    <div class=\"row\">\r\n\r\n      <!-- Grid column -->\r\n      <div class=\"col-md-12 py-5\">\r\n        <div class=\"mb-5 flex-center\">\r\n          <!--Linkedin -->\r\n          <a class=\"li-ic\" href=\"http://linkedin.com/in/sufyan-fofana-2a743584\" target=\"_blank\">\r\n            <i class=\"fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x\"> </i>\r\n          </a>\r\n          <!--GitHub-->\r\n          <a class=\"ins-ic\" href=\"https://github.com/sfofana/AwsImgRekJava\" target=\"_blank\">\r\n            <i class=\"fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x\"> </i>\r\n          </a>\r\n          <!--Youtube-->\r\n          <a class=\"pin-ic\" href=\"https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g\" target=\"_blank\">\r\n            <i class=\"fab fa-youtube fa-lg white-text fa-2x\"> </i>\r\n          </a>\r\n        </div>\r\n      </div>\r\n      <!-- Grid column -->\r\n\r\n    </div>\r\n    <!-- Grid row-->\r\n\r\n  </div>\r\n  <!-- Footer Elements -->\r\n\r\n  <!-- Copyright -->\r\n  <div class=\"foot text-center py-3\">\r\n    \r\n  </div>\r\n  <!-- Copyright -->\r\n\r\n</footer>\r\n<!-- Footer -->\r\n\r\n"
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark\">\r\n\r\n  <
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container my-5 py-5 z-depth-1\">\r\n\r\n\r\n    <!--Section: Content-->\r\n    <section class=\"px-md-5 mx-md-5 text-center dark-grey-text\">\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row d-flex justify-content-center\">\r\n\r\n        <!--Grid column-->\r\n        <div class=\"col-xl-6 col-md-8\">\r\n\r\n          <h3 class=\"font-weight-bold\">AWS Rekognition</h3>\r\n\r\n          <p class=\"text-muted\">Compare faces and review the results</p>\r\n          <p>1st Image: <input [(ngModel)]=\"img1\" class=\"btn-md ml-0 mb-5\" (keyup.enter)=\"compareFaces()\" type=\"text\"><br>\r\n            2nd Image: <input [(ngModel)]=\"img2\" class=\"btn-md ml-0 mb-5\" (keyup.enter)=\"compareFaces()\" type=\"text\"><br>\r\n          <a class=\"btn btn-info btn-md ml-0 mb-5\" \r\n          [@animator]=\"button\" (@animator.done)=\"btnReset()\" \r\n          (click)=\"compareFaces(); btnAnimate('heartBeat')\" role=\"button\">Compare\r\n          </a></p>\r\n\r\n          <div *ngIf=\"isSpinning\" class=\"spinner-border text-danger\" role=\"status\"></div>\r\n\r\n          <div *ngIf=\"results > 1\">\r\n            <h5 *ngIf=\"results > 70\" class=\"success\" [@animator]=\"bouncer\">{{results | number:'2.1-2'}}% similarity</h5> \r\n            <h5 *ngIf=\"results < 70\" class=\"invalid\" [@animator]=\"shaker\">Less than 70% similarity</h5>\r\n          </div>      \r\n\r\n          <h5 *ngIf=\"message\" class=\"invalid\" [@animator]=\"shaker\">{{message}}</h5>\r\n\r\n          <div *ngIf=\"details.length > 0\" [@animator]=\"zoomIn\">\r\n            <table mdbTable class=\"view display overlay z-depth-1-half\">\r\n              <thead>\r\n                <tr>\r\n                  <th *ngFor=\"let detail of details\" class=\"success\">{{detail | titlecase}}</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr>\r\n                  <th *ngFor=\"let image of images\"><img [src]=\"image\" class=\"img-fluid\"></th>\r\n                </tr>             \r\n              </tbody>\r\n            </table>\r\n          </div>\r\n          \r\n          \r\n        </div>\r\n        <!--Grid column-->\r\n\r\n      </div>\r\n      <!--Grid row-->\r\n\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row\">\r\n\r\n        <!--First column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n          <i class=\"fas fa-gem fa-3x blue-text\"></i>\r\n \r\n          <p class=\"font-weight-bold my-3\">Feature One</p>\r\n\r\n          <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/First column-->\r\n\r\n        <!--Second column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-chart-area fa-3x teal-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Two</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Second column-->\r\n\r\n        <!--Third column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-cogs fa-3x indigo-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Three</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Third column-->\r\n\r\n        <!--Fourth column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-cloud-upload-alt fa-3x deep-purple-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Four</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Fourth column-->\r\n\r\n      </div>\r\n      <!--/Grid row-->\r\n\r\n\r\n    </section>\r\n    <!--Section: Content-->\r\n\r\n\r\n  </div>"
+module.exports = "<div class=\"container my-5 py-5 z-depth-1\">\r\n\r\n\r\n    <!--Section: Content-->\r\n    <section class=\"px-md-5 mx-md-5 text-center dark-grey-text\">\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row d-flex justify-content-center\">\r\n\r\n        <!--Grid column-->\r\n        <div class=\"col-xl-6 col-md-8\">\r\n\r\n          <h3 class=\"font-weight-bold\">AWS Rekognition</h3>\r\n\r\n          <p class=\"text-muted\">Compare faces and review the results</p>\r\n          <p>1st Image: <input [(ngModel)]=\"img1\" class=\"btn-md ml-0 mb-5\" (keyup.enter)=\"compareFaces()\" type=\"text\"><br>\r\n            2nd Image: <input [(ngModel)]=\"img2\" class=\"btn-md ml-0 mb-5\" (keyup.enter)=\"compareFaces()\" type=\"text\"><br>\r\n          <a class=\"btn btn-info btn-md ml-0 mb-5\" \r\n          [@animator]=\"button\" (@animator.done)=\"btnAnimate('stop')\" \r\n          (click)=\"compareFaces(); btnAnimate('start')\" role=\"button\">Compare\r\n          </a></p>\r\n\r\n          <div *ngIf=\"isSpinning\" class=\"spinner-border text-danger\" role=\"status\"></div>\r\n\r\n          <div *ngIf=\"results > 1\">\r\n            <h5 *ngIf=\"results > 70\" class=\"success\" [@animator]=\"bouncer\">{{results | number:'2.1-2'}}% similarity</h5> \r\n            <h5 *ngIf=\"results < 70\" class=\"invalid\" [@animator]=\"shaker\">Less than 70% similarity</h5>\r\n          </div>      \r\n\r\n          <h5 *ngIf=\"message\" class=\"invalid\" [@animator]=\"shaker\">{{message}}</h5>\r\n\r\n          <div *ngIf=\"details.length > 0\" [@animator]=\"zoomIn\">\r\n            <table mdbTable class=\"view display overlay z-depth-1-half\">\r\n              <thead>\r\n                <tr>\r\n                  <th *ngFor=\"let detail of details\" class=\"success\">{{detail | titlecase}}</th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                <tr>\r\n                  <th *ngFor=\"let image of images\"><img [src]=\"image\" class=\"img-fluid\"></th>\r\n                </tr>             \r\n              </tbody>\r\n            </table>\r\n          </div>\r\n          \r\n          \r\n        </div>\r\n        <!--Grid column-->\r\n\r\n      </div>\r\n      <!--Grid row-->\r\n\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row\">       \r\n\r\n        <!--Second column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-chart-area fa-3x green-text\"\r\n            [@animator]=\"chart\" (@animator.done)=\"chartAnimate('stop')\" \r\n            (mouseover)=\"chartAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Microservices</p>\r\n  \r\n            <p class=\"text-muted\">Using Spring Boot and .NET Core</p>\r\n        </div>\r\n        <!--/Second column-->\r\n\r\n        <!--Third column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-cogs fa-3x grey-text\"\r\n            [@animator]=\"cog\" (@animator.done)=\"cogAnimate('stop')\" \r\n            (mouseover)=\"cogAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Rekognition</p>\r\n  \r\n            <p class=\"text-muted\">Results are processed and displayed</p>\r\n        </div>\r\n        <!--/Third column-->\r\n\r\n        <!--Fourth column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-cloud-upload-alt fa-3x blue-text\"\r\n            [@animator]=\"cloud\" (@animator.done)=\"cloudAnimate('stop')\" \r\n            (mouseover)=\"cloudAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Cloud</p>\r\n  \r\n            <p class=\"text-muted\">Compare images from a cloud storage bucket</p>\r\n        </div>\r\n        <!--/Fourth column-->\r\n\r\n      </div>\r\n      <!--/Grid row-->\r\n\r\n\r\n    </section>\r\n    <!--Section: Content-->\r\n\r\n\r\n  </div>"
 
 /***/ }),
 
@@ -40,7 +40,7 @@ module.exports = "<section class=\"sec1\">\r\n\r\n    <div class=\"container z-d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container my-5 py-5 z-depth-1\">\r\n\r\n\r\n    <!--Section: Content-->\r\n    <section class=\"px-md-5 mx-md-5 text-center dark-grey-text\">\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row d-flex justify-content-center\">\r\n\r\n        <!--Grid column-->\r\n        <div class=\"col-xl-6 col-md-8\">\r\n\r\n          <h3 class=\"font-weight-bold\">AWS Rekognition</h3>\r\n\r\n                <p class=\"text-muted\">Upload the images you wish to compare faces with</p>\r\n                <p>Name: <input mdbInput [(ngModel)]=\"name\" (keyup.enter)=\"uploadFiles()\" class=\"btn-md ml-0 mb-5\" type=\"text\">\r\n                <input mdbInput class=\"btn btn-md ml-0 mb-5\" type=\"file\" (change)=\"fileChange($event.target.files)\">\r\n                <a class=\"btn btn-info btn-md ml-0 mb-5\" \r\n                [@animator]=\"button\" (@animator.done)=\"btnReset()\"\r\n                (click)=\"uploadFiles(); btnAnimate('heartBeat')\" role=\"button\">Upload</a></p>\r\n\r\n                <div *ngIf=\"isSpinning\" class=\"spinner-border text-danger\" role=\"status\"></div>\r\n\r\n                  <h5 *ngIf=\"results\" class=\"success\" [@animator]=\"bouncer\">{{results}}</h5> \r\n                   <h5 *ngIf=\"message\" class=\"invalid\" [@animator]=\"shaker\">{{message}}</h5> \r\n                   <table *ngIf=\"image\" mdbTable class=\"view display overlay z-depth-1-half\" [@animator]=\"zoomIn\">\r\n                    <thead>\r\n                      <tr>\r\n                        <th class=\"success\">{{display | titlecase}}</th>\r\n                      </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                      <tr>\r\n                        <th><img [src]=\"image\" class=\"img-fluid\"></th>\r\n                      </tr>             \r\n                    </tbody>\r\n                  </table>                                     \r\n\r\n        </div>\r\n        <!--Grid column-->\r\n\r\n      </div>\r\n      <!--Grid row-->\r\n\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row\">\r\n\r\n        <!--First column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n          <i class=\"fas fa-gem fa-3x blue-text\"></i>\r\n \r\n          <p class=\"font-weight-bold my-3\">Feature One</p>\r\n\r\n          <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/First column-->\r\n\r\n        <!--Second column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-chart-area fa-3x teal-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Two</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Second column-->\r\n\r\n        <!--Third column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-cogs fa-3x indigo-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Three</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Third column-->\r\n\r\n        <!--Fourth column-->\r\n        <div class=\"col-lg-3 col-md-6\">\r\n            <i class=\"fas fa-cloud-upload-alt fa-3x deep-purple-text\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Feature Four</p>\r\n  \r\n            <p class=\"text-muted\">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\r\n        </div>\r\n        <!--/Fourth column-->\r\n\r\n      </div>\r\n      <!--/Grid row-->\r\n\r\n\r\n    </section>\r\n    <!--Section: Content-->\r\n\r\n\r\n  </div>"
+module.exports = "<div class=\"container my-5 py-5 z-depth-1\">\r\n\r\n\r\n    <!--Section: Content-->\r\n    <section class=\"px-md-5 mx-md-5 text-center dark-grey-text\">\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row d-flex justify-content-center\">\r\n\r\n        <!--Grid column-->\r\n        <div class=\"col-xl-6 col-md-8\">\r\n\r\n          <h3 class=\"font-weight-bold\">AWS Rekognition</h3>\r\n\r\n                <p class=\"text-muted\">Upload the images you wish to compare faces with</p>\r\n                <p>Name: <input mdbInput [(ngModel)]=\"name\" (keyup.enter)=\"uploadFiles()\" class=\"btn-md ml-0 mb-5\" type=\"text\">\r\n                <input mdbInput class=\"btn btn-md ml-0 mb-5\" type=\"file\" (change)=\"fileChange($event.target.files)\">\r\n                <a class=\"btn btn-info btn-md ml-0 mb-5\" \r\n                [@animator]=\"button\" (@animator.done)=\"btnReset('stop')\"\r\n                (click)=\"uploadFiles(); btnAnimate('start')\" role=\"button\">Upload</a></p>\r\n\r\n                <div *ngIf=\"isSpinning\" class=\"spinner-border text-danger\" role=\"status\"></div>\r\n\r\n                  <h5 *ngIf=\"results\" class=\"success\" [@animator]=\"bouncer\">{{results}}</h5> \r\n                   <h5 *ngIf=\"message\" class=\"invalid\" [@animator]=\"shaker\">{{message}}</h5> \r\n                   <table *ngIf=\"image\" mdbTable class=\"view display overlay z-depth-1-half\" [@animator]=\"zoomIn\">\r\n                    <thead>\r\n                      <tr>\r\n                        <th class=\"success\">{{display | titlecase}}</th>\r\n                      </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                      <tr>\r\n                        <th><img [src]=\"image\" class=\"img-fluid\"></th>\r\n                      </tr>             \r\n                    </tbody>\r\n                  </table>                                     \r\n\r\n        </div>\r\n        <!--Grid column-->\r\n\r\n      </div>\r\n      <!--Grid row-->\r\n\r\n\r\n      <!--Grid row-->\r\n      <div class=\"row\">\r\n\r\n        <!--Second column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-chart-area fa-3x deep-purple-text\"\r\n            [@animator]=\"chart\" (@animator.done)=\"chartAnimate('stop')\"\r\n            (mouseover)=\"chartAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Microservices</p>\r\n  \r\n            <p class=\"text-muted\">Using Spring Boot and .NET Core</p>\r\n        </div>\r\n        <!--/Second column-->\r\n\r\n        <!--Third column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-cogs fa-3x red-text\"\r\n            [@animator]=\"cog\" (@animator.done)=\"cogAnimate('stop')\"\r\n            (mouseover)=\"cogAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Upload</p>\r\n  \r\n            <p class=\"text-muted\">Upload images to a cloud storage bucket</p>\r\n        </div>\r\n        <!--/Third column-->\r\n\r\n        <!--Fourth column-->\r\n        <div class=\"col-lg-4 col-md-6\">\r\n            <i class=\"fas fa-cloud-upload-alt fa-3x teal-text\"\r\n            [@animator]=\"cloud\" (@animator.done)=\"cloudAnimate('stop')\"\r\n            (mouseover)=\"cloudAnimate('start')\"></i>\r\n\r\n            <p class=\"font-weight-bold my-3\">Cloud</p>\r\n  \r\n            <p class=\"text-muted\">Images are saved to the cloud storage bucket</p>\r\n        </div>\r\n        <!--/Fourth column-->\r\n\r\n      </div>\r\n      <!--/Grid row-->\r\n\r\n\r\n    </section>\r\n    <!--Section: Content-->\r\n\r\n\r\n  </div>"
 
 /***/ }),
 
@@ -71,7 +71,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*!*****************************************!*\
   !*** ./src/app/animations/animation.ts ***!
   \*****************************************/
-/*! exports provided: pulse, fadeInLeft, fadeInRight, flipInY, heartBeat, slideInUp, zoomIn, bounce, shake */
+/*! exports provided: pulse, fadeInLeft, fadeInRight, flipInY, heartBeat, slideInUp, zoomIn, bounce, shake, tada, rotateIn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -85,6 +85,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "zoomIn", function() { return zoomIn; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bounce", function() { return bounce; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "shake", function() { return shake; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tada", function() { return tada; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rotateIn", function() { return rotateIn; });
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 
 var pulse = [
@@ -93,11 +95,11 @@ var pulse = [
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1, 1, 1)', offset: 1 })
 ];
 var fadeInLeft = [
-    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 0, transform: 'translate3d(-100%, 0, 0)', offset: 0 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 0, transform: 'translate3d(-25%, 0, 0)', offset: 0 }),
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1 })
 ];
 var fadeInRight = [
-    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 0, transform: 'translate3d(100%, 0, 0)', offset: 0 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 0, transform: 'translate3d(25%, 0, 0)', offset: 0 }),
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1 })
 ];
 var flipInY = [
@@ -141,6 +143,21 @@ var shake = [
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translate3d(-10px, 0, 0)', offset: .7 }),
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translate3d(10px, 0, 0)', offset: .8 }),
     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'translate3d(-10px, 0, 0)', offset: .9 })
+];
+var tada = [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1, 1, 1)', offset: .1 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)', offset: .2 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .3 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .4 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .5 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .6 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .7 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)', offset: .8 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)', offset: .9 })
+];
+var rotateIn = [
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: .5, transform: 'rotate3d(0, 0, 1, -200deg)', offset: 0 }),
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 1, transform: 'translate3d(0, 0, 0)', offset: 1 })
 ];
 
 
@@ -217,39 +234,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animations/animation */ "./src/app/animations/animation.ts");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _services_animation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/animation.service */ "./src/app/services/animation.service.ts");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(animation) {
+        this.animation = animation;
         this.title = "AWS Image Rekognition";
+        this.upload = "";
+        this.compare = "";
+        this.contact = "";
     }
     AppComponent.prototype.preparedRoute = function (outlet) {
         return outlet &&
             outlet.activatedRouteData &&
             outlet.activatedRouteData['animation'];
     };
+    AppComponent.prototype.upAnimate = function (state) {
+        this.upload = this.animation.dashAnimate(state);
+    };
+    AppComponent.prototype.compAnimate = function (state) {
+        this.compare = this.animation.dashAnimate(state);
+    };
+    AppComponent.prototype.contAnimate = function (state) {
+        this.contact = this.animation.dashAnimate(state);
+    };
+    AppComponent.ctorParameters = function () { return [
+        { type: _services_animation_service__WEBPACK_IMPORTED_MODULE_2__["AnimationService"] }
+    ]; };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
             animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["trigger"])('animator', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])('* => isLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInLeft"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])('* => isRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])('isLeft => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["transition"])('isRight => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInLeft"])))
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["trigger"])('animator', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => isLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInLeft"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => isRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('isLeft => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('isRight => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInLeft"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => pulse', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["pulse"]))),
                 ])
             ],
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [_services_animation_service__WEBPACK_IMPORTED_MODULE_2__["AnimationService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -283,12 +323,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_upload_upload_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/upload/upload.component */ "./src/app/components/upload/upload.component.ts");
 /* harmony import */ var _components_compare_compare_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/compare/compare.component */ "./src/app/components/compare/compare.component.ts");
 /* harmony import */ var _services_http_interceptor_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/http-interceptor.service */ "./src/app/services/http-interceptor.service.ts");
+/* harmony import */ var _services_animation_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/animation.service */ "./src/app/services/animation.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -333,6 +375,7 @@ var AppModule = /** @class */ (function () {
                 _services_user_service__WEBPACK_IMPORTED_MODULE_9__["UserService"],
                 _services_validation_service__WEBPACK_IMPORTED_MODULE_10__["ValidationService"],
                 _services_subject_service__WEBPACK_IMPORTED_MODULE_11__["SubjectService"],
+                _services_animation_service__WEBPACK_IMPORTED_MODULE_15__["AnimationService"],
                 { provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"], useClass: _services_http_interceptor_service__WEBPACK_IMPORTED_MODULE_14__["HttpInterceptorService"], multi: true }
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -372,7 +415,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/subject.service */ "./src/app/services/subject.service.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _animations_animation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../animations/animation */ "./src/app/animations/animation.ts");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _services_animation_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/animation.service */ "./src/app/services/animation.service.ts");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -389,17 +433,22 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var CompareComponent = /** @class */ (function () {
-    function CompareComponent(service, memory, validate) {
+    function CompareComponent(service, memory, validate, animation) {
         this.service = service;
         this.memory = memory;
         this.validate = validate;
+        this.animation = animation;
         this.images = [];
         this.details = [];
         this.button = "";
         this.bouncer = "bounce";
         this.zoomIn = "zoom";
         this.shaker = "shake";
+        this.chart = "";
+        this.cog = "";
+        this.cloud = "";
         this.isSpinning = false;
         this.fileType = "data:image/png;base64,";
     }
@@ -445,12 +494,16 @@ var CompareComponent = /** @class */ (function () {
         this.img2 = "";
     };
     CompareComponent.prototype.btnAnimate = function (state) {
-        if (!this.button) {
-            this.button = state;
-        }
+        this.button = this.animation.btnAnimate(state);
     };
-    CompareComponent.prototype.btnReset = function () {
-        this.button = "";
+    CompareComponent.prototype.chartAnimate = function (state) {
+        this.chart = this.animation.chartAnimate(state);
+    };
+    CompareComponent.prototype.cogAnimate = function (state) {
+        this.cog = this.animation.cogAnimate(state);
+    };
+    CompareComponent.prototype.cloudAnimate = function (state) {
+        this.cloud = this.animation.cloudAnimate(state);
     };
     CompareComponent.prototype.ngOnDestroy = function () {
         this.memory.unsubscribe.next();
@@ -459,25 +512,30 @@ var CompareComponent = /** @class */ (function () {
     CompareComponent.ctorParameters = function () { return [
         { type: _services_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"] },
         { type: src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__["SubjectService"] },
-        { type: src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"] }
+        { type: src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"] },
+        { type: _services_animation_service__WEBPACK_IMPORTED_MODULE_6__["AnimationService"] }
     ]; };
     CompareComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-compare',
             template: __webpack_require__(/*! raw-loader!./compare.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/compare/compare.component.html"),
             animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('animator', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => heartBeat', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["heartBeat"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => bounce', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(650, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["bounce"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => zoom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["zoomIn"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => shake', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(500, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["shake"])))
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["trigger"])('animator', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => heartBeat', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["heartBeat"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => bounce', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(650, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["bounce"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => zoom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["zoomIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => shake', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(500, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["shake"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => tada', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["tada"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => rotate', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["rotateIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => popup', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["slideInUp"])))
                 ])
             ],
             styles: [__webpack_require__(/*! ./compare.component.scss */ "./src/app/components/compare/compare.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"],
             src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__["SubjectService"],
-            src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"]])
+            src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_2__["ValidationService"],
+            _services_animation_service__WEBPACK_IMPORTED_MODULE_6__["AnimationService"]])
     ], CompareComponent);
     return CompareComponent;
 }());
@@ -643,7 +701,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/subject.service */ "./src/app/services/subject.service.ts");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _animations_animation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../animations/animation */ "./src/app/animations/animation.ts");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _services_animation_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../services/animation.service */ "./src/app/services/animation.service.ts");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -660,17 +719,22 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var UploadComponent = /** @class */ (function () {
-    function UploadComponent(service, memory, validate) {
+    function UploadComponent(service, memory, validate, animation) {
         this.service = service;
         this.memory = memory;
         this.validate = validate;
+        this.animation = animation;
         this.formData = new FormData();
         this.fileType = "data:image/png;base64,";
         this.button = "";
         this.bouncer = "bounce";
         this.zoomIn = "zoom";
         this.shaker = "shake";
+        this.chart = "";
+        this.cog = "";
+        this.cloud = "";
         this.isSpinning = false;
     }
     UploadComponent.prototype.ngOnInit = function () {
@@ -714,12 +778,16 @@ var UploadComponent = /** @class */ (function () {
         this.formData = new FormData();
     };
     UploadComponent.prototype.btnAnimate = function (state) {
-        if (!this.button) {
-            this.button = state;
-        }
+        this.button = this.animation.btnAnimate(state);
     };
-    UploadComponent.prototype.btnReset = function () {
-        this.button = "";
+    UploadComponent.prototype.chartAnimate = function (state) {
+        this.chart = this.animation.chartAnimate(state);
+    };
+    UploadComponent.prototype.cogAnimate = function (state) {
+        this.cog = this.animation.cogAnimate(state);
+    };
+    UploadComponent.prototype.cloudAnimate = function (state) {
+        this.cloud = this.animation.cloudAnimate(state);
     };
     UploadComponent.prototype.ngOnDestroy = function () {
         this.memory.unsubscribe.next();
@@ -728,25 +796,30 @@ var UploadComponent = /** @class */ (function () {
     UploadComponent.ctorParameters = function () { return [
         { type: _services_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"] },
         { type: src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__["SubjectService"] },
-        { type: _services_validation_service__WEBPACK_IMPORTED_MODULE_1__["ValidationService"] }
+        { type: _services_validation_service__WEBPACK_IMPORTED_MODULE_1__["ValidationService"] },
+        { type: _services_animation_service__WEBPACK_IMPORTED_MODULE_6__["AnimationService"] }
     ]; };
     UploadComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-upload',
             template: __webpack_require__(/*! raw-loader!./upload.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/upload/upload.component.html"),
             animations: [
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["trigger"])('animator', [
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => heartBeat', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["heartBeat"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => bounce', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(650, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["bounce"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => zoom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["zoomIn"]))),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["transition"])('* => shake', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["animate"])(500, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_6__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["shake"])))
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["trigger"])('animator', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => heartBeat', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["heartBeat"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => bounce', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(650, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["bounce"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => zoom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["zoomIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => shake', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(500, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["shake"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => tada', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["tada"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => rotate', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["rotateIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => popup', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_5__["slideInUp"])))
                 ])
             ],
             styles: [__webpack_require__(/*! ./upload.component.scss */ "./src/app/components/upload/upload.component.scss")]
         }),
         __metadata("design:paramtypes", [_services_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"],
             src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_3__["SubjectService"],
-            _services_validation_service__WEBPACK_IMPORTED_MODULE_1__["ValidationService"]])
+            _services_validation_service__WEBPACK_IMPORTED_MODULE_1__["ValidationService"],
+            _services_animation_service__WEBPACK_IMPORTED_MODULE_6__["AnimationService"]])
     ], UploadComponent);
     return UploadComponent;
 }());
@@ -769,6 +842,83 @@ var Email = /** @class */ (function () {
     function Email() {
     }
     return Email;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/animation.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/services/animation.service.ts ***!
+  \***********************************************/
+/*! exports provided: AnimationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationService", function() { return AnimationService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AnimationService = /** @class */ (function () {
+    function AnimationService() {
+    }
+    AnimationService.prototype.dashAnimate = function (state) {
+        if (state == "start") {
+            return "pulse";
+        }
+        if (state == "stop") {
+            return "";
+        }
+    };
+    AnimationService.prototype.btnAnimate = function (state) {
+        if (state == "start") {
+            return "heartBeat";
+        }
+        if (state == "stop") {
+            return "";
+        }
+    };
+    AnimationService.prototype.chartAnimate = function (state) {
+        if (state == "start") {
+            return "tada";
+        }
+        if (state == "stop") {
+            return "";
+        }
+    };
+    AnimationService.prototype.cogAnimate = function (state) {
+        if (state == "start") {
+            return "rotate";
+        }
+        if (state == "stop") {
+            return "";
+        }
+    };
+    AnimationService.prototype.cloudAnimate = function (state) {
+        if (state == "start") {
+            return "popup";
+        }
+        if (state == "stop") {
+            return "";
+        }
+    };
+    AnimationService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [])
+    ], AnimationService);
+    return AnimationService;
 }());
 
 
