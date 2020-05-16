@@ -61,7 +61,6 @@ public class UserServiceImpl implements UserService {
 												.withRegion("us-east-2").build();
 		
 		List<String> names = new ArrayList<String>();
-		String img2;
 		faces.getNames().forEach(data -> {
 			names.add("temp" + System.getProperty("user.dir") + "/" + data +".jpg");
 		});
