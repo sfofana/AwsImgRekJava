@@ -1,5 +1,0 @@
-package com.sfofana.app.exception;
-
-public class ErrorDetail {
-
-}

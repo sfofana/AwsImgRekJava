@@ -1,9 +1,0 @@
-package com.sfofana.app.model;
-
-public class Images {
-
-	private String face1;
-	private String face2;
-	private String detail1;
-	private String detail2;
-}
