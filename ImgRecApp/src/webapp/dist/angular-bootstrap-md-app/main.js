@@ -602,6 +602,8 @@ var ContactComponent = /** @class */ (function () {
         this.bouncer = "bounce";
     }
     ContactComponent.prototype.ngOnInit = function () {
+        this.override = new Blob();
+        this.formData = new FormData();
     };
     ContactComponent.prototype.setMail = function () {
         this.mail.name = this.name;
@@ -611,19 +613,30 @@ var ContactComponent = /** @class */ (function () {
         this.mail.message = this.message;
         this.validMail = this.validate.validRequest(this.mail);
     };
+    ContactComponent.prototype.setBlob = function (mail) {
+        this.override = new Blob([
+            JSON.stringify(mail)
+        ], {
+            type: 'application/json'
+        });
+        this.formData.append('override', this.override);
+    };
     ContactComponent.prototype.submit = function () {
         var _this = this;
         this.setMail();
         this.reset();
         if (this.validMail) {
             this.isSpinning = true;
-            this.service.sendEmail(this.validMail)
+            this.setBlob(this.validMail);
+            this.service.sendEmail(this.formData)
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.memory.unsubscribe))
                 .subscribe(function () {
                 _this.success = "Message Sent";
                 _this.isSpinning = false;
             });
         }
+        this.override = new Blob();
+        this.formData = new FormData();
     };
     ContactComponent.prototype.reset = function () {
         this.name = "";

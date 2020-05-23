@@ -25,6 +25,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   private phone: string;
   private subject: string;
   private message: string;
+  private override: Blob;
+  private formData: FormData;
   private success: string;
   private invalid: string;
   private mail = new Email();
@@ -41,6 +43,8 @@ export class ContactComponent implements OnInit, OnDestroy {
     ) { }
 
   ngOnInit() {
+    this.override = new Blob();
+    this.formData = new FormData();
   }
 
   setMail(){
@@ -52,18 +56,32 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.validMail = this.validate.validRequest(this.mail);
   }
 
+  setBlob(mail: Email){
+    this.override = new Blob(
+      [
+        JSON.stringify(mail)
+      ],
+      {
+        type: 'application/json'
+    });
+    this.formData.append('override', this.override);
+  }
+
   submit(){
     this.setMail();
     this.reset();
     if(this.validMail){
       this.isSpinning = true;
-      this.service.sendEmail(this.validMail)
+      this.setBlob(this.validMail);
+      this.service.sendEmail(this.formData)
       .pipe(takeUntil(this.memory.unsubscribe))
       .subscribe(()=>{
         this.success="Message Sent";
         this.isSpinning = false;
       });
     } 
+    this.override = new Blob();
+    this.formData = new FormData();
   }
 
   reset(){
