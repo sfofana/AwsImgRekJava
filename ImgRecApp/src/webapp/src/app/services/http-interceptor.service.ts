@@ -11,11 +11,16 @@ export class HttpInterceptorService implements HttpInterceptor {
   private message="";
   private username = "sfofana";
   private password = "UofH2011";
+  private bearer = "Bearer ";
+  private cToken = "cToken";
+  private jToken = "jtoken";
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
     req = req.clone({
       setHeaders: {
-        Authorization: 'Basic ' + btoa(this.username+":"+this.password)
+        Authorization: 'Basic ' + btoa(this.username+":"+this.password),
+        cToken: this.bearer + localStorage.getItem(this.cToken),
+        jToken: this.bearer + localStorage.getItem(this.jToken)
       }
     });
 

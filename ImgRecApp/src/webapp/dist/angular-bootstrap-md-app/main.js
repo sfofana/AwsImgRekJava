@@ -33,6 +33,17 @@ module.exports = "<section class=\"sec1\">\r\n\r\n    <div class=\"container z-d
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/components/home/home.component.html":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/components/home/home.component.html ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container my-5\">\n\n\n    <!-- Section: Block Content -->\n    <section class=\"dark-grey-text text-center\">\n  \n      <h3 class=\"text-center font-weight-bold mb-4 pb-2\">\n        Another hot cup of Java? No thanks, I'd prefer a cup of C#\n      </h3>  \n      <!-- Grid row -->\n      <div class=\"row\">\n  \n        <!-- Grid column -->\n        <div class=\"col-md-12 mb-4\">\n  \n          <!-- Card -->\n          <div class=\"card card-image\" style=\"background-image: url(assets/images/ai.PNG);\">\n            <div class=\"text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded\">\n              <div>\n                <h3 class=\"py-3 font-weight-bold\">\n                  <strong>Bio Unique</strong>\n                </h3>\n                <p class=\"pb-3\">Face recognition application using Aws Rekognition, Spring Boot and .NET Core.\n                    Compare faces of all kinds and rate thier similarity want to try things out for yourself? \n                    Click the button below to get access and get started.\n                </p>\n                <a class=\"btn btn-primary btn-rounded btn-md\" (click)=\"getAccess()\">Get Access</a>\n              </div>\n            </div>\n          </div>\n          <!-- Card -->\n  \n        </div>\n        <!-- Grid column -->\n  \n      </div>\n      <!-- Grid row -->\n  \n    </section>\n    <!-- Section: Block Content -->\n  </div>\n\n  <div class=\"spacer d-flex justify-content-center\">\n    <div *ngIf=\"isSpinning\" class=\"spinner-border text-danger\" role=\"status\"></div>\n    <p class=\"invalid\" *ngIf=\"message\" [@animator]=\"shaker\">{{message}}</p>\n  </div>\n\n  <div class=\"container my-5\">\n\n\n    <!--Section: Content-->\n    <section class=\"dark-grey-text\">\n  \n      <!-- Section heading -->\n      <h3 class=\"text-center font-weight-bold mb-4 pb-2\">Routed to this page again?</h3>\n      <hr class=\"w-header\">\n      <!-- Section description -->\n      <p class=\"lead text-center w-responsive mx-auto text-muted mt-4 pt-2 mb-5\">Requesting access is required and is as simple as clicking the \"Get Access\" button above</p>\n      \n      <!--First row-->\n      <div class=\"row\">\n  \n        <!--First column-->\n        <div class=\"col-md-6 mb-4\">\n  \n          <!-- Card -->\n          <a class=\"card hoverable\">\n            \n            <!-- Card content -->\n            <div class=\"card-body\">\n  \n                <div class=\"media\">\n                <span class=\"card-img-100 d-inline-flex justify-content-center align-items-center lighten-3 mr-4\">\n                  <i class=\"fab fa-react fa-4x text-info\"></i>\n                </span>\n                <div class=\"media-body\">\n                  <h5 class=\"dark-grey-text mb-3\">Had access before?</h5>\n                  <p class=\"font-weight-light text-muted mb-0\">Your session may have ended, but can be renewd by \n                      simply clicking the \"Get Access\" button above.</p>\n                </div>\n              </div>\n              \n            </div>\n  \n          </a>\n          <!-- Card -->\n  \n        </div>\n        <!--First column-->\n  \n        <!--Second column-->\n        <div class=\"col-md-6 mb-4\">\n  \n          <!-- Card -->\n          <a class=\"card hoverable\">\n            \n            <!-- Card content -->\n            <div class=\"card-body\">\n  \n                <div class=\"media\">\n                <span class=\"card-img-100 d-inline-flex justify-content-center align-items-center lighten-3 mr-4\">\n                  <i class=\"far fa-user fa-4x blue-text\"></i>\n                </span>\n                <div class=\"media-body\">\n                  <h5 class=\"dark-grey-text mb-3\">Still not working?</h5>\n                  <p class=\"font-weight-light text-muted mb-0\">If you are still not getting access you can \n                      contact me and I will get back to you as soon as I can.</p>\n                </div>\n              </div>\n              \n            </div>\n  \n          </a>\n          <!-- Card -->\n          <!-- Card -->\n  \n        </div>\n        <!--Second column-->\n  \n      </div>\n      <!--First row-->\n  \n      </section>\n    \n    \n  </div>"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/components/upload/upload.component.html":
 /*!***********************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/components/upload/upload.component.html ***!
@@ -178,6 +189,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/contact/contact.component */ "./src/app/components/contact/contact.component.ts");
 /* harmony import */ var _components_upload_upload_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/upload/upload.component */ "./src/app/components/upload/upload.component.ts");
 /* harmony import */ var _components_compare_compare_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/compare/compare.component */ "./src/app/components/compare/compare.component.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -189,11 +201,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
+    { path: 'home', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"], data: { animation: 'fade' } },
     { path: 'upload', component: _components_upload_upload_component__WEBPACK_IMPORTED_MODULE_3__["UploadComponent"], data: { animation: 'isLeft' } },
     { path: 'compare', component: _components_compare_compare_component__WEBPACK_IMPORTED_MODULE_4__["CompareComponent"] },
     { path: 'contact', component: _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_2__["ContactComponent"], data: { animation: 'isRight' } },
-    { path: '**', pathMatch: 'full', redirectTo: 'upload' }
+    { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -280,6 +294,7 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
             animations: [
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["trigger"])('animator', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => fade', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["zoomIn"]))),
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => isLeft', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInLeft"]))),
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('* => isRight', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["transition"])('isLeft => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_3__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_1__["fadeInRight"]))),
@@ -324,12 +339,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_compare_compare_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/compare/compare.component */ "./src/app/components/compare/compare.component.ts");
 /* harmony import */ var _services_http_interceptor_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/http-interceptor.service */ "./src/app/services/http-interceptor.service.ts");
 /* harmony import */ var _services_animation_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/animation.service */ "./src/app/services/animation.service.ts");
+/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -357,6 +374,7 @@ var AppModule = /** @class */ (function () {
                 _components_contact_contact_component__WEBPACK_IMPORTED_MODULE_8__["ContactComponent"],
                 _components_upload_upload_component__WEBPACK_IMPORTED_MODULE_12__["UploadComponent"],
                 _components_compare_compare_component__WEBPACK_IMPORTED_MODULE_13__["CompareComponent"],
+                _components_home_home_component__WEBPACK_IMPORTED_MODULE_16__["HomeComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -687,6 +705,120 @@ var ContactComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/home/home.component.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/components/home/home.component.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".invalid {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ob21lL0M6XFxVc2Vyc1xcc3VmeWFcXERvY3VtZW50c1xcUmVwb3NpdG9yeVxcSW1nUmVjQXBwXFxKYXZhXFxBd3NJbWdSZWtKYXZhXFxJbWdSZWNBcHBcXHNyY1xcd2ViYXBwL3NyY1xcYXBwXFxjb21wb25lbnRzXFxob21lXFxob21lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksVUFBVSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ob21lL2hvbWUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW52YWxpZHtcclxuICAgIGNvbG9yOiByZWQ7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/home/home.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/components/home/home.component.ts ***!
+  \***************************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_user_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/subject.service */ "./src/app/services/subject.service.ts");
+/* harmony import */ var src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/validation.service */ "./src/app/services/validation.service.ts");
+/* harmony import */ var src_app_services_animation_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/services/animation.service */ "./src/app/services/animation.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _animations_animation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../animations/animation */ "./src/app/animations/animation.ts");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent(service, memory, validate, animation) {
+        this.service = service;
+        this.memory = memory;
+        this.validate = validate;
+        this.animation = animation;
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+        this.role = "user";
+        this.isSpinning = false;
+        this.shaker = "shake";
+    };
+    HomeComponent.prototype.getAccess = function () {
+        var _this = this;
+        this.isSpinning = true;
+        this.user = {
+            role: this.role
+        };
+        this.service.getAccess(this.user)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.memory.unsubscribe))
+            .subscribe(function (data) {
+            localStorage.setItem("cToken", data.cToken);
+            localStorage.setItem("jtoken", data.jToken);
+            _this.isSpinning = false;
+        }, function (error) {
+            _this.message = "Internal error.. retry or contact me";
+            _this.isSpinning = false;
+        });
+    };
+    HomeComponent.prototype.ngOnDestroy = function () {
+        this.memory.unsubscribe.next();
+        this.memory.unsubscribe.complete();
+    };
+    HomeComponent.ctorParameters = function () { return [
+        { type: src_app_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"] },
+        { type: src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_2__["SubjectService"] },
+        { type: src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_3__["ValidationService"] },
+        { type: src_app_services_animation_service__WEBPACK_IMPORTED_MODULE_4__["AnimationService"] }
+    ]; };
+    HomeComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-home',
+            template: __webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/index.js!./src/app/components/home/home.component.html"),
+            animations: [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["trigger"])('animator', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => heartBeat', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["heartBeat"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => bounce', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(650, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["bounce"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => zoom', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["zoomIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => shake', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(500, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["shake"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => tada', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(1000, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["tada"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => rotate', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["rotateIn"]))),
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["transition"])('* => popup', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["animate"])(300, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_7__["keyframes"])(_animations_animation__WEBPACK_IMPORTED_MODULE_6__["slideInUp"])))
+                ])
+            ],
+            styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/components/home/home.component.scss")]
+        }),
+        __metadata("design:paramtypes", [src_app_services_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"],
+            src_app_services_subject_service__WEBPACK_IMPORTED_MODULE_2__["SubjectService"],
+            src_app_services_validation_service__WEBPACK_IMPORTED_MODULE_3__["ValidationService"],
+            src_app_services_animation_service__WEBPACK_IMPORTED_MODULE_4__["AnimationService"]])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/upload/upload.component.scss":
 /*!*********************************************************!*\
   !*** ./src/app/components/upload/upload.component.scss ***!
@@ -967,11 +1099,16 @@ var HttpInterceptorService = /** @class */ (function () {
         this.message = "";
         this.username = "sfofana";
         this.password = "UofH2011";
+        this.bearer = "Bearer ";
+        this.cToken = "cToken";
+        this.jToken = "jtoken";
     }
     HttpInterceptorService.prototype.intercept = function (req, next) {
         req = req.clone({
             setHeaders: {
-                Authorization: 'Basic ' + btoa(this.username + ":" + this.password)
+                Authorization: 'Basic ' + btoa(this.username + ":" + this.password),
+                cToken: this.bearer + localStorage.getItem(this.cToken),
+                jToken: this.bearer + localStorage.getItem(this.jToken)
             }
         });
         return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) {
@@ -1063,10 +1200,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
+        this.sessionUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].session;
         this.eUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].emailUrl;
         this.compUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].compare;
         this.upUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].upload;
     }
+    UserService.prototype.getAccess = function (user) {
+        return this.http.post(this.sessionUrl, user);
+    };
     UserService.prototype.sendEmail = function (message) {
         return this.http.post(this.eUrl, message);
     };
@@ -1182,6 +1323,7 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     emailUrl: 'https://node-jsfofana-bank-v2.herokuapp.com/api/v1/email/send',
+    session: 'http://3.17.152.168/api/v1/authenticate',
     upload: 'http://3.17.152.168/api/v1/upload',
     compare: 'http://3.17.152.168/api/v1/compare'
 };

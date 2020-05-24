@@ -10,6 +10,7 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('animator', [
+      transition('* => fade', animate(300, keyframes(keyframe.zoomIn))),
       transition('* => isLeft', animate(300, keyframes(keyframe.fadeInLeft))),
       transition('* => isRight', animate(300, keyframes(keyframe.fadeInRight))),
       transition('isLeft => *', animate(300, keyframes(keyframe.fadeInRight))),

@@ -16,6 +16,7 @@ import { UploadComponent } from './components/upload/upload.component';
 import { CompareComponent } from './components/compare/compare.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { AnimationService } from './services/animation.service';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { AnimationService } from './services/animation.service';
     ContactComponent,
     UploadComponent,
     CompareComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

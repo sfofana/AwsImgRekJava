@@ -39,6 +39,8 @@ import com.amazonaws.util.Base64;
 import com.amazonaws.util.IOUtils;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Upload;
+import com.sfofana.app.model.User;
+import com.sfofana.app.util.JwtUtil;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -49,6 +51,9 @@ public class UserServiceImpl implements UserService {
 	private String secretKey;
 	@Value("${aws.s3.bucket}")
 	private String bucket;
+	
+	@Autowired
+	private JwtUtil jwtUtil;
 	
 	Float similarityThreshold = 70F;	
 	
@@ -162,6 +167,42 @@ public class UserServiceImpl implements UserService {
 		}
 			
 		return upload;
+	}
+
+	@Override
+	public Boolean tokenAuthenticated(String token)  throws Exception {
+		String role = null;
+		String jwt = null;
+		Boolean flag = false;
+		
+		if(token != null && token.startsWith("Bearer ")) {
+			jwt = token.substring(7);
+			role = jwtUtil.extractUser(jwt);
+			if(role != null) {
+				if(jwtUtil.validateToken(jwt, getAccess())) {
+					flag = true;
+				} else {
+					throw new Exception("Invalid Session");
+				}
+			}else {
+				throw new Exception("Invalid Session");
+			}
+		}else {
+			throw new Exception("Invalid Session");
+		}
+		return flag;
+	}
+
+	@Override
+	public User initiateSession(User user) {
+		final String jwt = jwtUtil.generateToken(user);
+		user.setJToken(jwt);
+		return user;
+	}
+	
+	@Override
+	public User getAccess() {
+		return new User(null, null, "user", null);
 	}
 	
 }

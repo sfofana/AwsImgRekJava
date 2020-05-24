@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   emailUrl: 'https://node-jsfofana-bank-v2.herokuapp.com/api/v1/email/send',
+  session: 'http://3.17.152.168/api/v1/authenticate',
   upload: 'http://3.17.152.168/api/v1/upload',
   compare: 'http://3.17.152.168/api/v1/compare'
 };

@@ -23,12 +23,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser(username).password(passwordEncoder().encode(password)).roles("User");
+		auth.inMemoryAuthentication().withUser(username)
+		.password(passwordEncoder().encode(password))
+		.roles("User");
 	}
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest().authenticated().and().httpBasic();
+		http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**")
+		.permitAll().anyRequest().authenticated()
+		.and().httpBasic();
 	}
 	
 	@Bean

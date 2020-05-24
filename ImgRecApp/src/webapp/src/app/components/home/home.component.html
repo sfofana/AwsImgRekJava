@@ -1,0 +1,126 @@
+<div class="container my-5">
+
+
+    <!-- Section: Block Content -->
+    <section class="dark-grey-text text-center">
+  
+      <h3 class="text-center font-weight-bold mb-4 pb-2">
+        Another hot cup of Java? No thanks, I'd prefer a cup of C#
+      </h3>  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 mb-4">
+  
+          <!-- Card -->
+          <div class="card card-image" style="background-image: url(assets/images/ai.PNG);">
+            <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4 px-md-5 rounded">
+              <div>
+                <h3 class="py-3 font-weight-bold">
+                  <strong>Bio Unique</strong>
+                </h3>
+                <p class="pb-3">Face recognition application using Aws Rekognition, Spring Boot and .NET Core.
+                    Compare faces of all kinds and rate thier similarity want to try things out for yourself? 
+                    Click the button below to get access and get started.
+                </p>
+                <a class="btn btn-primary btn-rounded btn-md" (click)="getAccess()">Get Access</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </section>
+    <!-- Section: Block Content -->
+  </div>
+
+  <div class="spacer d-flex justify-content-center">
+    <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
+    <p class="invalid" *ngIf="message" [@animator]="shaker">{{message}}</p>
+  </div>
+
+  <div class="container my-5">
+
+
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+  
+      <!-- Section heading -->
+      <h3 class="text-center font-weight-bold mb-4 pb-2">Routed to this page again?</h3>
+      <hr class="w-header">
+      <!-- Section description -->
+      <p class="lead text-center w-responsive mx-auto text-muted mt-4 pt-2 mb-5">Requesting access is required and is as simple as clicking the "Get Access" button above</p>
+      
+      <!--First row-->
+      <div class="row">
+  
+        <!--First column-->
+        <div class="col-md-6 mb-4">
+  
+          <!-- Card -->
+          <a class="card hoverable">
+            
+            <!-- Card content -->
+            <div class="card-body">
+  
+                <div class="media">
+                <span class="card-img-100 d-inline-flex justify-content-center align-items-center lighten-3 mr-4">
+                  <i class="fab fa-react fa-4x text-info"></i>
+                </span>
+                <div class="media-body">
+                  <h5 class="dark-grey-text mb-3">Had access before?</h5>
+                  <p class="font-weight-light text-muted mb-0">Your session may have ended, but can be renewd by 
+                      simply clicking the "Get Access" button above.</p>
+                </div>
+              </div>
+              
+            </div>
+  
+          </a>
+          <!-- Card -->
+  
+        </div>
+        <!--First column-->
+  
+        <!--Second column-->
+        <div class="col-md-6 mb-4">
+  
+          <!-- Card -->
+          <a class="card hoverable">
+            
+            <!-- Card content -->
+            <div class="card-body">
+  
+                <div class="media">
+                <span class="card-img-100 d-inline-flex justify-content-center align-items-center lighten-3 mr-4">
+                  <i class="far fa-user fa-4x blue-text"></i>
+                </span>
+                <div class="media-body">
+                  <h5 class="dark-grey-text mb-3">Still not working?</h5>
+                  <p class="font-weight-light text-muted mb-0">If you are still not getting access you can 
+                      contact me and I will get back to you as soon as I can.</p>
+                </div>
+              </div>
+              
+            </div>
+  
+          </a>
+          <!-- Card -->
+          <!-- Card -->
+  
+        </div>
+        <!--Second column-->
+  
+      </div>
+      <!--First row-->
+  
+      </section>
+    
+    
+  </div>

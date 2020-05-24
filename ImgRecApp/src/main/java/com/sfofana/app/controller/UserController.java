@@ -2,6 +2,8 @@ package com.sfofana.app.controller;
 
 import java.io.File;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Upload;
+import com.sfofana.app.model.User;
 import com.sfofana.app.service.UserService;
 
 @RestController
@@ -23,15 +26,32 @@ import com.sfofana.app.service.UserService;
 public class UserController {
 
 	@Autowired
+	private HttpServletRequest request;
+	@Autowired
 	UserService service;
 	
+	@PostMapping("authenticate")
+	public User authenticate(@RequestBody User user) throws Exception {
+		return service.initiateSession(user);
+	}
+	
 	@PostMapping("compare")
-	public Compare compareFaces(@RequestBody Compare faces) {
+	public Compare compareFaces(@RequestBody Compare faces) throws Exception {
+		if(service.tokenAuthenticated(getToken())) {
+			throw new Exception("Access Denied");
+		}
 		return service.compareFacesResults(faces);
 	}
 	
 	@PostMapping("upload/{name}")
-	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) {
+	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
+		if(service.tokenAuthenticated(getToken())) {
+			throw new Exception("Access Denied");
+		}
 		return service.processImageUpload(fileName, file);
+	}
+	
+	private String getToken() {
+		return request.getHeader("jToken");
 	}
 }
