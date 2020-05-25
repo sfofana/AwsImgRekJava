@@ -6,6 +6,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
 import { AnimationService } from '../../services/animation.service';
+import { Router } from '@angular/router';
 import { trigger, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
@@ -44,10 +45,13 @@ export class CompareComponent implements OnInit, OnDestroy {
   private cog = "";
   private cloud = "";
   private isSpinning = false;
+  private time: number;
+  private dotLoader: boolean;
   private readonly fileType: string = "data:image/png;base64,";
 
   constructor(
     private service: UserService, 
+    private router: Router,
     private memory: SubjectService,
     private validate: ValidationService,
     private animation: AnimationService
@@ -56,6 +60,8 @@ export class CompareComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.img1 = "";
     this.img2 = "";
+    this.time = 10000;
+    this.dotLoader = false;
   }
 
   compareFaces(){
@@ -85,6 +91,9 @@ export class CompareComponent implements OnInit, OnDestroy {
       }, error => {
         this.message = "Internal error.. retry or contact me";
         this.isSpinning = false;
+        this.dotLoader = true;
+        localStorage.clear();
+        setTimeout(()=>this.router.navigate(['/home']),this.time);       
       });
     } 
     if(!this.img1 || !this.img2){

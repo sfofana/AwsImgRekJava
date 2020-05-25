@@ -6,6 +6,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
 import { AnimationService } from '../../services/animation.service';
+import { Router } from '@angular/router';
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 
 @Component({
@@ -45,9 +46,12 @@ export class UploadComponent implements OnInit, OnDestroy {
   private cog = "";
   private cloud = "";
   private isSpinning = false;
+  private time: number;
+  private dotLoader: boolean;
 
   constructor(
     private service: UserService, 
+    private router: Router,
     private memory: SubjectService,
     private validate: ValidationService,
     private animation: AnimationService
@@ -55,6 +59,8 @@ export class UploadComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     this.name = "";
+    this.time = 10000;
+    this.dotLoader = false;
   }
 
   fileChange(files:any[]) {
@@ -85,6 +91,9 @@ export class UploadComponent implements OnInit, OnDestroy {
       error => {
         this.message = "Internal error.. retry or contact me";
         this.isSpinning = false;
+        this.dotLoader = true;
+        localStorage.clear();
+        setTimeout(()=>this.router.navigate(['/home']),this.time);
       });
     } 
     if(!this.name){

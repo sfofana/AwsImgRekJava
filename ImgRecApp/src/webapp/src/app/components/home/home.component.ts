@@ -28,10 +28,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private role: string;
   private user: User;
+  private success: string;
   private message: string;
 
   private isSpinning: boolean;
   private shaker: string;
+  private bouncer: string;
+  private button: string;
 
   constructor(
     private service: UserService, 
@@ -42,17 +45,25 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.role = "user";
     this.isSpinning = false;
+    this.bouncer = "bounce";
     this.shaker = "shake";
+  }
+
+  reset(){
+    this.success = "";
+    this.message = "";
   }
 
   getAccess(){
     this.isSpinning = true;
+    this.reset();
     this.user = {
       role: this.role
     }
     this.service.getAccess(this.user)
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(data => { 
+      this.success = "Access Granted";
       localStorage.setItem("cToken", data.cToken);
       localStorage.setItem("jToken", data.jToken);
       this.isSpinning = false;
@@ -60,6 +71,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.message = "Internal error.. retry or contact me";
       this.isSpinning = false;
     });
+  }
+
+  btnAnimate(state: string){
+    this.button = this.animation.btnAnimate(state);
   }
 
   ngOnDestroy(): void {

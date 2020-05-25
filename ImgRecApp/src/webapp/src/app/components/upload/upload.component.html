@@ -1,5 +1,14 @@
-<div class="container my-5 py-5 z-depth-1">
+<div [ngClass]="{redirect: dotLoader}" class="container my-5 py-5 z-depth-1">
 
+  <div *ngIf="dotLoader" 
+    id="dot-loader"
+    class="row d-flex justify-content-center">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
 
     <!--Section: Content-->
     <section class="px-md-5 mx-md-5 text-center dark-grey-text">
@@ -10,14 +19,34 @@
         <!--Grid column-->
         <div class="col-xl-6 col-md-8">
 
-          <h3 class="font-weight-bold">AWS Rekognition</h3>
+          <div class="aws mask rgba-white-light">
+            <img src="assets/images/awslogo.PNG" class="img-fluid">
+          </div>  
 
                 <p class="text-muted">Upload the images you wish to compare faces with</p>
-                <p>Name: <input mdbInput [(ngModel)]="name" (keyup.enter)="uploadFiles()" class="btn-md ml-0 mb-5" type="text">
-                <input mdbInput class="btn btn-md ml-0 mb-5" type="file" (change)="fileChange($event.target.files)">
-                <a class="btn btn-info btn-md ml-0 mb-5" 
+
+                <div class="md-form mb-5">
+                  <input mdbInput id="name" [(ngModel)]="name" (keyup.enter)="uploadFiles()" 
+                  class="form-control" type="text">
+                  <label for="name">Name</label>
+                </div>           
+
+                <div class="zone d-flex justify-content-center">
+                  <div class="dropZ">                                    
+                    <div class="selectFile"> 
+                    <p>Select File</p>         
+                      <label class="l waves-light fas fa-file-upload fa-3x orange-text">
+                        <input mdbInput class="btn btn-md ml-0 mb-5" type="file" 
+                        (change)="fileChange($event.target.files)">
+                      </label>                                    
+                      <p>File size limit : 10 MB</p>
+                    </div>            
+                  </div>         
+                </div>
+
+                <a class="btn waves-light" 
                 [@animator]="button" (@animator.done)="btnReset('stop')"
-                (click)="uploadFiles(); btnAnimate('start')" role="button">Upload</a></p>
+                (click)="uploadFiles(); btnAnimate('start')" role="button">Upload</a>
 
                 <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
 

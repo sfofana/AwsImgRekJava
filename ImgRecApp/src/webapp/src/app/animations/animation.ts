@@ -37,6 +37,12 @@ export const slideInUp = [
     style({transform: 'translate3d(0, 0, 0)', offset: 1})
 ]
 
+export const slideDotLoader = [
+    style({transform: 'scale(1)', offset: 0}),
+    style({opcaity: .3, transform: 'scale(2)', offset: .5}),
+    style({transform: 'scale(1)', offset: 1})
+]
+
 export const zoomIn = [
     style({opacity: 0, transform: 'scale3d(0, 0, 0)', offset: 0}),
     style({opacity: 1, offset: 1})

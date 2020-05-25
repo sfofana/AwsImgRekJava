@@ -1,6 +1,14 @@
-<div class="container my-5 py-5 z-depth-1">
+<div [ngClass]="{redirect: dotLoader}" class="container my-5 py-5 z-depth-1">
 
-
+  <div *ngIf="dotLoader" 
+    id="dot-loader"
+    class="row d-flex justify-content-center">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
     <!--Section: Content-->
     <section class="px-md-5 mx-md-5 text-center dark-grey-text">
 
@@ -10,15 +18,25 @@
         <!--Grid column-->
         <div class="col-xl-6 col-md-8">
 
-          <h3 class="font-weight-bold">AWS Rekognition</h3>
+          <div class="aws mask rgba-white-light">
+            <img src="assets/images/awslogo.PNG" class="img-fluid">
+          </div>   
 
           <p class="text-muted">Compare faces and review the results</p>
-          <p>1st Image: <input [(ngModel)]="img1" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
-            2nd Image: <input [(ngModel)]="img2" class="btn-md ml-0 mb-5" (keyup.enter)="compareFaces()" type="text"><br>
-          <a class="btn btn-info btn-md ml-0 mb-5" 
+          <div class="md-form mb-5">
+            <input mdbInput id="img1" [(ngModel)]="img1" (keyup.enter)="compareFaces()" 
+            class="form-control" type="text">
+            <label for="img1">1st Image</label>
+          </div> 
+          <div class="md-form mb-5">
+            <input mdbInput id="img2" [(ngModel)]="img2" (keyup.enter)="compareFaces()" 
+            class="form-control" type="text">
+            <label for="img2">2nd Image</label>
+          </div> 
+          <a class="btn waves-light" 
           [@animator]="button" (@animator.done)="btnAnimate('stop')" 
           (click)="compareFaces(); btnAnimate('start')" role="button">Compare
-          </a></p>
+          </a>
 
           <div *ngIf="isSpinning" class="spinner-border text-danger" role="status"></div>
 
