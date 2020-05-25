@@ -45,6 +45,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.override = new Blob();
     this.formData = new FormData();
+    console.log("cToken");
+    console.log(localStorage.getItem("cToken"));
   }
 
   setMail(){

@@ -622,6 +622,8 @@ var ContactComponent = /** @class */ (function () {
     ContactComponent.prototype.ngOnInit = function () {
         this.override = new Blob();
         this.formData = new FormData();
+        console.log("cToken");
+        console.log(localStorage.getItem("cToken"));
     };
     ContactComponent.prototype.setMail = function () {
         this.mail.name = this.name;
@@ -773,7 +775,7 @@ var HomeComponent = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.memory.unsubscribe))
             .subscribe(function (data) {
             localStorage.setItem("cToken", data.cToken);
-            localStorage.setItem("jtoken", data.jToken);
+            localStorage.setItem("jToken", data.jToken);
             _this.isSpinning = false;
         }, function (error) {
             _this.message = "Internal error.. retry or contact me";
@@ -1101,7 +1103,7 @@ var HttpInterceptorService = /** @class */ (function () {
         this.password = "UofH2011";
         this.bearer = "Bearer ";
         this.cToken = "cToken";
-        this.jToken = "jtoken";
+        this.jToken = "jToken";
     }
     HttpInterceptorService.prototype.intercept = function (req, next) {
         req = req.clone({

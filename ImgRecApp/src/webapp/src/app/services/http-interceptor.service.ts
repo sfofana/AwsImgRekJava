@@ -13,7 +13,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   private password = "UofH2011";
   private bearer = "Bearer ";
   private cToken = "cToken";
-  private jToken = "jtoken";
+  private jToken = "jToken";
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
     req = req.clone({

@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(data => { 
       localStorage.setItem("cToken", data.cToken);
-      localStorage.setItem("jtoken", data.jToken);
+      localStorage.setItem("jToken", data.jToken);
       this.isSpinning = false;
     }, error => {
       this.message = "Internal error.. retry or contact me";
