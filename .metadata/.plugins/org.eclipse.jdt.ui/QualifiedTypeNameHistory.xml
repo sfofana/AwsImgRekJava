@@ -17,7 +17,6 @@
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.Image"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.S3Object"/>
     <fullyQualifiedTypeName name="com.amazonaws.auth.AWSStaticCredentialsProvider"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="com.sfofana.app.service.UserService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
@@ -48,4 +47,5 @@
     <fullyQualifiedTypeName name="com.sfofana.app.util.JwtUtil"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.User"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
 </qualifiedTypeNameHistroy>

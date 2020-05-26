@@ -5,9 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.User;
 
 import io.jsonwebtoken.Claims;
@@ -17,8 +19,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtUtil {
 	
-	@Value("${secret-key}")
-	private String secretKey;
+//	@Value("${secret-key}")
+//	private String secretKey;
+	@Autowired
+	private Credentials credentials;
 	
 	public String extractUser(String token) {
 		return extractClaim(token, Claims::getSubject);
@@ -34,7 +38,7 @@ public class JwtUtil {
 	}
 	
 	public Claims extractAllClaims(String token) {
-		return Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
+		return Jwts.parser().setSigningKey(credentials.getKey()).parseClaimsJws(token).getBody();
 	}
 	
 	private Boolean isTokenExpired(String token) {
@@ -50,7 +54,7 @@ public class JwtUtil {
 		return Jwts.builder().setClaims(claims).setSubject(subject)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
-				.signWith(SignatureAlgorithm.HS256, secretKey).compact();
+				.signWith(SignatureAlgorithm.HS256, credentials.getKey()).compact();
 	}
 	
 	public Boolean validateToken(String token, User user) {

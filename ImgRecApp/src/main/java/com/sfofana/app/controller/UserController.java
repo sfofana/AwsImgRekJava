@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.model.Compare;
+import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.service.UserService;
+import com.sfofana.app.util.VaultUtil;
 
 @RestController
 @CrossOrigin
@@ -28,7 +30,9 @@ public class UserController {
 	@Autowired
 	private HttpServletRequest request;
 	@Autowired
-	UserService service;
+	private UserService service;
+	@Autowired
+	private VaultUtil vaultUtil;
 	
 	@PostMapping("authenticate")
 	public User authenticate(@RequestBody User user) throws Exception {

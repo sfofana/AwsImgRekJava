@@ -31,3 +31,5 @@ build/
 .vscode/
 
 *.jpg
+secret
+secret.zip

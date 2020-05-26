@@ -12,19 +12,19 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.sfofana.app.model.Credentials;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
-	@Value("${auth.username}")
-	private String username;
-	@Value("${auth.password}")
-	private String password;
+	@Autowired
+	private Credentials credentials;
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser(username)
-		.password(passwordEncoder().encode(password))
+		auth.inMemoryAuthentication().withUser(credentials.getUsername())
+		.password(passwordEncoder().encode(credentials.getPassword()))
 		.roles("User");
 	}
 	

@@ -38,20 +38,16 @@ import java.nio.ByteBuffer;
 import com.amazonaws.util.Base64;
 import com.amazonaws.util.IOUtils;
 import com.sfofana.app.model.Compare;
+import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.util.JwtUtil;
 
 @Service
 public class UserServiceImpl implements UserService {
-
-	@Value("${aws.access.key}")
-	private String accessKey;
-	@Value("${aws.secret.key}")
-	private String secretKey;
-	@Value("${aws.s3.bucket}")
-	private String bucket;
 	
+	@Autowired
+	private Credentials credentials;
 	@Autowired
 	private JwtUtil jwtUtil;
 	
@@ -59,10 +55,13 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public Compare compareFacesResults(Compare faces) {
-		BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey); 
+		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
+				credentials.getAccessKey(), 
+				credentials.getSecretKey()
+				); 
 		AmazonRekognition client = AmazonRekognitionClientBuilder
 												.standard()
-												.withCredentials(new AWSStaticCredentialsProvider(credentials))
+												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
 												.withRegion("us-east-2").build();
 		
 		List<String> names = new ArrayList<String>();
@@ -75,13 +74,13 @@ public class UserServiceImpl implements UserService {
 							new Image()
 							.withS3Object(new S3Object()
 									.withName(names.get(0))
-									.withBucket(bucket)
+									.withBucket(credentials.getBucket())
 									)
 							).withTargetImage(
 							new Image()
 							.withS3Object(new S3Object()
 									.withName(names.get(1))
-									.withBucket(bucket)
+									.withBucket(credentials.getBucket())
 									)
 							).withSimilarityThreshold(similarityThreshold);
 			CompareFacesResult results = client.compareFaces(compareFacesRequest);
@@ -105,10 +104,13 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public Compare getImageData(Compare faces) {
-		BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey); 
+		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
+				credentials.getAccessKey(), 
+				credentials.getSecretKey()
+				); 
 		AmazonS3 s3 = AmazonS3ClientBuilder
 												.standard()
-												.withCredentials(new AWSStaticCredentialsProvider(credentials))
+												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
 												.withRegion("us-east-2").build();
 		
 		List<String> images = new ArrayList<String>();
@@ -117,7 +119,7 @@ public class UserServiceImpl implements UserService {
 			String file = System.getProperty("user.dir") + "/" + data +".jpg";
 			com.amazonaws.services.s3.model.S3Object content = null;			
 			try {
-				content = s3.getObject(bucket, "temp"+file);
+				content = s3.getObject(credentials.getBucket(), "temp"+file);
 				String face = Base64.encodeAsString(IOUtils.toByteArray(content.getObjectContent()));
 				images.add(face);
 				details.add(data);
@@ -137,10 +139,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Upload processImageUpload(String fileName, MultipartFile file) {
-		BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey); 
+		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
+				credentials.getAccessKey(), 
+				credentials.getSecretKey()
+				); 
 		AmazonS3 s3 = AmazonS3ClientBuilder
 												.standard()
-												.withCredentials(new AWSStaticCredentialsProvider(credentials))
+												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
 												.withRegion("us-east-2").build();
 		
 		Upload upload = new Upload(fileName, "Image was not successully uploaded.. try agian", null);
@@ -154,7 +159,7 @@ public class UserServiceImpl implements UserService {
 				File output = new File(filePath);
 				String image = Base64.encodeAsString(Files.readAllBytes(output.toPath()));
 				try {
-					s3.putObject(bucket, "temp"+filePath, output);
+					s3.putObject(credentials.getBucket(), "temp"+filePath, output);
 					upload.setProcess("File successfully uploaded");
 					upload.setImage(image);
 				} catch (AmazonServiceException e) {
