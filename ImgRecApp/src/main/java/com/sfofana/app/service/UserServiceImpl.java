@@ -152,14 +152,15 @@ public class UserServiceImpl implements UserService {
 		if(file.isEmpty()) {
 			upload.setProcess("Please choose a image you wish to upload");
 		} else {
-			String filePath = System.getProperty("user.dir") + "/" +fileName +".jpg";
+			String filePath = System.getProperty("user.dir") + "/temp/" +fileName +".jpg";
+			String s3Path = "temp" + System.getProperty("user.dir") + "/" +fileName +".jpg";
 			System.out.println(System.getProperty("user.dir"));
 			try {
 				file.transferTo(new File(filePath));
 				File output = new File(filePath);
 				String image = Base64.encodeAsString(Files.readAllBytes(output.toPath()));
 				try {
-					s3.putObject(credentials.getBucket(), "temp"+filePath, output);
+					s3.putObject(credentials.getBucket(), s3Path, output);
 					upload.setProcess("File successfully uploaded");
 					upload.setImage(image);
 				} catch (AmazonServiceException e) {
