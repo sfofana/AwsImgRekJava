@@ -41,17 +41,21 @@ public class UserController {
 	
 	@PostMapping("compare")
 	public Compare compareFaces(@RequestBody Compare faces) throws Exception {
-		if(!service.tokenAuthenticated(getToken())) {
+		try {
+			service.tokenAuthenticated(getToken());
+		} catch (Exception e) {
 			throw new Exception("Access Denied");
-		}
+		}		
 		return service.compareFacesResults(faces);
 	}
 	
 	@PostMapping("upload/{name}")
 	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
-		if(!service.tokenAuthenticated(getToken())) {
+		try {
+			service.tokenAuthenticated(getToken());
+		} catch (Exception e) {
 			throw new Exception("Access Denied");
-		}
+		}	
 		return service.processImageUpload(fileName, file);
 	}
 	
