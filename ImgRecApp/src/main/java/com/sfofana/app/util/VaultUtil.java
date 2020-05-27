@@ -38,7 +38,7 @@ public class VaultUtil {
 	
 	private String keyName = "/secret/key";
 	private String encryption = "/secret/vault";
-	private String path = "/home/ec2-user";
+	private String path = System.getProperty("user.dir");
 	
 	public Credentials decrypt() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		File keyFile = new File(path+keyName);
