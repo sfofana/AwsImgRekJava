@@ -26,7 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		auth.inMemoryAuthentication().withUser(credentials.getUsername())
 		.password(passwordEncoder().encode(credentials.getPassword()))
 		.roles("User");
-		System.out.println("temp" + System.getProperty("user.dir"));
+		System.out.println(System.getProperty("user.dir"));
 	}
 	
 	@Override
