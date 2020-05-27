@@ -24,8 +24,13 @@ public class JwtUtil {
 	@Autowired
 	private Credentials credentials;
 	
-	public String extractUser(String token) {
-		return extractClaim(token, Claims::getSubject);
+	public String extractUser(String token) throws Exception {
+		try {
+			return extractClaim(token, Claims::getSubject);
+		} catch (Exception e) {
+			throw new Exception("User not found");
+		}
+		
 	}
 	
 	public Date extractExpiration(String token) {
@@ -57,8 +62,14 @@ public class JwtUtil {
 				.signWith(SignatureAlgorithm.HS256, credentials.getKey()).compact();
 	}
 	
-	public Boolean validateToken(String token, User user) {
-		final String email = extractUser(token);
-		return (email.equals(user.getRole()) && !isTokenExpired(token));
+	public Boolean validateToken(String token, User user) throws Exception{
+		String email;
+		try {
+			email = extractUser(token);
+			return (email.equals(user.getRole()) && !isTokenExpired(token));
+		} catch (Exception e) {
+			throw new Exception("Token expired");
+		}
+		
 	}
 }

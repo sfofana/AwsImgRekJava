@@ -181,18 +181,14 @@ public class UserServiceImpl implements UserService {
 		Boolean flag = false;
 		
 		if(token != null && token.startsWith("Bearer ")) {
-			jwt = token.substring(7);
-			role = jwtUtil.extractUser(jwt);
-			if(role != null) {
-				if(jwtUtil.validateToken(jwt, getAccess())) {
-					flag = true;
-				} else {
-					throw new Exception("Invalid Session");
-				}
-			}else {
+			try {
+				jwt = token.substring(7);
+				role = jwtUtil.extractUser(jwt);
+				flag = jwtUtil.validateToken(jwt, getAccess());
+			} catch (Exception e) {
 				throw new Exception("Invalid Session");
-			}
-		}else {
+			} 
+		} else {
 			throw new Exception("Invalid Session");
 		}
 		return flag;
