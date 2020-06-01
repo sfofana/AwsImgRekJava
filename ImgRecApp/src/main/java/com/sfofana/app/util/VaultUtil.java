@@ -30,9 +30,14 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sfofana.app.model.Credentials;
 
+/**
+ * @author Sufyan Fofana
+ * @version 1.0
+ *
+ */
 @Component
 public class VaultUtil {
-	
+
 	@Autowired
 	ObjectMapper objectMapper;
 	
@@ -40,6 +45,16 @@ public class VaultUtil {
 	private String encryption = "/secret/vault";
 	private String path = System.getProperty("user.dir");//
 	
+	/**
+	 * @return Decrypts file converts to string and returns that as a pojo
+	 * @throws IOException
+	 * @throws InvalidKeyException
+	 * @throws NoSuchAlgorithmException
+	 * @throws InvalidKeySpecException
+	 * @throws NoSuchPaddingException
+	 * @throws IllegalBlockSizeException
+	 * @throws BadPaddingException
+	 */
 	public Credentials decrypt() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		File keyFile = new File(path+keyName);
 		File encrypted = new File(path+encryption);
@@ -56,6 +71,14 @@ public class VaultUtil {
 		return jsonStringToObject(new String(decrypted), Credentials.class);
 	}
 	
+	/**
+	 * @param <T> Any pojo can be used
+	 * @param json Any JSON in string format can be used
+	 * @param clazz Same class as pojo used
+	 * @return Full cooked JSON string to pojo using object mapped
+	 * @throws JsonMappingException
+	 * @throws JsonProcessingException
+	 */
 	private <T> T jsonStringToObject(String json, Class<T> clazz) throws JsonMappingException, JsonProcessingException{
 		return objectMapper.readValue(json, clazz);
 	}

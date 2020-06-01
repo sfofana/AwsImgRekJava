@@ -4,7 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+/**
+ * @author Sufyan Fofana
+ * @version 1.0
+ * Credentials pojo holding all necessary configuration secrets
+ */
 @Getter
 @Setter
 @NoArgsConstructor

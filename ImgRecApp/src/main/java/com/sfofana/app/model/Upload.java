@@ -8,7 +8,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+/**
+ * @author Sufyan Fofana
+ * @version 1.0
+ * Upload pojo holding upload file details
+ */
 @Getter
 @Setter
 @NoArgsConstructor

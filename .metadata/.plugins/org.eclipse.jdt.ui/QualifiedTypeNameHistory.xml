@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="java.nio.ByteBuffer"/>
-    <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.AmazonRekognition"/>
-    <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder"/>
-    <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="com.amazonaws.util.IOUtils"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.CompareFacesRequest"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.CompareFacesResult"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.CompareFacesMatch"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.ComparedFace"/>
     <fullyQualifiedTypeName name="com.amazonaws.services.rekognition.model.BoundingBox"/>
@@ -45,11 +37,27 @@
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.User"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
     <fullyQualifiedTypeName name="com.sfofana.app.util.VaultUtil"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.Credentials"/>
+    <fullyQualifiedTypeName name="springfox.documentation.swagger2.annotations.EnableSwagger2"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="springfox.documentation.swagger.web.SecurityConfiguration"/>
+    <fullyQualifiedTypeName name="springfox.documentation.swagger.web.SecurityConfigurationBuilder"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.SecurityScheme"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.GrantType"/>
+    <fullyQualifiedTypeName name="springfox.documentation.builders.AuthorizationCodeGrantBuilder"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.TokenRequestEndpoint"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.TokenEndpoint"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="springfox.documentation.builders.OAuthBuilder"/>
+    <fullyQualifiedTypeName name="springfox.documentation.spi.service.contexts.SecurityContext"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.AuthorizationScope"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.SecurityReference"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="springfox.documentation.service.BasicAuth"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

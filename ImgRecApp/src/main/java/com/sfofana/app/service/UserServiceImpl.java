@@ -43,9 +43,15 @@ import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.util.JwtUtil;
 
+/**
+ * @author Sufyan Fofana
+ * @version 1.0
+ * Implementation of User Service
+ *
+ */
 @Service
 public class UserServiceImpl implements UserService {
-	
+
 	@Autowired
 	private Credentials credentials;
 	@Autowired

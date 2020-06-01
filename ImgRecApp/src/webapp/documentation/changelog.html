@@ -1,0 +1,1247 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angular-bootstrap-md-lib documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">angular-bootstrap-md-lib documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p>8.10.0
+In version 8.10.0 we added some bug fixes and new features for the existing components. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Carousel - selectSlide method will work correctly even if animation type is not specified,</li>
+<li>Datepicker - resolved problem with setting disabled state in reactive forms (modal version),</li>
+<li>Textarea - resolved problem with auto resize for default value,</li>
+<li>Select/Multiselect - resolved problem with background color of highlighted option in colorful select,</li>
+<li>Select/Multiselect - resolved problem with position of value text in outline mode.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Carousel - added new allowSwipe input that allow to enable/disable swipe gestures,</li>
+<li>Icon - added support for Font Awesome Pro Duotone Icons.</li>
+</ul>
+<p>8.9.0
+In version 8.9.0 we added some fixes and features for the existing components. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Validation - resolved problem with styles of outline inputs,</li>
+<li>Select - adjusted outline input height to the height of the inputs in other form controls,</li>
+<li>Stepper - (stepChange) event will not be emitted for disabled steps,</li>
+<li>Datepicker - resolved problems with global options,</li>
+<li>Autocomplete - fixed dropdown bottom position in outline mode,</li>
+<li>Timepicker - component will now return new value and change event when clear method is used,</li>
+<li>Checkbox - resolved problem with label styles (removed unnecessary overflow and white-space properties),</li>
+<li>Sidenav - resolved problem with styles of the links with waves effect,</li>
+<li>Sortable plugin - input/textarea funcitonality will no longer be blocked by the sortable directive,</li>
+<li>Sidenav/Accordion - added checks for window object to resolve problems with server side rendering.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Dropdown - added new dynamicPosition input, when this option is active component will dynamically update dropdown position (if the menu does not fit the viewport),</li>
+<li>Timepicker - added possibility to add custom styles for footer and AM/PM buttons and custom translation to buttons,</li>
+<li>Timepicker - added possibility to add new button that will clear the current selected value.</li>
+</ul>
+<p>8.8.2
+In version 8.8.2 we added some fixes for the existing components and removed duplicated css styles. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Styles - removed duplicated code,</li>
+<li>Toast - resolved problem with box-shadow styles on hover,</li>
+<li>Table - removed unecessary styles from a elements,</li>
+<li>Table sort - slightly improved performance,</li>
+<li>Validation - prefix icons will get correct validation color styles (success/error),</li>
+<li>Validation - fixed position of validation messages,</li>
+<li>Sidenav - will not be closed when viewport height change,</li>
+<li>Select - will not be overlapped by table header with sticky-top class,</li>
+<li>Pills - removed unecessary shadow styles on hover,</li>
+<li>Static modal - backdrop will be added/removed correctly when config value change,</li>
+<li>Calendar plugin - fixed parameter name in object emitted by (monthChanged) output.</li>
+</ul>
+<p>8.8.1
+In version 8.8.1 we added some fixes for the existing components and small update for the calendar plugin. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Inputs - resolved problem with styles of long label,</li>
+<li>Datepicker inline - clicking on the icon won&#39;t open the disabled component,</li>
+<li>Textarea - resolved problem with position of validation message,</li>
+<li>Textarea - active styles for prefix icon will be applied correctly,</li>
+<li>Search - resolved problem with the icon position when the input is inside container with .md-form class,</li>
+<li>Autocomplete - clear button will be added correctly if default value is set,</li>
+<li>Admin Template Pro - resolved problem with styles of images that use waves effect,</li>
+<li>Admin Template Pro - resolved problem with styles of icons in the sidenav.</li>
+</ul>
+<p><strong>Plugins:</strong></p>
+<ul>
+<li>Calendar - added new [defaultView] input that allow to set default view for the component (week/month/list).</li>
+</ul>
+<p>8.8.0
+In version 8.8.0 we added some fixes and new tree view component. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Sticky header - resolved problem with navbar z-index,</li>
+<li>Table search/Table editor - resolved problem with filtering when a property value is null,</li>
+<li>Datepicker - resolved problem with setting minYear and maxYear options,</li>
+<li>Select - clear button will no longer be displayed if no option is selected,</li>
+<li>Timepicker - component view will be now updated correctly on form control value change,</li>
+<li>Color picker plugin - resolved problem with displaying wrong rgba color on component initialization,</li>
+<li>Resolved problem with memory leaks caused by unsubscribed subscriptions.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Added new tree view component.</li>
+</ul>
+<p>8.7.0
+In version 8.7.0 we added some fixes and new features. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Sidenav - resolved problem with closing sidenav when mobile keyboard appear on the screen,</li>
+<li>Datepicker - resolved problem with next and previous arrows styles on IE11,</li>
+<li>Select - resolved problem with search input and value container styles in outline mode,</li>
+<li>Select - added validation styles for bootstrap version,</li>
+<li>Autocomplete - resolved problem with dropdown dynamic position when appendToBody option is used,</li>
+<li>Autocomplete - resolved problem with dynamic dropdown position updates on option filtering,</li>
+<li>Lightbox - resolved problems with browser navigation,</li>
+<li>Buttons - resolved problem with dynamic style updates for outline and flat button,</li>
+<li>Color picker plugin - resolved problem with rendering the plugin inside modal,</li>
+<li>Zip packages/Admin template - resolved problem with ng test and ng lint.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Table search - added possibility to search through multiple table columns,</li>
+<li>Reveal cards - added new (animationStart) and (animationEnd) outputs,</li>
+<li>Table pagination - added new (lastPageClick) and (firstPageClick) outputs.</li>
+</ul>
+<p>8.6.0
+In version 8.6.0 we added some fixes and new features. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Select - resolved problem with maintaing focus on component when navigating using keyboard and added proper colors for focused component,</li>
+<li>Select - resolved problem with navigation to other element using tab or shift+tab keys,</li>
+<li>Select - added different color for highlighted options to help to distinguish selected options from highlighted options,</li>
+<li>Select - resolved problem with highlighting option when typing its name (it works when filter input is disabled),</li>
+<li>Select - resolved problem with dropdown position when using filter input or custom content,</li>
+<li>Select - resolved problems with styles and dropdown position in outline mode,</li>
+<li>Select - resolved problems with resetting selected value,</li>
+<li>Buttons - styles will be now properly updated if inputs values change,</li>
+<li>Prefix icon - removed unecessary color transition delay,</li>
+<li>Datepicker - resolved problem with disabling component with reactive forms</li>
+<li>Datepicker - resolved problem with z-index in inline mode (this problem occured when multiple components were used in the same view),</li>
+<li>Table sort - resolved problem with returning undefined sortOrder in (sorted) output.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Select - added possibility to use prefix icon,</li>
+<li>Select - added proper aria attributes,</li>
+<li>Timepicker - added possibility to mark input as readonly,</li>
+<li>WYSIWYG plugin - added new (valueContent) output that will return only text content without HTML tags.</li>
+</ul>
+<p>8.5.0
+In version 8.5.0 we added some fixes and new features. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Datepicker - resolved problem with opening multiple datepickers on label click when inline mode is used,</li>
+<li>Datepicker - resolved problem with styles of right and left arrows when date picker is rendered inside mdb-stepper,</li>
+<li>Datepicker - resolved problem with z-index in inline mode (dropdown should no longer be overlapped by a footer),</li>
+<li>Multiselect - resolved problem with styles of checkboxes when select is used inside element with md-form class,</li>
+<li>Select - resolved problem with setting default value when change is detected in option array,</li>
+<li>Select - component styles have been corrected to adapt its appearance to other MDB form elements,</li>
+<li>Autocomplete - number of visible options will no longer be set by default. It resolves problem with options styles when mdb-options have a non-standard height.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Table sort - added new (sorted) output that emits data, sortDirection and sortBy parameters,</li>
+<li>Autocomplete - added new [dropdownHeight] input that allows to customize dropdown height (it will only work if visibleOptions input is not used).</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Modal - added list of options available for dynamic modals</li>
+<li>MDB Angular Boilerplate - added guide on how to configure MDB Angular Pro version.</li>
+</ul>
+<p>8.4.0
+In version 8.4.0 we added some fixes and new features. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Datepicker - resolved problem with opening multiple datepickers on label click. Every component will now have unique id. You can specify this id in [id]        input, otherwise custom id will be created,</li>
+<li>Chips - resolved problem with displaying default tags on component initialization,</li>
+<li>Chips - resolved problem with deleting items with backspace/delete key,</li>
+<li>Chips - resolved problem with input focus after adding first tag or removing last tag,</li>
+<li>Modal - resolved problem with modal position when backdrop option is set to false,</li>
+<li>Autocompleter - resolved problem with closing dropdown on scroll click. We needed to drop support for dropdown state updates on input blur event, because in    many cases it was impossible to check whether dropdow should b* closed. If you need to programatically change focus to other element with focus() method, you   should also programatically hide autocompleter dropdow* by using its hide() method,</li>
+<li>Autocompleter - removed unecessary border styles from mdb-option,</li>
+<li>Autocomplter - resolved problem with opening dropdown when [clearButton] is set to false,</li>
+<li>Dropdown - resolved problem with change detection, dropdown should be correctly removed from DOM even when OnPush strategy is used in parent component,</li>
+<li>Select - dropdown won&#39;t open on right click on input,</li>
+<li>Select - resolved problem with displaying long placeholder and label text,</li>
+<li>Select - resolved problem with opening dropdown on label click (this problem occured only when label was added as html element and not with [label] input ,</li>
+<li>Sortable plugin - resolved problem with blocked click events,</li>
+<li>Sortable plugin - resolved problem with width of cards in card deck example.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Select - added possibility to add object to the value parameter in select options array,</li>
+<li>Select - added new [compareWith] input that accepts a function that will be used to find corresponding option for specified value (useful when using object     as option value),</li>
+<li>Calendar plugin - added new (monthChanged), (weekChanged) and (listChanged) outputs,</li>
+<li>Popover - added new [bodyClass], [headerClass] and [containerClass] inputs that allow to specify custom classes.</li>
+</ul>
+<p>8.3.1
+In version 8.3.1 we added some fixes and updated code in the documentation pages. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Checkbox - resolved problem with checked state updates on ngModel value change,</li>
+<li>Autocompleter - resolved problem with Cannot read property &#39;value&#39; of undefined on up arrow navigation,</li>
+<li>Dropdown - resolved problem with material styles in default version,</li>
+<li>Textarea - added possibility to resize material version,</li>
+<li>Timepicker - resolved problem with clear button, it should be now displayed correctly,</li>
+<li>Table pagination - resolved problem with pagination when switching to last item,</li>
+<li>Sidenav - resolved problem with accordion auto expand/collapse when queryParams are used.</li>
+</ul>
+<p>8.3.0
+In version 8.3.0 we added some fixes, new features and updated code in documentation pages. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Admin Pro Template - resolved problem with responsivity,</li>
+<li>Flipping cards - resolved problem with animation,</li>
+<li>Time picker - resolved problem with change detection when setting default value,</li>
+<li>Time picker - component will now open on input focus, to disable this behavior set openOnFocus input to false,</li>
+<li>Checkbox - resolved problem with position of validation message for longer text,</li>
+<li>Radio buttons group - resolved problem with styles for rounded buttons,</li>
+<li>Breadcrumbs - added cursor: pointer style for inactive elements,</li>
+<li>File upload - resolved problem with uploading the same file multiple times in a row,</li>
+<li>Sidenav - resolved problems with accordion items auto expand on route change,</li>
+<li>Sidenav - reduced size of indicator arrow in accordion items and fixed its animation,</li>
+<li>Modal - resolved problem with alignment of items in dynamic full height modal,</li>
+<li>Select - resolved problem with styles on disabled state,</li>
+<li>Toast - resolved problem with maxOpened option,</li>
+<li>Carousel - resolved problem with displaying first slide when OnPush strategy is used in parent component,</li>
+<li>Accordion - resolved problem with aria-expanded value,</li>
+<li>Select - resolve problem with highlightColor and highlightTextColor options,</li>
+<li>Autocompleter - dropdown will no longer be closed on input click.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Date picker - added possibility to add default date in JavaScript Date Object format. Component will also return date object if useDateObject option is set to true (default value is false)</li>
+<li>Dropdown - added new dropupDefault input that allow to use dropup component with default Bootstrap styles,</li>
+<li>Autocompleter - added new clear method that allow to reset displayed value,</li>
+<li>Table - added new searchLocalDataByFields method that allow to filter result only in specific table columns,</li>
+<li>Autocompleter - added new optionHeight input that allow to set height for the dropdown options,</li>
+<li>Autocompleter - added new visibleOptions input that allow to change number of options visible in the dropdown,</li>
+<li>Autocompleter - added new displayValue input that allow to specify option value that will be displayed in the input text field. This is useful in case where we want the value processed by the form control to be different from the displayed value (for example when value of the option is an object).</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Datatables - added example of master detail table</li>
+<li>Charts - added examples of data formatting</li>
+<li>Time picker - added validation example</li>
+</ul>
+<p>8.2.0
+In version 8.2.0 we resolved some problems with change detection and reduced number of unecessary change detection cycles caused by our components. These changes should positively affect the performance of applications that use MDB Angular.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Credit card directive - changed limit of Diners card from 19 to 14,</li>
+<li>Autocomplete - resolved problem with position of dropdown displayed above the completer input (it should now update correctly when number of displayed options change),</li>
+<li>Date picker - resolved problem with label animation when click is detected directly on label text,</li>
+<li>Date picker - resolved problem with display of default date when using locales other than &#39;en&#39;,</li>
+<li>Carousel - resolved problem with video playing in the background even when slide is not active,</li>
+<li>Select - resolved problem with long placeholder overlapping select input,</li>
+<li>Toast - resolved problem with null check in show method,</li>
+<li>Navbar - resolved problem with scroll in navbar dropdown when .fixed-top class is added,</li>
+<li>Dropdown - resolved problem with fade out animation,</li>
+<li>File upload plugin - resolved problem with resetting default file,</li>
+<li>File upload plugin - resolved problem with &#39;No file choosen&#39; message when default file is available.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Autocomplete - added new (selected) output that is fired on selection change,</li>
+<li>Accordion - added new [autoExpand] input that allow to disable auto expanding of accordion items in sidenav when active route is detected,</li>
+<li>Table editor plugin - added sorting feature.</li>
+</ul>
+<p>8.1.1
+In version 8.1.1 we added some minor fixes and updated documentation pages. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Lightbox - resolved problem with styles (hover, cursor, margin),</li>
+<li>Lightbox - resolved problems with back button in mobile browsers,</li>
+<li>Ligthbox/Carousel - resolved problem with paths to images,</li>
+<li>Autocompleter - resolved problem with dropdown position when its rendered on top, it should no longer cover the input</li>
+<li>Autocompleter - resolved problem with closing the dropdown with hide() method,</li>
+<li>Fixed button - removed unnecessary right and left styles,</li>
+<li>Select - removed display: none style from standard HTML select,</li>
+<li>Inline date picker - resolved problem with closing dropdown when using multiple date pickers in the same view, the dropdown should now close automatically when another date picker is opened</li>
+<li>Inline date picker - resolved problem with previous/next buttons styles,</li>
+<li>Credit card directive - resolved problem with formatting of the Diners card number,</li>
+<li>Rounded buttons - resolved problem with styles when using rounded buttons and mdb-calendar plugin in the same view,</li>
+<li>Range slider - resolved problem with value updates in reactive forms.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Cards - updated code responsible for rendering image overlay,</li>
+<li>Progressbar - updated API section of the component.</li>
+</ul>
+<p>8.1.0
+In version 8.1.0 we added some new features and bug fixes. Check what changed below:</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Dynamic modal - resolved problem with backdrop in lazy loaded modules (it should no longer remain on screen after navigating to a different module),</li>
+<li>Carousel - resolved problem with auto slide,</li>
+<li>Sticky header - resolved problem with stickyHeader=&quot;true&quot; in Chrome browser,</li>
+<li>Table search - resolved problem with filtering for nested data,</li>
+<li>Vertical list group (mdb-tabset) - resolved problem with display on hover in Safari browser,</li>
+<li>Time picker and Date picker - resolved problem with different input position in these form controls,</li>
+<li>Popover - resolved problem with outsideClick in Safari browser (ipad),</li>
+<li>Accordion - resolved problem with alignment of indicator icon,</li>
+<li>Accordion - resolved problem with OnPush change detection,</li>
+<li>Register/login modal - resolved problem with alignment of mdb-success and mdb-error messages,</li>
+<li>Video modal - resolved problem with not pausing video when closing modal,</li>
+<li>Select - resolve problem with position of clear button,</li>
+<li>Double navigation - resolved problem with missing margin-left and margin-right in dobule navigation layouts,</li>
+<li>Textarea - resolved problem with active state of the label (it should no longer have blue color when it&#39;s not focused),</li>
+<li>Fixed caption button - resolved problem with element[NATIVE_ADD_LISTENER] is not a function error.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Table pagination - added new buttons for navigation to first and last page,</li>
+<li>Charts - added new getPointDataAtEvent(event) for getting cursor position after click.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Migration guide - added information about cards and skins,</li>
+<li>Sidenav - added live preview for slim sidenav,</li>
+<li>Charts- added example on how to display values for each point of the graph,</li>
+<li>Forms - updated example code with new validation method,</li>
+<li>Validation - updated example code for onSubmit validation method,</li>
+<li>Dynamic modal - added example on how to use output events,</li>
+<li>Parallax - added additional information about the usage in Angular project.</li>
+</ul>
+<p>8.0.0
+New version brings refactor in styles and few components. Check every change in 8.0.0 below.</p>
+<p><strong>MIGRATION INSTRUCTIONS:</strong>
+You should definitely read the entire migration guide carefully and understandably before updating your application to the latest.</p>
+<p><strong>Most important changes in version 8.0.0:</strong></p>
+<ul>
+<li>support for Angular 8 - new Angular version is now required in MDB Angular 8.0.0,</li>
+<li>modular styles - components styles will be now loaded with thier modules, that means you can load only the styles you need in your application (some of the styles still remain global as they are not part of any component),</li>
+<li>some bug fixes and new features.</li>
+</ul>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Fluid modal - the modal will no longer overwrite padding-right styles on the body element,</li>
+<li>Fixed button - resolved problem with ExpressionChangedAfterItHasBeenCheckedError error,</li>
+<li>Dynamic modal - resolved problem with focus trap (other elements on the page should no longer be focusable if the modal is displayed),</li>
+<li>Autocompleter - resolved problem with click event on the clear button,</li>
+<li>Autocompleter - resolved problem with blocked events in autocompleter dropdown (it should be possible to add events to mdb-option components and other custom elements that are displayed in completer dropdown),</li>
+<li>Stepper - removed automatic mode change from horizontal to vertical on smaller screens. The stepper mode will be changed only if [vertical]value change,</li>
+<li>Dropdown - resolved problem with visibility of dropdown menu when it was opened from element with mdbTooltipdirective.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Steppers - added new [stepChange] output which will be fired on every step change,</li>
+<li>Autocompleter - added Control Value Accessor to completer input (that should resolve problems wit valueChange in reactive forms).</li>
+<li>Material Select - added ChangeDetectionStrategy.OnPush from default to the Material Select dropdown.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<p>All code examples have been updated to work correctly in Angular 8 projects. Due to the changes in styles modularity, there may be slight differences when it comes to overwritting component styles. We also reviewed the documentation and removed minor errors like typos and old, unused code.</p>
+<ul>
+<li>Autocompleter - changed the code of the examples to make it shorter and more readable.</li>
+</ul>
+<p>7.5.4
+New version brings some bug fixes and new features. Check every change in 7.5.4 below.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Select label with prefilled value 0 won&#39;t break lifting up label element,</li>
+<li>Select will now be properly aligned with other material inputs,</li>
+<li>Material Select will now close it&#39;s dropdown while clicking outside of it on iOS,</li>
+<li>visibleOptions in Material Select will now work again when select was opened for the first time,</li>
+<li>Carousel won&#39;t throw classList is undefined anymore,</li>
+<li>Datepicker won&#39;t throw document is undefined while SSR no more,</li>
+<li>Datepicker will now allow to use Font Awesome 5 Pro with css,</li>
+<li>Datepicker will now format date properly while using patchValue and JS date format,</li>
+<li>Toast with changed opacity won&#39;t blink anymore,</li>
+<li>Resolved problems with access specificators on fullTemplateTypeCheck mode,</li>
+<li>Color Picker won&#39;t throw erorrs when destroying it&#39;s instance,</li>
+<li>Sidenav with routerLink will now open active links after reload while using HashLocationStrategy.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Material Select - Added new input - [outline] which will allow to use outline input type,</li>
+<li>Multi Select - Added new input - [outline] which will allow to use outline input type,</li>
+<li>Material Select - added ChangeDetectionStrategy.OnPush from default to the Material Select dropdown,</li>
+<li>Autocomplete - Added new output which will emit value after clicking in clear button,</li>
+<li>Table Editor plugin - added behavior to highlight table editor row when editing row,</li>
+<li>Table Pagination - added two new ofKeyword, dashKeyword inputs which allow to overwrite default text in Table Pagination,</li>
+<li>Accordion - added new (animationStateChange) event which will be fired after accordion animation end,</li>
+<li>Cards - added ChangeDetectionStrategy.OnPush from default to the Cards components,</li>
+<li>Sortable plugin - added new [disabledDragElements]=&quot;[]&quot; input which allow to determine, on which elements sortable effect should be disabled.</li>
+<li>Chat plugin - added new chat example - Small Chat,</li>
+<li>E-commerce components - added new example - Shopping Cart.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Navbars - resolved problem with dropdown alignment on mobile screen,</li>
+<li>Material Select - added missing inputs and outputs to the Material Select API docs.</li>
+</ul>
+<p><strong>Other:</strong></p>
+<ul>
+<li>Resolved vulnerability problems on four repositories: MDB Free, MDB Admin Free, MDB Pro, MDB Admin Pro.</li>
+</ul>
+<p>7.5.3
+New version brings some bug fixes and new features. Check every change in 7.5.3 below.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Tooltip with routerLink and nested i tag won&#39;t reload page after click,</li>
+<li>Improved positioning in Tooltip - use dynamicPosition input to turn off adjusting position,</li>
+<li>Improved positioning in Popover - use dynamicPosition input to turn off adjusting position,</li>
+<li>Accordion will now allow to use keyboard navigation (Tab, Enter, Space).</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Double Range Slider - Added new component - Two dots range slider,</li>
+<li>Accordion - changed icon behavior - now it is rendered with css and content property,</li>
+<li>Flipping Cards - added (animationStart) and (animationEnd) outputs,</li>
+<li>File Upload plugin - added new customText input which allow to overwrite default text in File Upload,</li>
+<li>File Upload Plugin - added new [defaultFile]&quot; input which allow to set default file for File Input component,</li>
+<li>Date Picker - added possibility to use LocaleService as global service - one instance for every instance of Date Picker,</li>
+<li>Material Select - added feature which allow to highlight specific item after keyboard button push (eg. push &quot;F&quot;, and Select will highlight item which starts on &quot;F&quot; char),</li>
+<li>Material Select - added new [filterAutocomplete]=&quot;true&quot; input which allow to determine, Select should allow browser autocomplete mechanism or not,</li>
+<li>Material Select - Select will now allow you to define custom template in it,</li>
+<li>Toast / Notification - added new actionButtonClass config property which allow to add CSS class to action button in toast,</li>
+<li>Date Picker - added new editableDateField config property which allow to disable Date Picker input field to put there some text,</li>
+<li>Popover - added new [outsideClick]=&quot;true&quot; input which allow to determine, if Popover should be closed after clicking in it&#39;s content,</li>
+<li>Date Picker - added new [outlineInput]=&quot;true&quot; input which allow to use the .md-outline class inside Date Picker,</li>
+<li>Time Picker - added new [outlineInput]=&quot;true&quot; input which allow to use the .md-outline class inside Time Picker.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Multi Item Carousel - added new Multi item responsive carousel,</li>
+<li>Flipping Cards - added information about this, that Flipping Cards requires BrowserAnimationsModule.</li>
+</ul>
+<p>7.5.2
+New version brings some bug fixes and new features. Check every change in 7.5.2 below.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Table pagination - resolved problem with displayed value of maxVisibleItems,</li>
+<li>Tooltip - resolved problems with alignment near the edge of viewport,</li>
+<li>Dropdown - resolved problem with menu position when its open near the edge of viewport,</li>
+<li>Autocompleter - resolved problem with dropdown position in Chrome,</li>
+<li>Select/multiselect - resolved problem with animation of label added with html tag,</li>
+<li>Date picker - resolved problem with dynamic value and format updates when locale input change,</li>
+<li>Date picker - resolved problem with disabling component in reactive forms,</li>
+<li>Validation - resolved problems with validation of default value in mdb-select component,</li>
+<li>Sidenav - resolved problem with component blinking on initialization,</li>
+<li>WYSIWYG plugin - added type=&quot;button&quot; to the options buttons to resolve problem with form submitting.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Select / Multiselect - added possibility to customize toggle icon,</li>
+<li>Sidenav - added new slim sidenav version,</li>
+<li>Calendar plugin - added new [editable] input that allow to disable event editing,</li>
+<li>Calendar plugin - added new [options] input that allow to add custom configuration options, options.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Modals - updated example code for long content modals,</li>
+<li>Date picker - added new examples for setting default value,</li>
+<li>Datatables - added new example for passing table data to dynamic modal,</li>
+<li>Calendar plugin - added new instructions on how to use custom configuration options.</li>
+</ul>
+<p>7.5.1
+New version brings some bug fixes and new features. Check every change in 7.5.1 below.</p>
+<p><strong>* Fixes: *</strong></p>
+<ul>
+<li>Sticky Header - resolved problem with &#39;BrowserModule has already been loaded&#39;,</li>
+<li>Toast - resolved problem with animation in Edge,</li>
+<li>Carousel - resolved problem with &#39;Cannot read property classList of undefined&#39;,</li>
+<li>Card reveal - resolved problems with animation,</li>
+<li>WYSIWYG plugin - resolve problems with value dynamic updates and valueChange event.</li>
+</ul>
+<p><strong>* New Features: *</strong></p>
+<ul>
+<li>Fixed buttons - added new mdbFixedCaption directive that allow to add caption to button,</li>
+<li>Navbar - added new [scrollSensitivity] input that allow to specify scroll amount needed for the top-nav-collapse class to be added,</li>
+<li>Stepper - added new [editable] input that allow to disable edition of finished step,</li>
+<li>Sidenav - added new [side] input that allow to change position of the sidenav. Use [side]=&quot;&#39;right&#39;&quot; or [side]=&quot;&#39;left&#39;&quot; options,</li>
+<li>Inputs - added new Material 2.0 input with background and animated border.</li>
+</ul>
+<p><strong>* Docs: *</strong></p>
+<ul>
+<li>Card reveal - added live example,</li>
+<li>Composition - added example with hidden sidenav under fixed navbar.</li>
+</ul>
+<p>7.5.0
+New version brings breaking changes in tables, some bug fixes and new features. Check every change in 7.5.0 below!</p>
+<p><strong>* Breaking changes in tables: *</strong></p>
+<p>MdbTableService will be no longer used and it will be removed from package in MDB Angular 8 version. All methods available in this service were moved to the MdbTableDirective.</p>
+<p>New [tableEl] input was added to MdbTablePaginationComponent. This input accepts instance of MdbTableDirective, and it&#39;s required for the pagination to function properly.</p>
+<p>toLowerCase() method was removed from MdbTableSort directive due to problems with sorting in Chrome browser. Sort headers values must be now exactly the same as values of data source objects properties.</p>
+<p>All changes have been included in the new examples in the tables documentation.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Frame Modal - resolved problem with displaying in Safari browser,
+* Fluid Modal - resolved problem with position on smaller screens,
+* Autocompleter - resolved problem with dropdown position in modal,
+* Autocompleter - resolved problem with form submitting when using enter key to select an option,
+* Collapse - resolved problem with displaying shadow of card component,
+* Horizontal Stepper - resolved problem with dynamic height update,
+* Accordion - resolved problem with asynchronous data,
+* Accordion - resolved problem with multiple accordion instances inside one component,
+* Table sort header - resolved problem with accessibility,
+* Navbar - resolved problem with accessibility of navbar toggler button.</code></pre></div><p><strong>* New Features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Date picker - added new inline version,
+* Date picker - added javascript date to object emitted by (dateChanged) output,
+* Date picker - added new (closeButtonClicked), (todayButtonClicked) and (clearButtonClicked) outputs,
+* Table sort - added new (sortEnd) output that will emit sorted data,
+* Sticky header - added new mdbStickyHeader directive that can be added to mdb-navbar component to hide navbar when scrolling down and bring it back when scrolling up.
+* WYSIWYG plugin - added ControlValueAccessor implementation.</code></pre></div><p><strong>* Docs: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Inputs - added new fix for yellow or blue background that is added with Chrome auto-fill,
+* File upload plugin - changed component type from FileUploadComponent to MdbFileUploadComponent,
+* Table sort - added TitleCase pipe to sort headers,
+* Table pagination - onPreviousPageClick and onNextPageClick methods were moved to the MdbTablePaginationComponent internal code.</code></pre></div><p>7.4.4
+New version brings some bug fixes and new features. Check every change in 7.4.4 below!</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Multiselect - disabled options will be now skipped correctly in &#39;Select all&#39; method,</li>
+<li>Table pagination - resolved problem with accessibility,</li>
+<li>Table filter - resolved problem with searching in list with null values,</li>
+<li>Table filter - search will now work correctly for uppercase letters,</li>
+<li>Table sort - resolved problem with sorting null values,</li>
+<li>Autocompleter - resolved problem with scrollbar,</li>
+<li>Autocompleter - resolved problem with z-index in modal,</li>
+<li>Textarea - resolved problem with rows attribute.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Time picker - added new (timeChanged) output that will be emitted on time change,</li>
+<li>WYSIWYG plugin - added new (valueChanged) output which emits current value as string.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>Skins - added new instructions on how to add new data to skin.</li>
+</ul>
+<p>7.4.3
+New version brings a lot of bug fixes, and improved performance in Material Select Component. Check the every change in 7.4.3 below!</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Select - resolved problem with performance,</li>
+<li>Select - resolved problem with option height on dynamic option update,</li>
+<li>Multiselect with filter - resolved problem with options position,</li>
+<li>Dynamic modal - resolved problem with animation when mdb-select component is added to modal template,</li>
+<li>Datepicker - resolved problem with event emitting on input focus and added new [openOnFocus] input. Add [openOnFocus]=&quot;false&quot; to prevent date picker from opening on input focus,</li>
+<li>Checkbox - (change) event won&#39;t be emitted before valueChanges on Edge anymore,</li>
+<li>Lightbox - magnifier icon will zoom picture properly,</li>
+<li>Dynamic Modal - animation on Edge will now won&#39;t blink,</li>
+<li>Dynamic Modal with Select - the animation won&#39;t blink on Edge anymore,</li>
+<li>Modals - resolved problem with focusing element from background while modal was opened,</li>
+<li>Auto Completer - resolved problem with scrolling down completer&#39;s dropdown with keyboard on Chrome,</li>
+<li>Auto Completer - fixed problem with wrong highlighted item after first click on arrow down key,</li>
+<li>Inputs with icon prefix - icon will now be highlighted after input focus,</li>
+<li>Carousel with Crossfade - rewritten the crossfade animation so it now looks like this one from MDB jQuery.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Auto Completer - added functionality to pick highlighted (with keyboard) item as input&#39;s value,</li>
+<li>Auto Completer - added (select) output event which is fired after item selection,</li>
+<li>Icon - added classInside input which allow to add class to inside element of mdb-icon element,</li>
+<li>Badge - added classInside input which allow to add class to inside element of mdb-badge element,</li>
+<li>Navbars - added possibility to add custom element to mdb-navbar template (it will allow to add custom back button to iOS devices),</li>
+<li>Table Sort - added functionality to sort over nested object properties.</li>
+</ul>
+<p><strong>Docs:</strong></p>
+<ul>
+<li>File Input - added example of upload options usage,</li>
+<li>File Input - added few new examples how to use options,</li>
+<li>Date Picker - added new [openOnFocus] input to input list,</li>
+<li>Carousel - updated input list in API section,</li>
+<li>Auto Completer - added example how to send API calls after (input) event,</li>
+<li>Charts - added Stacked Bar Chart example,</li>
+<li>Checkbox - Added Template-Driven forms example,</li>
+<li>Checkbox - Added Reactive Forms example,</li>
+<li>Table with Pagination - Modified Basic Example code,</li>
+<li>Table Editable - Modified Basic Example code (now it has bigger padding on table items),</li>
+<li>Plugins - Added Live Preview in MDB Angular Demo App,</li>
+<li>Navbar - Added 4 new navbar examples to the Basic Example section,</li>
+<li>Dropdowns - Added new example how to open dropdown from various elements,</li>
+<li>Sticky Content - renamed sticky-after input to stickyAfter. Previous code is still compatible,</li>
+<li>Steppers - Added new example how to add icons to the each steps with SCSS,</li>
+<li>Toast with opacity -Customized the opacity scss code,</li>
+<li>Sidenav - Added new example how to build sidenav with nested accordion links,</li>
+<li>DataTables - Customized the searchItems() function in every DataTables example.</li>
+</ul>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>Auto Completer - changed behavior of textNoResults input. From now, you have to set it to be visible. From default, this text is not visible.</li>
+</ul>
+<p>7.4.2
+In this version we resolved few bugs and resolved the problem with mdb-angular-free zip install on Windows. Check the 7.4.2 changes below.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>Collapse animation will now work properly on MacOS and Safari Browser,</li>
+<li>Lightbox won&#39;t throw the this.galleryDescription is undefined no more,,</li>
+<li>Resolved problem with search.toLowerCase() is undefined in Table Search,</li>
+<li>mdbWavesEffect won&#39;t hide button text no more while button is nested in Accordion on Chrome 71 &amp; 72.</li>
+</ul>
+<p><strong>New features:</strong></p>
+<ul>
+<li>Table Sort - added custom trim function which allows to sort table data while table data contains white signs.</li>
+</ul>
+<p>7.4.1
+In this version we resolved problems with a lot of bugs. Check the 7.4.1 changes below.</p>
+<p><strong>Fixes:</strong></p>
+<ul>
+<li>mdb-auto-completer component won&#39;t throw errors when navigating with keyboard while dropdown is closed,</li>
+<li>mdbAutoCompleter - resolved problem with rendering completer&#39;s dropdown below the parent with overflow: hidden style - necessary to use the [appendToBody]=&quot;true&quot; input,</li>
+<li>mdbAutoCompleter will now render along the top edge of the input when it won&#39;t fit below the input,</li>
+<li>mdbAutoCompleter - resolved problem with showing clear button in the first mdb-auto-completer while there were two or more of them,</li>
+<li>mdb-image-card - image card will now properly scale when his container is .col-6 or more,</li>
+<li>mdb-card - from now it&#39;s possible to overwrite the default shadow with one of .z-depth-* class,</li>
+<li>mdbInputDirective - renamed the mdbValidate input to the mdbValidation due to duplicated name conflict,</li>
+<li>mdbInput - from now, it&#39;s possible to bind dynamic value to the input placeholder via placeholder=&quot;{{text}}&quot; string interpolation,</li>
+<li>mdbCheckboxChange - will now be exported, so problem with unable to import this class from the ng-uikit-pro-standard will gone,</li>
+<li>Sidenav &amp; Nested Accordion - from now only the active mdb-accordion-item element will be highlighted,</li>
+<li>Navbar - added possibility to use the hide() method to collapse navbar after click on mobile view,</li>
+<li>Select - added mechanism to prevent line wrap in mdb-select item when it is wider than select dropdown,</li>
+<li>Lightbox - image size will now be little bit larger,</li>
+<li>Toast - the positioning classes .md-toast-top-center .md-toast-bottom-center will now work as they should,</li>
+<li>Checkbox - resolved problem with validation while using onSubmit or onBlur properties,</li>
+<li>Textarea validation - validation message won&#39;t be overlapped with bottom border of the element on Firefox,</li>
+<li>Accordion - resolved problem with not working [multiple]=&quot;false&quot; on mdb-accordion generated with *ngFor loop,</li>
+<li>Thumbnail Carousel - thumbnails will now be properly highlighted while active.</li>
+</ul>
+<p><strong>New Features:</strong></p>
+<ul>
+<li>Inputs - new Material 2.0 inputs (outlined),</li>
+<li>Added new helper classes for opacity: Incremented by 10, .opacity-0, .opacity-10 until 100.</li>
+<li>mdbAutoCompleter - added new [appendToBody]=&quot;true&quot; input which will determine if completer&#39;s dropdown should be appended to the body element or it&#39;s parent. Useful while completer&#39;s parent got overflow: hidden style.</li>
+<li>Date Picker - added new closeBtnClicked() method which allow to hide Date Picker programmatically.</li>
+</ul>
+<p><strong>Documentation:</strong></p>
+<ul>
+<li>Masonry - Added documentation for Masonry Layout,</li>
+<li>Autocompleter - added example how to use [appendToBody]=&quot;true&quot; input,</li>
+<li>Date Picker - added example how to show / hide date picker with typescript method,</li>
+<li>Vertical Tabs - added new necessary class .list-group for the Vertical Tabs in list group,</li>
+<li>Notifications - changed the iconClasses in API section,</li>
+<li>Notifications - resolved problem with not working alerts,</li>
+<li>Pattern Validation - updated the allow only letters regex pattern,</li>
+<li>Navbar - corrected the method names,</li>
+<li>Multi-Item carousel gallery - added new most recent code.</li>
+</ul>
+<p>7.4.0
+In this version we resolved problems with our modules and tree shaking.
+It is now possible to import only those modules you need in your application, which will significantly reduce bundle size. We also updated Bootstrap to the newest version (4.2.1).</p>
+<p><strong>* Bootstrap version update: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added new spinner loading component,
+* Added new .font-weight-lighter and .font-weight-bolder utitlities,
+* Added new .text-decoration-none class,
+* Added new negative margin utility classes (e.g, .mb-n3),
+* Changed auto columns (e.g, .col-auto) from max-width: none to max-width: 100% to prevent content from causing a column to overflow the parent.
+* Added md prefix to scss code of our alert components to avoid overwritting bootstrap classes</code></pre></div><p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Popover / Tooltip - resolved problems with displaying in Firefox/Safari browsers on Mac OS,
+* Multiselect - changed some methods to provide better support for older browsers,
+* Carousel - resolved problem with OnPush change detection,
+* Validation - resolved problem with positioning messages under inputs with icons,
+* Select with filter - resolved problem with ExpressionChangedAfterItHasBeenCheckedError,
+* Select with icons - resolved problem with padding,
+* Steppers - updated styles to resolve problem with Font Awesome 5 Pro icons,
+* Tooltip - resolved problem with placement.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Multi item carousel - updated example code. From now only one item should be displayed on smaller screens,
+* Switch - changed syntax of default component,
+* Borders - added new border-white and rounded-pill examples,
+* Overflow - new documentation page in utilities section
+* Icons list - updated example code of the icons
+* Table editable - changed example code to resolve problems with editing on Edge 15.</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Select - added new [optionHeight] input which allow to customize options height,
+* Select - you can now use [appendToBody]=&quot;true&quot; input to avoid problems with displaying select dropdown in container with overflow: hidden,
+* Multiselect - added new selectAllLabel input which allow to customize text of &#39;Select all&#39; option,
+* Tabs - added possibility to add action buttons to tabset header.</code></pre></div><p>7.3.0
+In this release we have migrated our entire library to Font Awesome 5. Changing from 4 to 5 is not backward compatible, so we recommend updating the application to Font Awesome 5.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Datepicker - Solved problems with date formatting, when the component is in *ngIf,
+* Tabs - It is no longer necessary to double-click to activate the tab during OnPush,
+* Tabs - Disabled tab will not be marked as active,
+* Sidenav &amp; Custom Skin - Solved problem with text color overwriting in Sidenav in combination with custom skin,
+* Select &amp; Custom Skin - Solved problem with overwriting text color in Select with Custom Skin,
+* Table Sort - Sorting tables will not display an error .toLowerCase() is undefined,
+* Tooltips &amp; Admin Template Pro - Fixed tooltips in Admin Template Pro,
+* API - Removed deprecated API - HttpModule, eflectiveInjector, NavigationExtras.preserveQueryParams,
+* Lightbox &amp; Firebase - Solved problem with Lightbox and Firebase,
+* Navbar - Navbar in mobile version will not flash on the screen,
+* Textarea - Autoresizing Textarea will expand when text is added before rendering a view,
+* Auto Completer - Resolved problem with .trim() is undefined in mdb-option component.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Checkbox - Added documentation for Template Driven &amp; Reactive Forms Checkbox,
+* PWA Tutorial - Published new version of Angular PWA tutorial with Firebase and IndexedDB!</code></pre></div><p><strong>* New Features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Font Awesome 5 Icons - compatibility with Font Awesome 5,
+* Admin Template Pro - Added Sections page to Admin Template Pro,
+* Steppers - added new Steppers component,
+* Dynamic Modals - Added a new way to pass data to dynamic modals,
+* Scrollspy - Added event activeLinkChange to Scrollspy.</code></pre></div><p>7.2.0
+In this release we added new mdb-auto-completer component, which is improved version of mdb-autocomplete.</p>
+<p>We encourage you to use mdb-auto-completer, but mdb-autocomplete will still be available until version 8 of MDB Angular.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Select - resolved problems with updating values dynamically,
+* Dropdown - resolved problem with content position when opened in navbar,
+* Modal - remove unnecessary icon styles,
+* Autocomplete - resolved problem with angular/http.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Table with panel - resolved problem with icon names,
+* Navbars - removed unnecessary margin from search element,
+* Validation - added example for file upload validation.</code></pre></div><p>7.1.1
+<strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Select - resolved problems with OnPush change detection,
+* Select - changed styles and animation to add more material look,
+* Multiselect - resolved problem with disabled option styles,
+* Date Picker - resolved problem with dynamic value updating,
+* Date Picker - resolved problem with opening using built-in method,
+* Table Pagination - resolved two minor problems</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Dynamic Modal - added new scroll property to modal options object. It can be used to add overflow-y: auto to modal with long content,
+* Multiselect - added select all option. This option is enabled by default and can be turned off with [enableSelectAll]=&quot;false&quot; input,
+* Multiselect - added button for clearing selected options,
+* Select and Multiselect - added new [highlightFirst] input which can be used to turn off highlight added by default to the first option.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Scrollspy - added new example for MDB scrollspy on full page,
+* Accordion - added new example,
+* File Input - added new example,
+* Select - updated code in examples
+* Multiselect - updated code in examples
+* Added description how to change default Roboto font,
+* Intro Sections - resolved few minor problems,
+* Accordion - added toggle() method description.</code></pre></div><p>7.1.0
+We have rewritten the entire validation of forms. New validation is faster, lighter, better! Read about it below.</p>
+<p>The mdbInputDirective directive has been divided into mdbInput and mdbValidate directives. Validation messages can ben now added with mdb-error and mdb-success components. More information on the usage can be found in validation documentation.</p>
+<p>New validation offers more flexibility and solves problems with updateOn: &#39;blur&#39; and updateOn: &#39;submit&#39; options.</p>
+<p>Those changes are backwards compatible. Directive mdbInputDirective will be still available for next few versions, but we recommend to use the new directives.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Data Tables - pagination and search will now work without problems against data coming from Remote API,
+* Carousel with thumbnails - The problem with a larger thumbnails strip width than the slide photo in case of more slides has been solved,
+* Material Select - Filtering results with filterEnabled will now returns each line that contains the search character,
+* Date Picker - Significantly improved component performance. Solved an issue where Date Picker was rendered before it was needed,
+* Tooltip - A tooltip that does not fit in a free space along the top edge of the screen will be placed along the bottom edge, and vice versa,
+* Tooltip - Added input customHeight which supports the above effect, but in case the height of the tooltip has been changed,
+* Tabs - The problem in which static tabs were rendered before those with *ngIf was solved. It is required to use a new input tabOrder. Read more about this here,
+* Scroll Spy - Fixed problem with handling nested links.
+* Modals - Solved problem with built-in modal service. Now it is possible to call modals from this service.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Data Tables - added new example how to use Data Tables with data from remote API,
+* Tabs - added new example how to use both static &amp; dynamic tabs,
+* Tabs - added new tabOrder input,
+* Tooltips - added new example how to modify the Tooltip height,
+* Tooltips - added new customHeight input.
+* Modals - added examples how to use built-in modal&#39;s service.</code></pre></div><p>7.0.0
+Angular 7 version is now supported in MDB Angular.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Date picker - resolved problem with disabled state added in reactive forms
+* Date picker - resolved problem with typing the date in the input field
+* Date picker - changed z-index styles to fix the problem that caused other elements to overlap the component
+* Time picker - changed z-index styles to fix the problem that caused other elements to overlap the component
+* Accordion - resolved problem with &#39;Cannot read property expandAnimationState of undefined&#39;
+* MdbInputDirective - resolved problem with displaying error and success messages when errorMessage and successMessage inputs values are empty strings
+* File Upload - resolved problem with &#39;Cannot read property unsubscribe of undefined&#39;</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Date picker - added new [ tabIndex ] input that allow to set tabindex of the date picker input field
+* Time picker - added new [ tabIndex ] input that allow to set tabindex of the time picker input field
+* Tabs - added new [ disableWaves ] input that allow to disable waves effect on the tabs buttons</code></pre></div><p>6.3.0
+The key &quot;defaultProject&quot; has been added to angular.json files of all packages containing the demo application. Thanks to that you can restart the application using the ng serve command.</p>
+<p>In this update, support for the ng add function has been added to the MDB Angular Free product in the npmjs repository - angular-bootstrap-md. Thanks to that it is possible to install MDB Angular Free with one command ng add angular-bootstrap-md.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Select - resolved problem with placeholder when value is null,
+* Select - resolved problems with label styling. For the label to work correctly, we encourage you to add it via [ label ] input instead of HTML &lt;label&gt; tag.
+* Select - resolved problem with opening dropdown inside mdb-collapse component,
+* Multiselect - added new styles to resolve problem with broken layout when many options are selected,
+* Autocomplete - resolved problem with label position on input blur,
+* Date Picker - resolved problems with component performance,
+* Cards - resolved problem with adding shadow classes,
+* Card Reveal - resolved problem with card height,
+* Resolved problems with dependency vulnerabilities in MDB Free and MDB Pro</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added possibility to create vertical tabs and pills,
+* Added clear button functionality to mdb-time-picker</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* File input - added instructions on how to upload file to server
+* Sidenav - added instructions on how to use RouterLinkActive on mdb-side-nav links</code></pre></div><p><strong>* Improved documentation: *</strong></p>
+<p>Added a new documentation format for all pages in following sections:</p>
+<div><pre class="line-numbers"><code class="language-none">* Layout
+* Utilities
+* Content
+* CSS
+* Components
+* Forms</code></pre></div><p>6.2.6
+<strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Resolved problem with ngIf directive used on mdb-tab,
+* Resolved problem with active state on disabled mdb-tab,
+* Resolved problem with display of slider range cloud in Safari browser,
+* Resolved problem with usage of routerLinkActive in mdb-sidenav. Sidenav should now highlight active item and toggle accordion item depending on      active route,
+* Resolved problem with display of mega menu when it is used together with mdb-sidenav component,
+* Resolved problem with mdb-sidenav mask,
+* Resolved problem with &#39;Attempt to use a destroyed view&#39; in scroll-spy,
+* Resolved problem with &#39;ExpressionChangedAfterItHasBeenCheckedError&#39; in mdb-select filter input
+* Removed unnecessary padding from mdb-select component</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added possibility to use icons in option list of mdb-autocomplete component,
+* Added focus animation to mdb-autocomplete clear button and new [ clearButtonTabIndex ] input which allow to change tabindex attribute of this        button</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Date picker - updated options object in example code,
+* Tabs - added new instructions on how to set active tab programatically
+* Gradients - added examples for additional gradients
+* Skins - added instructions on how to add custom skin
+* Select - resolved problems with overlapped label with select element
+* Timeline - scss code is now in MDB Angular Pro package
+* FAQ - removed old and unnecessary questions and added new one</code></pre></div><p><strong>* Syntax changes: *</strong></p>
+<p>Following outputs names has been changed:</p>
+<div><pre class="line-numbers"><code class="language-none">Modal:
+
+* (onShow) is now (open)
+* (onShown) is now (opened)
+* (onHide) is now (close)
+* (onHidden) is now (closed)
+
+Dropdown:
+
+* (onShown) is now (shown)
+* (onHidden) is now (hidden)
+
+Popover:
+
+* (onShown) is now (shown)
+* (onHidden) is now (hidden)
+
+Tooltip:
+
+* (onShown) is now (shown)
+* (onHidden) is now (hidden)</code></pre></div><p>These syntax changes are backward compatible, which means that your project will work with both the old and the new syntax. We recommend that you update the syntax as soon as possible. The changes will be backward compatible for several more versions.</p>
+<p>6.2.5
+Added two demo applications to ready-to-use archives containing MDB Angular Free and MDB Angular Pro, and to the Angular Bootstrap with Material Design repository on Github.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Resolved problem with mdb-select animation. Option list will appear above the component if there is not enough space below,
+* Fixed bug which caused problems with opening mdb-select dropdown,
+* Resolved problem with mdb-autocomplete events (keyup, keydown) which were emitted twice on each entry in the input element,
+* Resolved problem with mdb-side-nav on Firefox,
+* Resolved problem with hidden and fixed double navigation on IE11,
+* Resolved problem with double navbar in Admin Dashboard Pro.</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added new directives which can be used to format credit card number, cvv number and date automatically.
+* Tables - added TableModule containing following elements:
+    MdbTableDirective - responsible for different table types, for example: striped, responsive, hover, bordered, borderless
+    MdbTableRowDirective - can be used to emit events after creating/removing table row
+    MdbTableScrollDirective - responsible for table scroll along the x/y axis
+    MdbTableSortDirective - responsible for sorting items in the table
+    MdbTablePagination - component responsible for table pagination
+    MdbTableService - service responsible for creating new rows, table search and table data source
+* Time picker - added [ disabled ] input which allow to specify disabled state for the component input,
+* Select - added new visibleOptions and tabindex inputs. Those inputs can be used to change number of options visible in the options list and tabindex of the component,
+* Added new BadgeModule module containing the MDBBadgeComponent.</code></pre></div><p><strong>* Documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Editable table - resolved problem with moving cursor in edit mode
+* Added new example how to use Info Window in Google Maps</code></pre></div><p><strong>* Syntax changes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Color - replaced .default-text, .primary-text, .secondary-text, .success-text, .danger-text, .warning-text, .info-text classes with Bootstrap ones: .text-default, .text-primary, .text-secondary, .text-success, .text-danger, .text-warning, .text-info</code></pre></div><p><strong>* Deprecated: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">This settings will be stored only by one version yet:
+* .default-text, .primary-text, .secondary-text, .success-text, .danger-text, .warning-text, .info-text
+
+We removed these classes from the package:
+* .full-bg-img
+* .full-height
+* .side-nav .double-navbar .bc-min
+* .no-padding
+* .ql-modal, .product-panel
+* .no-radius
+* .section-blog-fw
+* .personal-sm
+* .classic-tabs (previous syntax not classic tabs at all)
+* .naked-card
+* .pricing-card .heading .card-overlay</code></pre></div><p>6.2.4
+<strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Resolved problem with event (noOptionsFound) in mdb-select. It should no longer be emitted on every input in the select filter,
+* Resolved problem with display of vertical images in Lightbox component,
+* Resolved problem with mdb-collapse default collapsed state.</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added new scrollspy component</code></pre></div><p><strong>* Changed syntax: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Collapse - you no longer need to use [ mdbCollapse ]=&quot;isCollapsed&quot; syntax, instead just add mdbCollapse directive to the element and use [ isCollapsed ]=&quot;false&quot; input if you want collapsible element to be open by default.</code></pre></div><p><strong>* New documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Contact Form,
+* Breadcrumbs,
+* Table scroll,
+* Css demonstration page,
+* Gradient,
+* Background Image,
+* Components demonstration page,
+* Button group,
+* Loader,
+* Sections demonstration page,
+* Advanced demonstration page,
+* Chat,
+* Timeline,
+* Edge Header,
+* Streak,
+* Video,
+* Notifications,
+* E-commerce components,
+* Gallery</code></pre></div><p><strong>* Tutorial: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* MDB Angular PWA tutorial</code></pre></div><p>6.2.3
+<strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Resolved problem with unemitted tooltipChange event in Tooltips,
+* Resolved problem with select component with updateOn: &#39;blur&#39; option,
+* Resolved problem with display of select clear button when input [ allowClear ] is set to true,
+* Resolved problem with fixed buttons where one button overlapped another. Use of many fixed buttons in the same view should be now possible,
+* Resolved problem with label in date picker. It should no longer overlap on the displayed date,
+* Fixed problem with overlapped label in Autocomplete when there was some value after view init,
+* Sidenav will now remove fixed-sn or hidden-sn class from body element in ngOnDestroy lifecycle,
+* Fixed problem with wrong margin in input validation message in Cascading Modal form,
+* Resolved problem with autoresizing textarea without .md-textarea-auto class
+* Resolved problem with visibility of content placed below header in intro sections,
+* Resolved problem with dynamic updates of big data in date-picker component,
+* Removed unnecessary console.log from Tabs Component,
+* .dropdown-menu-right class will now align dropdown menu to the right side,
+* Modal without backdrop will now allow to interact with elements on the background,
+* Changing date in datepicker with reactive forms will now affect the big date in datepicker modal,</code></pre></div><p><strong>* Docs: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added legacy docs for version 6.2.1,
+* Dropdown alignment section - updated example code responsible for menu position,
+* Advanced modals - updated example code for modal advanced examples. Modal cookies, modal coupon, modal discount, modal related content and modal abandoned cart should no longer block interaction with other elements. In order to achieve this behaviour you need to add modal-scrolling class to the div with mdbModal directive,
+* Modals - added new section with instructions on how to open a modal from another component,
+* Intros - updated example codes to resolve problem with visibility of content placed below header,
+* Tabs &amp; pills - improved documentation
+* Slider - improved documentation
+* Switch - improved documentation
+* Autocomplete - added example how to use [ textSearching ] input
+* Datepicker - Added methods, inputs and outputs description
+* Social Buttons - added examples how to get page share and like counters from Facebook API, and how to share a page on Facebook</code></pre></div><p><strong>* New documentation: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* File input
+* Accordion</code></pre></div><p>6.2.2
+<strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Resolved problem with select filter. It should now display only values that match the word you type,
+* Resolved problem with select values and options that were updated dynamically. It should now work correctly both in template-driven and reactive forms,
+* Resolved problem with dateFormat and startDate options in DatePicker component. It is now possible to set default start date which will be formatted as it was specified in format option,
+* Resolved problem with auto resize textarea height,
+* Resolved problem with errorMessage and successMessage inputs - it is now possible to update messages dynamically,
+* Resolved file input problem with file upload,
+* Resolved problem with gesture support for lightbox,
+* Resolved problem with protected parameters in carousel component,
+* Resolved problem with &#39;mdb-card is not a known element&#39;.</code></pre></div><p><strong>* New features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Added possibility to disable accordion item. To do that, add [ isDisabled ]=&quot;true&quot; input to &lt;mdb-accordion-item-head&gt;,
+* Added new checkbox component.</code></pre></div><p><strong>* Docs: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Updated live examples in pagination advanced examples section,
+* Updated file input example code,
+* Updated code in carousel examples (there a was problem with display of carousel with mask),
+* Updated checkbox docs,
+* Added legacy docs for versions 6.0.0 and 6.1.0,
+* Added update instructions for MDB Admin Templates (free and pro).</code></pre></div><p>6.2.1
+<strong>* Fixes: *</strong></p>
+<ul>
+<li>Resolved problem when validation status was visible even when input was disabled,</li>
+<li>Resolved problem with select focus event (clicking the space bar when the component is selected with tab key is no longer required),</li>
+<li>Resolved problem with display of date-picker opened in the modal.</li>
+</ul>
+<p><strong>* New Features: *</strong></p>
+<ul>
+<li>Added possibility to choose custom color in mdb-spinner,</li>
+<li>Added new functionality to use only desired validation status (disabling success or error validation) by using [ validationSuccess ] =&quot;true&quot; or [ validationError ] = &quot;true&quot;,</li>
+<li>Added new [ errorMessage ] and [ successMessage ] inputs that allow to pass string or variable with custom validation message (only works when data-error and data-success are not available),</li>
+<li>Added mdbBtn directive to handle button styling,</li>
+<li>Added new mdb-card, mdb-card-body, mdb-card-img, mdb-card-header, mdb-card-footer, mdb-card-text, mdb-card-title components,</li>
+<li>Added &#39;actionButton&#39; option to alerts.</li>
+</ul>
+<p><strong>* Docs: *</strong></p>
+<ul>
+<li>Fixed bug with wrong validation status in Success and Error messages section in Inputs docs,</li>
+<li>Added new section &#39;Navigation&#39;,</li>
+<li>Added new page &#39;Mega menu&#39;,</li>
+<li>Added new page &#39;Navs&#39;,</li>
+<li>Added new page &#39;Hamburger menu&#39;,</li>
+<li>Added new &#39;actionButton&#39; option and new section &#39;Events&#39; to Alerts docs.</li>
+<li>Added description and examples for new inputs ([ errorMessage ] , [ successMessage ], [ validationSuccess ] , [ validationError ] ) in Inputs docs,</li>
+<li>Removed duplicated elements from Autocomplete docs,</li>
+<li>Updated Autocomplete docs with example of &#39;textNoResults&#39; usage,</li>
+<li>Updated pagination advanced examples (added variables that allow to change the number of elements displayed on a given page).</li>
+</ul>
+<p>6.2.0
+<strong>* MDB Angular Admin Templates: *</strong>
+    * Resolved problem with not working hamburger menu in Admin Dashboard Free,
+    * Fixed problems with cards styling in Admin Dashboard Pro.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Fixed a problem with the inability to update the charts labels together with the data,
+* Resolved problem with only 1 image in Lightbox Component,
+* Fixed problem with undefined calls after (ngModelChange) in Material Select component,
+* Collapse directive won&#39;t throw undefined calls after emitting events,
+* Datepicker date changed from string to javascript Date object,
+* Fixed problem with unable to listen date changes in Datepicker Component,
+* Resolved problem with fixed button sliding out from the bottom edge of the screen when it was at the top of the screen,
+* Fixed simple warnings from ng lint,
+* Resolved problem with tabs visible on Datepicker plate,</code></pre></div><p><strong>* Docs: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">* Described how to close Fixed Button content after click on some of his childs,
+* Improved documentation of adding translation into Datepicker Component,
+* Rewrote whole Modals Documentation section,
+* Described how to open collapse after view init,
+* Integration with ASP.NET Core moved from 5min-quickstart page to separate ASP.NET page,
+* On Multiselect page added description how to add initial value to it and how to get value changes,
+* Described how to update charts appearance dynamically.</code></pre></div><p>6.1.6
+<strong>* Fixes: *</strong>
+    * Fixed problem with freezing browser while validating input</p>
+<p>6.1.5
+<strong>* New Features: *</strong>
+    * Added .md-textarea-auto class which allows textarea to auto resize when would not fit into it. This feature requires mdbInputDirective on textarea,
+    * Added functionality to set first active slide in Carousel.</p>
+<p>** Docs: ***
+    * Described Card Reveal Component: <a href="https://mdbootstrap.com/angular/components/flipping-cards/">https://mdbootstrap.com/angular/components/flipping-cards/</a>,
+    * Described changing opacity of alerts using toastClass option: <a href="https://mdbootstrap.com/angular/advanced/alerts/">https://mdbootstrap.com/angular/advanced/alerts/</a></p>
+<p><strong>* Fixes: *</strong>
+    * Solved problem in which backdrop in sidenav did not hide after scrolling the page on the mobile,
+    * Fixed problem with rotating Time Picker arrow on mobile,
+    * Fixed problem with (activeSlideChange) event in Carousel Component,
+    * Solved problem with resetting state of validation in forms,
+    * Fixed problem with scaling mdb-simple-chart, and centering text in chart,</p>
+<p>6.1.4
+<strong>* Fixes: *</strong>
+    * Solved problem with this.changes.disconnect is undefined in mdbInputDirective.</p>
+<p>6.1.3
+<strong>* New Features: *</strong>
+    * Icons are now component. <mdb-icon> supports only Font Awesome icons. Available field: icon (icon class), size (icon size), class (custom class for example color),
+    * Number input now listens for key events. Added functionality to increment / decrement it&#39;s value by 10 or 0.1 by using shift + up / down arrow or alt + up / down arrow keys. Available by using mdbInputDirective.</p>
+<p><strong>* Fixes: *</strong>
+    * Fixed problems with Carousel when using Angular Universal,
+    * mdbInputDirective validation has ben rewritten. Now works with Angular Validators,
+    * Fixed problem with no backdrop in sidenav on mobile,
+    * Fixed problem with sidenavBreakpoint</p>
+<p>6.1.2</p>
+<p><strong>* Admin Templates: *</strong>
+We have provided users with the option to make their own changes to the source code and compile the library into JavaScript.</p>
+<p><strong>* New Features: *</strong>
+    * Added possibility to use .filled-in class in Multiple Select by using customClass=&quot; &#39;filled-in&#39; &quot; field,
+    * Added possibility to set custom sidenav breakpoint by using sidenavBreakpoint=&quot;desired-value&quot; control on mdb-sidenav element,
+    * Added option to define custom locale for datePicker without modifying datepickerLocale.service source file,</p>
+<p><strong>* Fixes: *</strong>
+    * Fixed problem with fluid modal-bottom,
+    * Fixed problem with modal height while using datepicker in modal,
+    * Fixed label lifting-up in Autocomplete,
+    * Fixed problem with Material Dropdowns and dropup, dropleft, dropright variations,
+    * Rewriten Material Select animation.</p>
+<p>6.1.1
+<strong>* NOTE: *</strong>
+You may need to rename the modules you are using in your application. The list of modified modules is presented below.</p>
+<p>In 6.1.1 we have made it possible to import only those modules that you actually use in your application.
+If only individual modules are used, import them but do not import the MDBBootstrapModulesPro main module as this may cause errors.</p>
+<p><strong>* What&#39;s new: *</strong>
+    Source code delivered to customers is now compilated to .js instead of .ts,
+    There&#39;s now possibility to import only those modules, which you need in your project. Full module list: <a href="https://mdbootstrap.com/angular/modules-list">https://mdbootstrap.com/angular/modules-list</a>
+    Changed names of few modules:
+        * MDBChartsModule -&gt; ChartsModule,
+        * BsDropdownModule -&gt; DropdownModule,
+        * MDBTooltipModule -&gt; TooltipModule,
+        * SqueezeBoxModule -&gt; AccordionModule,
+        * Ng2CompleterModule -&gt; AutocompleteModule,
+        * MDBDatePickerModule -&gt; DatepickerModule,
+        * MDBUploaderModule -&gt; FileInputModule,
+        * MDBPageScrollModule -&gt; SmoothscrollModule,
+        * MdbStickyModule -&gt; StickyContentModule,
+        * MaterialRootModule -&gt; PreloadersModule.</p>
+<p><strong>* Fixes: *</strong>
+    Fixed missing space in mdb-angular.scss file,
+    Added close icon to Autocomplete,
+    Fixed problem with prefilling Char Counter value,
+    Fixed problem with overlapping label &amp; error / success messages with mdbInputDirective,
+    Fixed problem with focusing inputs through TAB key.</p>
+<p>6.0.2
+<strong>* General: *</strong>
+    Changed Renderer to Renderer2.</p>
+<p><strong>* Fixes: *</strong>
+    Unnable to scroll in Sidenav,
+    Fixed problems with skins,
+    Fixed mobile view in DatePicker,
+    Fixed problem with scrolling page to the top edge in DatePicker,
+     Fixed problem with scrolling page to the top edge in TimePicker.</p>
+<p>6.0.1
+<strong>* Fixes: *</strong>
+    Fix for dropdowns, dropup variation,
+    Fix for fixed button when collapsing (need to pass $event in .toggle() method),
+    Few fixes in scss</p>
+<p>6.0.0
+<strong>* NOTE: Most of the components have been rebuilt. Please, check the ones you use in your project. *</strong></p>
+<p><strong>* General: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">Compatible with MDB 4.5.1,
+Compatible with Angular 6.0.0-rc.5, rxjs 6.0.0-uncanny-rc.7 and rxjs-compat 6.0.0-uncanny-rc.7,
+Compatible with Angular CLI ^1.7.1.</code></pre></div><p><strong>* NOTE 2: For proper using Angular 6 with MDB Angular 6 please check, if you&#39;re using rxjs in version at least 6.0.0-uncanny-rc.7 and rxjs-compat in version at least 6.0.0-uncanny-rc.7. Using older versions may produce errors and problems. *</strong></p>
+<p><strong>* Marked as deprecated: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">mdbActive,
+mdbInputValidate,
+mdbDeepDirective,
+mdbRippleRadius.</code></pre></div><p>mdbInputDirective has three of the above directives - mdbActive, mdbInputValidate and mdbDeepDirective.</p>
+<p>mdbActive is used by default and we do not anticipate that you will be able to disable it.</p>
+<p>mdbInputValidate is used by default, but the user can disable validation by using the [mdbValidate]=&quot;false&quot; control on input which contains mdbInputDirective.</p>
+<p>mdbDeepDirective is used by default when used on a checkbox or radio. It is possible to disable it by using [focusCheckbox]=&quot;false&quot; and [focusRadio]=&quot;false&quot;.</p>
+<p>mdbRippleRadius was changed to mdbWavesEffect. mdbRippleRadius will be deleted after next release.</p>
+<p><strong>* Fixes: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">Fix for z-index in few scenarios (tabs &amp; datePicker), navbar and other,
+Fixed clearUnselected in Autocomplete,
+Fix for mdbActive in Autocomplete.</code></pre></div><p><strong>* Features: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">Added feature to close datePicker after selecting an date (closeAfterSelect: true) in datePicker options object.</code></pre></div><p><strong>* Docs: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">New category Forms,
+Autocomplete, Inputs, Input Validation, Forms moved from Components to Forms,
+Material Select moved from Advanced to Forms,
+Input Groups moved from Extended to Forms,
+Added instructions how to update Angular projects: https://mdbootstrap.com/getting-started/update-instructions/
+Added instructions how to create project with Angular Universal: https://mdbootstrap.com/getting-started/universal/</code></pre></div><p><strong>* Changed syntax: *</strong></p>
+<div><pre class="line-numbers"><code class="language-none">Cards,
+Flipping Cards,
+Intros,
+Sections,
+Inputs,
+Footers,
+Preloaders,
+Masks,
+Hover Effects,
+Accordion,
+Modals,</code></pre></div><p>5.2.3
+<strong>* Compatibility with Angular Universal (Server-Side Rendering) *</strong>. Read tutorial.
+Improved dropdown animation in Material Select,
+Fixed problem with dropdown transition in Material Select,
+&quot;Not Found&quot; message in Material Select will be visible only when filtering does not show results ,
+Fix for top / bottom arrow in Material Select,
+Added possibility to overwrite $image-path variable.</p>
+<p>5.2.2
+Hotfixes not included in 5.2.1 patch</p>
+<p>5.2.1
+Enhanced mdbActive directive - works with data prefilled by browser
+Sidenav issue fixed (skin is optional)
+Fixed with rounded buttons inside input group
+Fixed for dropdown not getting closed after click in other dropdown.
+Fix for line breaking label in checkboxes</p>
+<p>5.2.0
+Updated to Bootstrap 4 stable version
+Integration with .NET CORE - tutorial here
+Compatibility with Angular 5.2.1 and CLI 1.6.5
+noImplicitAny and strictNullChecks compatibility
+New validation added (number, tel, submit) + custom validation regex. Read tutorial.
+Configurable labels for DatePicker</p>
+<p>5.1.2
+Angular 5.2.1 and CLI 1.6.5 compatibility
+Extended docs for modals - auto focus on input
+Fixed validation for email and password
+Aria attributes added to datepicker
+Added filtering options to Material Select
+Support for IE+ and Edge for Double Navigation
+Extended DatePicker with new functionality:
+Important!
+By default date picker will load now +- 7 years starting from current year. It can be overwritten using minYear and maxYear parameters:</p>
+<p>import { Component } from &#39;@angular/core&#39;;
+import { IMyOptions } from &#39;your_path_to/date-picker/index&#39;;</p>
+<p>@Component({
+    selector: &#39;date-picker-component-example&#39;,
+    templateUrl: &#39;toast.component.html&#39;
+})</p>
+<div><pre class="line-numbers"><code class="language-none">export class DatePickerComponentExample {
+public myDatePickerOptions: IMyOptions = {
+minYear: 2015,
+maxYear: 2017
+};</code></pre></div><p>}</p>
+<p>5.1.1
+Double navigation - support for collapsed sidenav and navbar
+Extended documentation for Autocomplete
+Auto resize function for collapse added
+Mobile gestures carousel support added
+Added option to hide next / prev buttons in carousel
+Fix for: Module has no exported member &#39;MDBSpinningPreloader&#39;
+Automatically set date in DatePicker using ngModel
+Fixed docs for File Upload</p>
+<p>5.1.0
+Angular 5.1.3 and CLI 1.6.3. compatibility
+Fixed issue with exceeding text tabs component
+Auto-close navbar after click into link (check documentation for more information)
+Fixed problem with error/success message on Firefox
+Fixed problems with selecting hour on mobile devices in Timepicker
+Extended configuration options of easy pie charts (check documentation for more information)
+Fixed for relative path in _skins.scss
+Fixed issue with date picker for Firefox
+Enhanced support for small screen resolution in Datepicker (&lt;575 px)
+Fix for issue while using multiple MDB Autocomplete components</p>
+<p>5.0.5
+Added compatibility with noUnusedLocals</p>
+<p>5.0.4
+Added compatibility with noUnusedParameters</p>
+<p>5.0.3
+Fixed missing arrow in popovers</p>
+<p>5.0.2
+Fixed circular dependencies error.</p>
+<p>5.0.1
+Fixed for imgPath in .scss</p>
+<p>5.0.0
+Version 5.0.0 brings brings compatibility with new Angular 5.0 and CLI 1.5. Except for that new update include Bootstrap 4 Beta 2 assets.</p>
+<p>What&#39;s new in Bootstrap 4 beta-2:</p>
+<p>Restored <code>.offset-*</code> classes
+Switched Breadcrumbs from <code>float</code> to Flexbox
+Dropped support for Bower</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -27,6 +27,9 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
 })
 export class CompareComponent implements OnInit, OnDestroy {
 
+  /**
+   * Attributes need for I/O of the Compare UI
+   */
   private img1: string;
   private img2: string;
   private names: string[];
@@ -37,6 +40,9 @@ export class CompareComponent implements OnInit, OnDestroy {
   private valid: Compare;
   private message: string;
 
+  /**
+   * Attributes needed for the animations and transitions
+   */
   private button = "";
   private bouncer = "bounce";
   private zoomIn = "zoom";
@@ -47,6 +53,9 @@ export class CompareComponent implements OnInit, OnDestroy {
   private isSpinning = false;
   private time: number;
   private dotLoader: boolean;
+  /**
+   * Image src from string format
+   */
   private readonly fileType: string = "data:image/png;base64,";
 
   constructor(
@@ -64,6 +73,16 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.dotLoader = false;
   }
 
+  /**
+   * News all elements, adds image names to Compare object
+   * names attribute, validates names using ValidationService,
+   * sets spinner to true only if names are valid, subscribes
+   * to hhtp post using UserService, sets all subscription data 
+   * with its coresponding elements and spinner is set to false. 
+   * In case off error, dot loader is set to true, local storage 
+   * is cleared and the UI is redirected to the home page based
+   * on the timer set number. 
+   */
   compareFaces(){
     this.names = [];
     this.images = [];
@@ -106,18 +125,38 @@ export class CompareComponent implements OnInit, OnDestroy {
     
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   btnAnimate(state: string){
     this.button = this.animation.btnAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   chartAnimate(state: string){
     this.chart = this.animation.chartAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   cogAnimate(state: string){
     this.cog = this.animation.cogAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   cloudAnimate(state: string){
     this.cloud = this.animation.cloudAnimate(state);
   }
