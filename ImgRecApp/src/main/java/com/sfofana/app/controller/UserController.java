@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.Upload;
@@ -39,23 +40,21 @@ public class UserController {
 	/**
 	 * @param user Parses user from request body
 	 * @return Allows user access to application only with provided token
-	 * @throws Exception Handles exceptions
+	 * @throws BusinessException Handles exceptions
 	 */
 	@PostMapping("authenticate")
-	public User authenticate(@RequestBody User user) throws Exception {
+	public User authenticate(@RequestBody User user) throws BusinessException {
 		return service.initiateSession(user);
 	}
 	
 	/**
 	 * @param faces Parses faces to compare from request body
 	 * @return Returns face similarity results only if given token is valid
-	 * @throws Exception Handles exception with message "Access Denied"
+	 * @throws BusinessException Handles exception with message "Access Denied"
 	 */
 	@PostMapping("compare")
 	public Compare compareFaces(@RequestBody Compare faces) throws Exception {
-		if(!service.tokenAuthenticated(getToken())) {
-			throw new Exception("Access Denied");
-		}
+		service.tokenAuthenticated(getToken());
 		return service.compareFacesResults(faces);
 	}
 	
@@ -63,13 +62,11 @@ public class UserController {
 	 * @param fileName Parses file name from url
 	 * @param file Parses file from request parameter name "file"
 	 * @return Returns status on image being uploaded
-	 * @throws Exception Handles exception with message "Access Denied"
+	 * @throws BusinessException Handles exception with message "Access Denied"
 	 */
 	@PostMapping("upload/{name}")
 	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
-		if(!service.tokenAuthenticated(getToken())) {
-			throw new Exception("Access Denied");
-		}
+		service.tokenAuthenticated(getToken());
 		return service.processImageUpload(fileName, file);
 	}
 	

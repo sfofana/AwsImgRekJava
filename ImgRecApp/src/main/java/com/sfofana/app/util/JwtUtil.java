@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.User;
 
@@ -29,15 +30,10 @@ public class JwtUtil {
 	/**
 	 * @param token Get user role based on token
 	 * @return Returns user role if valid
-	 * @throws Exception
+	 * @throws BusinessException
 	 */
-	public String extractUser(String token) throws Exception {
-		try {
-			return extractClaim(token, Claims::getSubject);
-		} catch (Exception e) {
-			throw new Exception("User not found");
-		}
-		
+	public String extractUser(String token) throws BusinessException {
+		return extractClaim(token, Claims::getSubject);
 	}
 	
 	/**
@@ -100,16 +96,10 @@ public class JwtUtil {
 	 * @param token String carrying claims details
 	 * @param user Carries role
 	 * @return True only if role of user is the same as claims and is not expired
-	 * @throws Exception
+	 * @throws BusinessException
 	 */
-	public Boolean validateToken(String token, User user) throws Exception{
-		String email;
-		try {
-			email = extractUser(token);
-			return (email.equals(user.getRole()) && !isTokenExpired(token));
-		} catch (Exception e) {
-			throw new Exception("Token expired");
-		}
-		
+	public Boolean validateToken(String token, User user) throws BusinessException{
+		String email = extractUser(token);
+		return (email.equals(user.getRole()) && !isTokenExpired(token));
 	}
 }

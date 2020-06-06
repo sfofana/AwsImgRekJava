@@ -91,11 +91,11 @@ public class SwaggerConfiguration {
 	    return scopes;
 	}
 	
-	private SecurityContext securityContext() {
-	    return SecurityContext.builder()
-	      .securityReferences(
-	        Arrays.asList(new SecurityReference("spring_oauth", scopes())))
-	      .forPaths(PathSelectors.ant("/*"))
-	      .build();
-	}
+//	private SecurityContext securityContext() {
+//	    return SecurityContext.builder()
+//	      .securityReferences(
+//	        Arrays.asList(new SecurityReference("spring_oauth", scopes())))
+//	      .forPaths(PathSelectors.ant("/*"))
+//	      .build();
+//	}
 }

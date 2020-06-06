@@ -5,6 +5,7 @@ import java.io.File;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.amazonaws.services.rekognition.model.Image;
+import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
@@ -39,9 +40,9 @@ public interface UserService {
 	/**
 	 * @param token The token to be validated
 	 * @return True only if user roles match and is not expired
-	 * @throws Exception Catches invalid, empty, or expired tokens
+	 * @throws BusinessException Catches invalid, empty, or expired tokens
 	 */
-	public Boolean tokenAuthenticated(String token) throws Exception;
+	public Boolean tokenAuthenticated(String token) throws BusinessException;
 	/**
 	 * @param user The user requesting access, user role is required
 	 * @return User with their generated token needed for access to the

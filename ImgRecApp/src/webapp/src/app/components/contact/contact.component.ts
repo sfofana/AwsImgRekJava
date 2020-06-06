@@ -20,6 +20,9 @@ import { trigger, keyframes, animate, transition } from '@angular/animations';
 })
 export class ContactComponent implements OnInit, OnDestroy {
 
+  /**
+   * Attributes need for I/O of the Email UI
+   */
   private name: string;
   private email: string;
   private phone: string;
@@ -32,6 +35,9 @@ export class ContactComponent implements OnInit, OnDestroy {
   private mail = new Email();
   private validMail = new Email();
 
+  /**
+   * Attributes needed for the animations and transitions
+   */
   private isSpinning = false;
   private button = "";
   private bouncer = "bounce";
@@ -47,6 +53,9 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.formData = new FormData();
   }
 
+  /**
+   * Resets all values to empty
+   */
   setMail(){
     this.mail.name = this.name;
     this.mail.email = this.email;
@@ -56,6 +65,11 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.validMail = this.validate.validRequest(this.mail);
   }
 
+  /**
+   * Sets the objetct in the blob as form data 
+   * with name override
+   * @param mail The email object to be sent
+   */
   setBlob(mail: Email){
     this.override = new Blob(
       [
@@ -67,6 +81,10 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.formData.append('override', this.override);
   }
 
+  /**
+   * Sends email using UserService only when 
+   * email inputs are valid
+   */
   submit(){
     this.setMail();
     this.reset();

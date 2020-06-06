@@ -37,6 +37,7 @@ import java.nio.ByteBuffer;
 
 import com.amazonaws.util.Base64;
 import com.amazonaws.util.IOUtils;
+import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.Upload;
@@ -181,7 +182,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Boolean tokenAuthenticated(String token)  throws Exception {
+	public Boolean tokenAuthenticated(String token)  throws BusinessException {
 		String role = null;
 		String jwt = null;
 		Boolean flag = false;
@@ -192,10 +193,10 @@ public class UserServiceImpl implements UserService {
 				role = jwtUtil.extractUser(jwt);
 				flag = jwtUtil.validateToken(jwt, getAccess());
 			} catch (Exception e) {
-				throw new Exception("Invalid Session");
+				throw new BusinessException("Invalid Session");
 			} 
 		} else {
-			throw new Exception("Invalid Session");
+			throw new BusinessException("Invalid Session");
 		}
 		return flag;
 	}
