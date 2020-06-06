@@ -11670,3 +11670,6 @@ java.lang.IllegalArgumentException: Illegal value: -1
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 09:17:12.525
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.sgWkgtXv => OK
+
+!ENTRY org.eclipse.wst.sse.ui 2 0 2020-06-06 11:30:41.205
+!MESSAGE The ''Boot Pom Completions'' proposal computer from the ''org.springframework.ide.eclipse.boot.wizard'' plug-in did not complete normally. The extension violated the API contract of the ''computeContextInformation()'' operation.

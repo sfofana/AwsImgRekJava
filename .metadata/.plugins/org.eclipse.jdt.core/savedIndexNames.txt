@@ -79,7 +79,6 @@ INDEX VERSION 1.131+C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRek
 523179866.index
 1336071089.index
 3776008494.index
-629500.index
 765599714.index
 1964175708.index
 4193668403.index
