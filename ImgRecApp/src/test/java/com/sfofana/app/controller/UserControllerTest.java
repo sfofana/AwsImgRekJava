@@ -19,13 +19,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMultipartHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.request.RequestPostProcessor;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.multipart.MultipartFile;
@@ -84,6 +87,13 @@ public class UserControllerTest {
 		assertThrows(BusinessException.class, () ->{
 			userController.compareFaces(faces);
 		});
+		
+		mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/compare")
+				.content(json)
+				.contentType(MediaType.APPLICATION_JSON)
+		.header("Authorization", "Basic " + Base64.encodeAsString(basic))
+		.header("jToken", "Bearer malToken" + token.getJToken()))
+		.andExpect(MockMvcResultMatchers.status().isNotFound());
 	}
 	
 	@Test
@@ -92,18 +102,24 @@ public class UserControllerTest {
 		
 		String path = System.getProperty("user.dir") + "/";
 		String fileName = "testFile";
-		MultipartFile file = new MockMultipartFile("testFile.txt", new FileInputStream(new File(path+"testFile.txt")));
-		MockMultipartFile mockFile = new MockMultipartFile("testFile.txt", new FileInputStream(new File(path+"testFile.txt")));
+		MultipartFile file = new MockMultipartFile("file", new FileInputStream(new File(path+"testFile.txt")));
+		MockMultipartFile mockFile = new MockMultipartFile("file", new FileInputStream(new File(path+"testFile.txt")));
 		
 		String basicAuth = credentials.getUsername()+":"+credentials.getPassword();
 		byte[] basic = basicAuth.getBytes();
 		
-		mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/upload/",fileName)			
-				//.file(mockFile)
-				//.param("name", fileName)
+		mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/upload/{name}",fileName)
+				.file(mockFile)
+				.with(new RequestPostProcessor() {
+			        @Override
+			        public MockHttpServletRequest postProcessRequest(MockHttpServletRequest request) {
+			            request.setMethod("POST");
+			            return request;
+			        }
+			    })			
 		.header("Authorization", "Basic " + Base64.encodeAsString(basic))
 		.header("jToken", "Bearer " + token.getJToken()))		
-		.andExpect(MockMvcResultMatchers.status().isNotFound());	
+		.andExpect(MockMvcResultMatchers.status().isOk());	
 		
 		assertThrows(BusinessException.class, () ->{
 			userController.uploadImage(fileName, file);

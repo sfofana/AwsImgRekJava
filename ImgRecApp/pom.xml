@@ -107,20 +107,20 @@
 					<excludeDevtools>false</excludeDevtools>
 				</configuration>
 			</plugin>
-<!--  
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.3</version>
 				<executions>
 					<execution>
-						<id>default-prepare-agent</id>
+						<id>prepare-agent</id>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
 					<execution>
-						<id>default-report</id>
+						<id>report</id>
 						<goals>
 							<goal>report</goal>
 						</goals>
@@ -144,8 +144,8 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> -->
-		</plugins> 
+			</plugin>
+		</plugins>
 	</build>
 
 </project>

@@ -11673,3 +11673,98 @@ java.lang.IllegalArgumentException: Illegal value: -1
 
 !ENTRY org.eclipse.wst.sse.ui 2 0 2020-06-06 11:30:41.205
 !MESSAGE The ''Boot Pom Completions'' proposal computer from the ''org.springframework.ide.eclipse.boot.wizard'' plug-in did not complete normally. The extension violated the API contract of the ''computeContextInformation()'' operation.
+!SESSION 2020-06-06 17:55:24.666 -----------------------------------------------
+eclipse.buildId=4.5.1.202001211336-RELEASE
+java.version=13.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2020-06-06 17:56:07.649
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-06 17:56:07.649
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42fd8f2f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7eea934d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-06-06 17:56:35.474
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sufya'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2020-06-06 18:53:14.700
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:34.479
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:34.482
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4d687300[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=631)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:34.501
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:34.927
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.800
+!MESSAGE Boot LS startup time from start to initialized: 13277ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.884
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wsoSpyqAisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.894
+!MESSAGE subscribing to classpath changes: sts4.classpath.wsoSpyqA isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.900
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.906
+!MESSAGE subsribers = {sts4.classpath.wsoSpyqA=Send Classpath Notifications(108)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.909
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.912
+!MESSAGE project ImgRecApp ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.915
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.916
+!MESSAGE Preparing classpath changed notification ImgRecApp
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.919
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wsoSpyqA => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.921
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.952
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.968
+!MESSAGE buffering callback sts4.classpath.wsoSpyqA ImgRecApp false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:47.970
+!MESSAGE executing callback sts4.classpath.wsoSpyqA 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-06 18:53:48.043
+!MESSAGE executing callback sts4.classpath.wsoSpyqA SUCCESS [done]
