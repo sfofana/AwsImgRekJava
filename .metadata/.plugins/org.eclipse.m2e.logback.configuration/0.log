@@ -6882,3 +6882,74 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2020-06-07 21:06:06,189 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-06-07 21:06:06,193 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-06-07 21:06:06,193 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-07 21:22:45,292 [Worker-85: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm install' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:23:05,920 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular-devkit/build-angular@0.800.6 requires a peer of typescript@>=3.1 < 3.5 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,924 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of @angular/compiler@8.1.3 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,927 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of typescript@>=3.4 <3.5 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,928 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - audited 1493 packages in 18.394s
+2020-06-07 21:23:05,929 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @ngtools/webpack@8.0.6 requires a peer of typescript@>=3.4 < 3.5 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,932 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,935 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler-cli@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,937 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of typescript@>= 2.7 <3.3 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,940 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN tsickle@0.35.0 requires a peer of typescript@~3.4.1 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:23:05,943 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\karma\node_modules\fsevents):
+2020-06-07 21:23:05,945 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-07 21:23:05,947 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\fsevents):
+2020-06-07 21:23:05,950 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-07 21:23:05,952 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:07,362 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:07,363 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 21 packages are looking for funding
+2020-06-07 21:23:07,363 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm fund` for details
+2020-06-07 21:23:07,363 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:07,365 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - found 120 vulnerabilities (110 low, 6 moderate, 4 high)
+2020-06-07 21:23:07,365 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm audit fix` to fix them, or `npm audit` for details
+2020-06-07 21:23:07,450 [Worker-85: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:23:08,599 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:08,600 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:23:08,600 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > ng build
+2020-06-07 21:23:08,600 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:23,440 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+2020-06-07 21:23:39,627 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:39,627 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Date: 2020-06-08T01:23:39.625Z
+2020-06-07 21:23:39,627 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Hash: f999f793b26d45a56a6c
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Time: 15563ms
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {main} main.js, main.js.map (main) 676 bytes [initial] [rendered]
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 145 kB [initial] [rendered]
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 463 kB [initial] [rendered]
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+2020-06-07 21:23:39,629 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {scripts} scripts.js, scripts.js.map (scripts) 439 kB [entry] [rendered]
+2020-06-07 21:23:39,630 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {styles} styles.js, styles.js.map (styles) 1.92 MB [initial] [rendered]
+2020-06-07 21:23:39,633 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:39,636 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - ERROR in The Angular Compiler requires TypeScript >=3.4.0 and <3.5.0 but 3.9.5 was found instead.
+2020-06-07 21:23:39,785 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! code ELIFECYCLE
+2020-06-07 21:23:39,788 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! errno 1
+2020-06-07 21:23:39,791 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! angular-bootstrap-md-lib@8.10.0 build: `ng build`
+2020-06-07 21:23:39,793 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! Exit status 1
+2020-06-07 21:23:39,795 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! 
+2020-06-07 21:23:39,797 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! Failed at the angular-bootstrap-md-lib@8.10.0 build script.
+2020-06-07 21:23:39,799 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2020-06-07 21:23:39,818 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:39,821 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! A complete log of this run can be found in:
+2020-06-07 21:23:39,824 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR!     C:\Users\sufya\AppData\Roaming\npm-cache\_logs\2020-06-08T01_23_39_790Z-debug.log
+2020-06-07 21:23:39,839 [Worker-85: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run tsc:build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:23:41,036 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:23:41,036 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 tsc:build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:23:41,036 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > tsc -p tsconfig.json
+2020-06-07 21:23:41,036 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:24:07,310 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - node_modules/@types/node/index.d.ts(73,11): error TS2300: Duplicate identifier 'IteratorResult'.
+2020-06-07 21:24:07,312 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - node_modules/typescript/lib/lib.es2015.iterable.d.ts(41,6): error TS2300: Duplicate identifier 'IteratorResult'.
+2020-06-07 21:24:07,410 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! code ELIFECYCLE
+2020-06-07 21:24:07,413 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! errno 2
+2020-06-07 21:24:07,417 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! angular-bootstrap-md-lib@8.10.0 tsc:build: `tsc -p tsconfig.json`
+2020-06-07 21:24:07,419 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! Exit status 2
+2020-06-07 21:24:07,422 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! 
+2020-06-07 21:24:07,425 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! Failed at the angular-bootstrap-md-lib@8.10.0 tsc:build script.
+2020-06-07 21:24:07,429 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+2020-06-07 21:24:07,463 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:24:07,466 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR! A complete log of this run can be found in:
+2020-06-07 21:24:07,469 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - npm ERR!     C:\Users\sufya\AppData\Roaming\npm-cache\_logs\2020-06-08T01_24_07_419Z-debug.log
+2020-06-07 21:24:07,557 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-07 21:24:07,558 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-07 21:24:07,559 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-07 21:24:07,565 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-07 21:24:07,566 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
