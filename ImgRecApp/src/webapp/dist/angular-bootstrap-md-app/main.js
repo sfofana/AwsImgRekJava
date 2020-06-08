@@ -469,6 +469,9 @@ var CompareComponent = /** @class */ (function () {
         this.animation = animation;
         this.images = [];
         this.details = [];
+        /**
+         * Attributes needed for the animations and transitions
+         */
         this.button = "";
         this.bouncer = "bounce";
         this.zoomIn = "zoom";
@@ -477,6 +480,9 @@ var CompareComponent = /** @class */ (function () {
         this.cog = "";
         this.cloud = "";
         this.isSpinning = false;
+        /**
+         * Image src from string format
+         */
         this.fileType = "data:image/png;base64,";
     }
     CompareComponent.prototype.ngOnInit = function () {
@@ -485,6 +491,16 @@ var CompareComponent = /** @class */ (function () {
         this.time = 10000;
         this.dotLoader = false;
     };
+    /**
+     * News all elements, adds image names to Compare object
+     * names attribute, validates names using ValidationService,
+     * sets spinner to true only if names are valid, subscribes
+     * to hhtp post using UserService, sets all subscription data
+     * with its coresponding elements and spinner is set to false.
+     * In case off error, dot loader is set to true, local storage
+     * is cleared and the UI is redirected to the home page based
+     * on the timer set number.
+     */
     CompareComponent.prototype.compareFaces = function () {
         var _this = this;
         this.names = [];
@@ -525,15 +541,35 @@ var CompareComponent = /** @class */ (function () {
         this.img1 = "";
         this.img2 = "";
     };
+    /**
+     *
+     * @param state Sets the state in animation using the AnimationService,
+     * in this case either stop or start
+     */
     CompareComponent.prototype.btnAnimate = function (state) {
         this.button = this.animation.btnAnimate(state);
     };
+    /**
+     *
+     * @param state Sets the state in animation using the AnimationService,
+     * in this case either stop or start
+     */
     CompareComponent.prototype.chartAnimate = function (state) {
         this.chart = this.animation.chartAnimate(state);
     };
+    /**
+     *
+     * @param state Sets the state in animation using the AnimationService,
+     * in this case either stop or start
+     */
     CompareComponent.prototype.cogAnimate = function (state) {
         this.cog = this.animation.cogAnimate(state);
     };
+    /**
+     *
+     * @param state Sets the state in animation using the AnimationService,
+     * in this case either stop or start
+     */
     CompareComponent.prototype.cloudAnimate = function (state) {
         this.cloud = this.animation.cloudAnimate(state);
     };
@@ -631,6 +667,9 @@ var ContactComponent = /** @class */ (function () {
         this.validate = validate;
         this.mail = new src_app_models_email__WEBPACK_IMPORTED_MODULE_4__["Email"]();
         this.validMail = new src_app_models_email__WEBPACK_IMPORTED_MODULE_4__["Email"]();
+        /**
+         * Attributes needed for the animations and transitions
+         */
         this.isSpinning = false;
         this.button = "";
         this.bouncer = "bounce";
@@ -639,6 +678,9 @@ var ContactComponent = /** @class */ (function () {
         this.override = new Blob();
         this.formData = new FormData();
     };
+    /**
+     * Resets all values to empty
+     */
     ContactComponent.prototype.setMail = function () {
         this.mail.name = this.name;
         this.mail.email = this.email;
@@ -647,6 +689,11 @@ var ContactComponent = /** @class */ (function () {
         this.mail.message = this.message;
         this.validMail = this.validate.validRequest(this.mail);
     };
+    /**
+     * Sets the objetct in the blob as form data
+     * with name override
+     * @param mail The email object to be sent
+     */
     ContactComponent.prototype.setBlob = function (mail) {
         this.override = new Blob([
             JSON.stringify(mail)
@@ -655,6 +702,10 @@ var ContactComponent = /** @class */ (function () {
         });
         this.formData.append('override', this.override);
     };
+    /**
+     * Sends email using UserService only when
+     * email inputs are valid
+     */
     ContactComponent.prototype.submit = function () {
         var _this = this;
         this.setMail();
@@ -1295,6 +1346,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var ValidationService = /** @class */ (function () {
     function ValidationService() {
     }
+    /**
+     *
+     * @param message Email object to be validated
+     * @returns Validated email object
+     */
     ValidationService.prototype.validRequest = function (message) {
         var validMessage = new _models_email__WEBPACK_IMPORTED_MODULE_1__["Email"]();
         validMessage = null;
@@ -1306,6 +1362,11 @@ var ValidationService = /** @class */ (function () {
         }
         return validMessage;
     };
+    /**
+     *
+     * @param faces Compare object to be validated
+     * @returns Returns validated Compare object
+     */
     ValidationService.prototype.validCompare = function (faces) {
         if (faces.names[0] && faces.names[1]) {
             return faces;
@@ -1314,6 +1375,11 @@ var ValidationService = /** @class */ (function () {
             return null;
         }
     };
+    /**
+     *
+     * @param name String to be validated
+     * @returns Returns validate string
+     */
     ValidationService.prototype.validUpload = function (name) {
         if (name) {
             return name;
@@ -1322,6 +1388,10 @@ var ValidationService = /** @class */ (function () {
             return null;
         }
     };
+    /**
+     *
+     * @param file
+     */
     ValidationService.prototype.validFile = function (file) {
         if (file) {
             return file;

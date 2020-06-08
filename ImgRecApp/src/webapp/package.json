@@ -14,6 +14,7 @@
     "remove-archive": "rm dist/angular-bootstrap-md/angular-bootstrap-md-8.*.tgz && cd ../..",
     "compile-lib": "ng build angular-bootstrap-md && npm run copy-scss && npm run copy-files && npm run pack-archive && npm run remove-archive",
     "schematics:build": "tsc -p projects/schematics/tsconfig.json",
+    "tsc:build": "tsc -p tsconfig.json",
     "schematics:copy": "npm run schematics:build && webpack",
     "compile": "npm run compile-lib && npm run schematics:copy"
   },
@@ -65,7 +66,7 @@
     "tsickle": "^0.35.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.4.5",
+    "typescript": "^3.4.5",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-node-externals": "^1.7.2"
