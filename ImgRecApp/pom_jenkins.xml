@@ -115,13 +115,13 @@
 				</configuration>
 			</plugin>
 
-	<!-- 		<plugin>
+	 		<plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
 				<version>1.7.6</version>
 				<configuration>
 					<workingDirectory>${basedir}/src/webapp</workingDirectory>
-					<nodeVersion>v13.10.1</nodeVersion>
+					<nodeVersion>v12.15.0</nodeVersion>
 					<npmVersion>6.13.7</npmVersion>
 				</configuration>
 				<executions>
@@ -149,7 +149,7 @@
 				</executions>
 			</plugin>  
 
-			<plugin>
+	<!-- 		<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.3</version>
