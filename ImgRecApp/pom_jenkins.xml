@@ -145,9 +145,7 @@
 						<configuration>
 							<arguments>
 							install 
-							@angular/compiler-cli --save
-							@angular/compiler@6.0.0 
-							typescript@2.7
+							-g @angular/compiler-cli
 							</arguments>			
 						</configuration>
 					</execution>
