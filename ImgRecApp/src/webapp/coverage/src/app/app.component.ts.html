@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,32 +130,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component } from '@angular/core';
@@ -181,32 +181,32 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
 })
 export class AppComponent {
   
-<span class="cstat-no" title="statement not covered" >  title = "AWS Image Rekognition";</span>
+  title = "AWS Image Rekognition";
 &nbsp;
-  private <span class="cstat-no" title="statement not covered" >upload = "";</span>
-  private <span class="cstat-no" title="statement not covered" >compare = "";</span>
-  private <span class="cstat-no" title="statement not covered" >contact = "";</span>
+  private upload = "";
+  private compare = "";
+  private contact = "";
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" >a</span>nimation: A</span>nimationService) {
+  constructor(private animation: AnimationService) {
  
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  preparedRoute(</span>outlet: RouterOutlet){
-<span class="cstat-no" title="statement not covered" >    return outlet &amp;&amp; </span>
+  preparedRoute(outlet: RouterOutlet){
+    return outlet &amp;&amp; 
     outlet.activatedRouteData &amp;&amp;
     outlet.activatedRouteData['animation'];
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  upAnimate(</span>state: string){
-<span class="cstat-no" title="statement not covered" >    this.upload = this.animation.dashAnimate(state);</span>
+  upAnimate(state: string){
+    this.upload = this.animation.dashAnimate(state);
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  compAnimate(</span>state: string){
-<span class="cstat-no" title="statement not covered" >    this.compare = this.animation.dashAnimate(state);</span>
+  compAnimate(state: string){
+    this.compare = this.animation.dashAnimate(state);
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  contAnimate(</span>state: string){
-<span class="cstat-no" title="statement not covered" >    this.contact = this.animation.dashAnimate(state);</span>
+  contAnimate(state: string){
+    this.contact = this.animation.dashAnimate(state);
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -216,7 +216,7 @@ export class AppComponent {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 06 2020 09:28:45 GMT-0400 (Eastern Daylight Time)
+                at Sat Jun 13 2020 10:48:44 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

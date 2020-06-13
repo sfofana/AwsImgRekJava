@@ -1,12 +1,38 @@
 import { TestBed } from '@angular/core/testing';
 
 import { HttpInterceptorService } from './http-interceptor.service';
+import { UserService } from './user.service';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { User } from '../models/user';
+import { error } from 'protractor';
 
 describe('HttpInterceptorService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let interceptor: HttpInterceptorService
+  let service: UserService;
+  let http: HttpClient;
 
-  it('should be created', () => {
-    const service: HttpInterceptorService = TestBed.get(HttpInterceptorService);
-    expect(service).toBeTruthy();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule
+      ],
+      providers: [
+        UserService,
+        {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
+      ]
+    });
+    service = TestBed.get(UserService);
+  });
+
+  it('should intercept error', () => {
+    const user: User = {
+      role: "spec",
+      cToken: "cToken",
+      jToken: "jToken"
+    };
+    
+    service.getAccess(user).subscribe(data => console.log('no error'), error => {
+      expect(error).toBeTruthy();
+    });
   });
 });

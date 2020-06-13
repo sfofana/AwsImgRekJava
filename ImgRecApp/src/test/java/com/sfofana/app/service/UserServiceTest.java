@@ -1,5 +1,6 @@
 package com.sfofana.app.service;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +40,12 @@ public class UserServiceTest {
 		assertTrue(!test.getNames().isEmpty());
 		assertTrue(!test.getImages().isEmpty());
 		assertTrue(!test.getDetails().isEmpty());
-		assertTrue(test.getResults() > 0);
+		assertTrue(test.getResults() > 0);	
 		assertTrue(exception.getResults() > 0);
 		exception.getDetails().forEach(ex -> {
 			assertTrue(ex.equals("There is no image with the name: mal"));
 		});
+		
 	}
 	
 	@Test
@@ -53,6 +56,7 @@ public class UserServiceTest {
 		Upload test = userService.processImageUpload(fileName, file);
 		assertTrue(test.getName() != null);
 		assertTrue(test.getImage() != null);
-		assertTrue(test.getProcess() != null);
+		assertTrue(test.getProcess() != null);		
+		
 	}
 }

@@ -25,7 +25,7 @@
                     Compare faces of all kinds and rate thier similarity want to try things out for yourself? 
                     Click the button below to get access and get started.
                 </p>
-                <a class="btn waves-light" 
+                <a class="btn waves-light" id="btn" 
                 [@animator]="button" (@animator.done)="btnAnimate('stop')"
                 (click)="getAccess(); btnAnimate('start')" role="button">Get Access</a>
               </div>

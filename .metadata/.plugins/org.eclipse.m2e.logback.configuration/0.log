@@ -6953,3 +6953,647 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2020-06-07 21:24:07,559 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-06-07 21:24:07,565 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-06-07 21:24:07,566 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-07 21:35:51,569 [Worker-89: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm install' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:36:21,596 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of @angular/compiler@8.1.3 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:36:21,599 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:36:21,602 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler-cli@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:36:21,603 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - updated 1 package and audited 1493 packages in 27.665s
+2020-06-07 21:36:21,604 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of typescript@>= 2.7 <3.3 but none is installed. You must install peer dependencies yourself.
+2020-06-07 21:36:21,607 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\fsevents):
+2020-06-07 21:36:21,610 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-07 21:36:21,612 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\karma\node_modules\fsevents):
+2020-06-07 21:36:21,616 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-07 21:36:21,618 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:36:24,530 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:36:24,530 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 21 packages are looking for funding
+2020-06-07 21:36:24,531 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm fund` for details
+2020-06-07 21:36:24,531 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:36:24,533 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - found 120 vulnerabilities (110 low, 6 moderate, 4 high)
+2020-06-07 21:36:24,533 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm audit fix` to fix them, or `npm audit` for details
+2020-06-07 21:36:24,651 [Worker-89: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:36:26,274 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:36:26,275 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:36:26,276 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > ng build
+2020-06-07 21:36:26,276 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:36:43,749 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+2020-06-07 21:37:22,026 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:37:22,027 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Date: 2020-06-08T01:37:22.022Z
+2020-06-07 21:37:22,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Hash: b1e1eb5139bc14ffce65
+2020-06-07 21:37:22,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Time: 37256ms
+2020-06-07 21:37:22,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {main} main.js, main.js.map (main) 121 kB [initial] [rendered]
+2020-06-07 21:37:22,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 293 kB [initial] [rendered]
+2020-06-07 21:37:22,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 463 kB [initial] [rendered]
+2020-06-07 21:37:22,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+2020-06-07 21:37:22,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {scripts} scripts.js, scripts.js.map (scripts) 439 kB [entry] [rendered]
+2020-06-07 21:37:22,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {styles} styles.js, styles.js.map (styles) 1.92 MB [initial] [rendered]
+2020-06-07 21:37:22,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {vendor} vendor.js, vendor.js.map (vendor) 4.86 MB [initial] [rendered]
+2020-06-07 21:37:22,295 [Worker-89: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run tsc:build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:37:23,864 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:37:23,865 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 tsc:build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-07 21:37:23,865 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > tsc -p tsconfig.json
+2020-06-07 21:37:23,865 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-07 21:37:51,972 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-07 21:37:51,973 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-07 21:37:51,976 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-07 21:37:51,981 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-07 21:37:51,982 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 12:54:18,549 [Worker-91: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 12:54:21,738 [Worker-91: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/${latest-version}/pojo-tester-${latest-version}.pom
+2020-06-08 12:54:21,738 [Worker-98: Check for devtools] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/${latest-version}/pojo-tester-${latest-version}.pom
+2020-06-08 12:54:21,746 [Worker-91: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for pl.pojo:pojo-tester:pom:${latest-version} is missing, no dependency information available
+2020-06-08 12:54:21,764 [Worker-98: Check for devtools] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for pl.pojo:pojo-tester:pom:${latest-version} is missing, no dependency information available
+2020-06-08 12:54:28,865 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:54:28,867 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:54:28,869 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:54:29,222 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:54:29,226 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 12:54:29,226 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 12:54:29,231 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:54:29,232 [Worker-91: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 12:54:29,287 [Worker-98: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-08 12:54:59,689 [Worker-98: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 12:55:00,244 [Worker-98: Updating Maven Project] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for pl.pojo:pojo-tester:pom:${latest-version} is missing, no dependency information available
+2020-06-08 12:55:06,469 [Worker-98: Updating Maven Project] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 12:55:06,856 [Worker-98: Updating Maven Project] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 12:55:07,045 [Worker-98: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/main/java
+2020-06-08 12:55:07,047 [Worker-98: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 12:55:07,048 [Worker-98: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 12:55:07,050 [Worker-98: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/test/java
+2020-06-08 12:55:08,995 [Worker-98: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 39 sec
+2020-06-08 12:55:17,854 [Worker-98: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for pl.pojo:pojo-tester:pom:${latest-version} is missing, no dependency information available
+2020-06-08 12:55:18,357 [Worker-98: Building] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 12:55:18,367 [Worker-98: Building] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 12:55:18,375 [Worker-98: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm install' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:55:57,099 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of @angular/compiler@8.1.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:55:57,102 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:55:57,104 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler-cli@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:55:57,105 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - audited 1493 packages in 28.546s
+2020-06-08 12:55:57,107 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of typescript@>= 2.7 <3.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:55:57,111 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\fsevents):
+2020-06-08 12:55:57,114 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 12:55:57,117 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\karma\node_modules\fsevents):
+2020-06-08 12:55:57,121 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 12:55:57,123 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:55:58,567 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:55:58,567 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 21 packages are looking for funding
+2020-06-08 12:55:58,567 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm fund` for details
+2020-06-08 12:55:58,567 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:55:58,568 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - found 120 vulnerabilities (110 low, 6 moderate, 4 high)
+2020-06-08 12:55:58,568 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm audit fix` to fix them, or `npm audit` for details
+2020-06-08 12:55:58,663 [Worker-98: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:56:00,059 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:56:00,060 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:56:00,061 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > ng build
+2020-06-08 12:56:00,062 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:56:58,452 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+2020-06-08 12:57:41,554 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:57:41,554 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Date: 2020-06-08T16:57:41.551Z
+2020-06-08 12:57:41,555 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Hash: b1e1eb5139bc14ffce65
+2020-06-08 12:57:41,556 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Time: 41607ms
+2020-06-08 12:57:41,556 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {main} main.js, main.js.map (main) 121 kB [initial] [rendered]
+2020-06-08 12:57:41,556 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 293 kB [initial] [rendered]
+2020-06-08 12:57:41,557 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 463 kB [initial] [rendered]
+2020-06-08 12:57:41,557 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+2020-06-08 12:57:41,557 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {scripts} scripts.js, scripts.js.map (scripts) 439 kB [entry] [rendered]
+2020-06-08 12:57:41,557 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {styles} styles.js, styles.js.map (styles) 1.92 MB [initial] [rendered]
+2020-06-08 12:57:41,557 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {vendor} vendor.js, vendor.js.map (vendor) 4.86 MB [initial] [rendered]
+2020-06-08 12:57:41,792 [Worker-98: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run tsc:build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:57:43,189 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:57:43,189 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 tsc:build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:57:43,189 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > tsc -p tsconfig.json
+2020-06-08 12:57:43,189 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:58:13,484 [Worker-98: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:58:13,486 [Worker-98: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 12:58:13,540 [Worker-98: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 12:58:13,546 [Worker-98: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:58:13,546 [Worker-98: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 12:58:17,340 [Worker-104: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 12:58:18,585 [Worker-104: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/pl/pojo/pojo-tester/${latest-version}/pojo-tester-${latest-version}.pom
+2020-06-08 12:58:19,804 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:58:19,805 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:58:19,807 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 12:58:20,012 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:58:20,016 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 12:58:20,017 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 12:58:20,022 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 12:58:20,023 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 12:58:44,613 [Worker-104: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-08 12:59:06,130 [Worker-104: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 12:59:11,077 [Worker-104: Updating Maven Project] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 12:59:11,362 [Worker-104: Updating Maven Project] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 12:59:11,534 [Worker-104: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/main/java
+2020-06-08 12:59:11,536 [Worker-104: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 12:59:11,537 [Worker-104: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 12:59:11,538 [Worker-104: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/test/java
+2020-06-08 12:59:14,342 [Worker-104: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 29 sec
+2020-06-08 12:59:21,406 [Worker-113: Building] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 12:59:21,416 [Worker-113: Building] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 12:59:21,426 [Worker-113: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm install' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:59:47,907 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of @angular/compiler@8.1.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:59:47,910 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:59:47,911 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - audited 1493 packages in 23.946s
+2020-06-08 12:59:47,913 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler-cli@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:59:47,914 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of typescript@>= 2.7 <3.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 12:59:47,916 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\karma\node_modules\fsevents):
+2020-06-08 12:59:47,917 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 12:59:47,920 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\fsevents):
+2020-06-08 12:59:47,921 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 12:59:47,923 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:59:49,241 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:59:49,241 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 21 packages are looking for funding
+2020-06-08 12:59:49,241 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm fund` for details
+2020-06-08 12:59:49,241 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:59:49,242 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - found 120 vulnerabilities (110 low, 6 moderate, 4 high)
+2020-06-08 12:59:49,243 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm audit fix` to fix them, or `npm audit` for details
+2020-06-08 12:59:49,325 [Worker-113: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:59:50,472 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 12:59:50,472 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 12:59:50,473 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > ng build
+2020-06-08 12:59:50,474 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:00:07,187 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+2020-06-08 13:00:39,027 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:00:39,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Date: 2020-06-08T17:00:39.025Z
+2020-06-08 13:00:39,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Hash: b1e1eb5139bc14ffce65
+2020-06-08 13:00:39,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Time: 30966ms
+2020-06-08 13:00:39,028 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {main} main.js, main.js.map (main) 121 kB [initial] [rendered]
+2020-06-08 13:00:39,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 293 kB [initial] [rendered]
+2020-06-08 13:00:39,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 463 kB [initial] [rendered]
+2020-06-08 13:00:39,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+2020-06-08 13:00:39,029 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {scripts} scripts.js, scripts.js.map (scripts) 439 kB [entry] [rendered]
+2020-06-08 13:00:39,030 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {styles} styles.js, styles.js.map (styles) 1.92 MB [initial] [rendered]
+2020-06-08 13:00:39,030 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {vendor} vendor.js, vendor.js.map (vendor) 4.86 MB [initial] [rendered]
+2020-06-08 13:00:39,280 [Worker-113: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run tsc:build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:00:40,588 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:00:40,589 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 tsc:build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:00:40,589 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > tsc -p tsconfig.json
+2020-06-08 13:00:40,589 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:01:07,537 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:01:07,538 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 13:01:07,568 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:01:07,573 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:01:07,573 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:02:15,761 [Worker-110: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 13:02:16,770 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.pom
+2020-06-08 13:02:17,283 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.pom
+2020-06-08 13:02:17,398 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.pom
+2020-06-08 13:02:17,552 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.pom
+2020-06-08 13:02:17,594 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.pom
+2020-06-08 13:02:17,670 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.pom
+2020-06-08 13:02:17,778 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/apache/commons/commons-parent/38/commons-parent-38.pom
+2020-06-08 13:02:17,831 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/38/commons-parent-38.pom
+2020-06-08 13:02:17,929 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/38/commons-parent-38.pom
+2020-06-08 13:02:18,045 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.pom
+2020-06-08 13:02:18,099 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.pom
+2020-06-08 13:02:18,158 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.pom
+2020-06-08 13:02:18,263 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.pom
+2020-06-08 13:02:18,311 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.pom
+2020-06-08 13:02:18,371 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.pom
+2020-06-08 13:02:18,865 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.jar
+2020-06-08 13:02:18,958 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar
+2020-06-08 13:02:19,048 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.jar
+2020-06-08 13:02:19,139 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.jar
+2020-06-08 13:02:19,254 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.jar
+2020-06-08 13:02:19,355 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6.jar
+2020-06-08 13:02:19,383 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar
+2020-06-08 13:02:19,588 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar
+2020-06-08 13:02:19,612 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.jar
+2020-06-08 13:02:20,060 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1.jar
+2020-06-08 13:02:20,083 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.jar
+2020-06-08 13:02:20,302 [Worker-110: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA.jar
+2020-06-08 13:02:22,650 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:22,651 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:22,653 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:22,856 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:22,863 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:02:22,864 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:02:22,869 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:22,870 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:02:25,304 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6-sources.jar
+2020-06-08 13:02:26,726 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6-sources.jar
+2020-06-08 13:02:27,229 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pl/pojo/pojo-tester/0.7.6/pojo-tester-0.7.6-sources.jar
+2020-06-08 13:02:27,476 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for pl.pojo:pojo-tester:0.7.6
+2020-06-08 13:02:27,831 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://jcenter.bintray.com/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-sources.jar
+2020-06-08 13:02:28,649 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-sources.jar
+2020-06-08 13:02:29,347 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-sources.jar
+2020-06-08 13:02:29,492 [Worker-119: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 13:02:29,542 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.commons:commons-collections4:4.1
+2020-06-08 13:02:30,993 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1-sources.jar
+2020-06-08 13:02:31,275 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/googlecode/combinatoricslib/combinatoricslib/2.1/combinatoricslib-2.1-sources.jar
+2020-06-08 13:02:31,438 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.googlecode.combinatoricslib:combinatoricslib:2.1
+2020-06-08 13:02:32,270 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:32,272 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:32,274 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:32,469 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:32,475 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 13:02:32,498 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:02:32,504 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:32,505 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:02:32,779 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA-sources.jar
+2020-06-08 13:02:33,146 [Worker-116: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/javassist/javassist/3.22.0-GA/javassist-3.22.0-GA-sources.jar
+2020-06-08 13:02:33,434 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.javassist:javassist:3.22.0-GA
+2020-06-08 13:02:33,493 [Worker-116: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.javassist:javassist:3.22.0-GA
+2020-06-08 13:02:36,781 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:36,783 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:36,785 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:02:36,790 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:36,791 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:02:36,792 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:02:36,795 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:02:36,796 [Worker-120: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:05:18,256 [Worker-118: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-06-08 13:05:45,612 [Worker-118: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 13:05:58,542 [Worker-118: Updating Maven Project] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 13:05:58,808 [Worker-118: Updating Maven Project] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 13:06:00,127 [Worker-118: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/main/java
+2020-06-08 13:06:00,127 [Worker-118: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 13:06:00,127 [Worker-118: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ImgRecApp/src/main/resources
+2020-06-08 13:06:00,128 [Worker-118: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ImgRecApp/src/test/java
+2020-06-08 13:06:03,017 [Worker-118: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 44 sec
+2020-06-08 13:06:08,590 [Worker-110: Building] INFO  c.g.e.m.p.f.lib.NodeInstaller - Node v13.10.1 is already installed.
+2020-06-08 13:06:08,601 [Worker-110: Building] INFO  c.g.e.m.p.frontend.lib.NPMInstaller - NPM 6.13.7 is already installed.
+2020-06-08 13:06:08,611 [Worker-110: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm install' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:06:45,578 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN @angular/compiler-cli@8.1.3 requires a peer of @angular/compiler@8.1.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 13:06:45,581 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 13:06:45,584 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of @angular/compiler-cli@^6.0.0 || ^7.0.0 || ^7.2.0-beta.0 but none is installed. You must install peer dependencies yourself.
+2020-06-08 13:06:45,584 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - audited 1493 packages in 25.727s
+2020-06-08 13:06:45,586 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN ng-packagr@4.7.1 requires a peer of typescript@>= 2.7 <3.3 but none is installed. You must install peer dependencies yourself.
+2020-06-08 13:06:45,588 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\fsevents):
+2020-06-08 13:06:45,590 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 13:06:45,592 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\karma\node_modules\fsevents):
+2020-06-08 13:06:45,594 [Exec Stream Pumper] WARN  c.g.e.m.p.f.lib.DefaultNpmRunner - npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+2020-06-08 13:06:45,596 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:06:46,851 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:06:46,851 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 21 packages are looking for funding
+2020-06-08 13:06:46,852 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm fund` for details
+2020-06-08 13:06:46,852 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:06:46,852 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - found 120 vulnerabilities (110 low, 6 moderate, 4 high)
+2020-06-08 13:06:46,852 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner -   run `npm audit fix` to fix them, or `npm audit` for details
+2020-06-08 13:06:46,955 [Worker-110: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:06:48,208 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:06:48,208 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:06:48,208 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > ng build
+2020-06-08 13:06:48,209 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:07:51,671 [Exec Stream Pumper] ERROR c.g.e.m.p.f.lib.DefaultNpmRunner - Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+2020-06-08 13:08:35,749 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:08:35,750 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Date: 2020-06-08T17:08:35.746Z
+2020-06-08 13:08:35,750 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Hash: b1e1eb5139bc14ffce65
+2020-06-08 13:08:35,751 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Time: 42640ms
+2020-06-08 13:08:35,751 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {main} main.js, main.js.map (main) 121 kB [initial] [rendered]
+2020-06-08 13:08:35,751 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 293 kB [initial] [rendered]
+2020-06-08 13:08:35,751 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {polyfills-es5} polyfills-es5.js, polyfills-es5.js.map (polyfills-es5) 463 kB [initial] [rendered]
+2020-06-08 13:08:35,751 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+2020-06-08 13:08:35,752 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {scripts} scripts.js, scripts.js.map (scripts) 439 kB [entry] [rendered]
+2020-06-08 13:08:35,752 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {styles} styles.js, styles.js.map (styles) 1.92 MB [initial] [rendered]
+2020-06-08 13:08:35,752 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - chunk {vendor} vendor.js, vendor.js.map (vendor) 4.86 MB [initial] [rendered]
+2020-06-08 13:08:36,027 [Worker-110: Building] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - Running 'npm run tsc:build' in C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:08:37,363 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:08:37,363 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > angular-bootstrap-md-lib@8.10.0 tsc:build C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\webapp
+2020-06-08 13:08:37,364 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - > tsc -p tsconfig.json
+2020-06-08 13:08:37,364 [Exec Stream Pumper] INFO  c.g.e.m.p.f.lib.DefaultNpmRunner - 
+2020-06-08 13:09:07,943 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:09:07,945 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 13:09:07,994 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:09:08,002 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:09:08,004 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:10:50,428 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:10:50,430 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:10:50,431 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:10:50,435 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:10:50,436 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:10:50,437 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:10:50,440 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:10:50,441 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:11:25,070 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:25,072 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:25,074 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:25,079 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:11:25,079 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:11:25,080 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:11:25,084 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:11:25,084 [Worker-126: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:11:38,644 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:38,646 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:38,647 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:11:38,652 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:11:38,652 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:11:38,653 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:11:38,657 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:11:38,657 [Worker-124: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 13:54:13,987 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:54:13,989 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:54:13,990 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 13:54:13,999 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:54:14,000 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:54:14,002 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 13:54:14,007 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 13:54:14,007 [Worker-136: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 14:11:37,412 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 14:11:37,414 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 14:11:37,415 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 14:11:37,419 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 14:11:37,419 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 14:11:37,420 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 14:11:37,423 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 14:11:37,423 [Worker-140: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 16:55:16,376 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:16,379 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:16,380 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:16,387 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:16,387 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:16,388 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:16,391 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:16,391 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 16:55:17,457 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:17,459 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:17,460 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:17,463 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:17,464 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:17,465 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:17,469 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:17,469 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 16:55:29,911 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:29,913 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:29,914 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:29,919 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:29,919 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:29,920 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:29,924 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:29,925 [Worker-150: Launching UserServiceTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 16:55:46,055 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:46,057 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:46,058 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:46,063 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:46,064 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:46,065 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:46,069 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:46,070 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 16:55:54,224 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:54,226 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:54,227 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 16:55:54,232 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:54,233 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:54,234 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 16:55:54,236 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 16:55:54,237 [Worker-150: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 17:05:07,376 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:07,378 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:07,379 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:07,384 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:05:07,385 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:05:07,386 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:05:07,389 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:05:07,389 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 17:05:08,829 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:08,831 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:08,832 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:05:08,836 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:05:08,838 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 17:05:08,843 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:05:08,848 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:05:08,848 [Worker-154: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 17:06:53,633 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:53,635 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:53,636 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:53,639 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:06:53,640 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:06:53,640 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:06:53,646 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:06:53,647 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 17:06:54,802 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:54,804 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:54,805 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 17:06:54,809 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:06:54,809 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:06:54,810 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 17:06:54,813 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 17:06:54,814 [Worker-148: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:30:54,245 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:54,247 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:54,248 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:54,253 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:54,254 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:30:54,255 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:30:54,259 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:54,260 [Worker-158: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:30:55,457 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:55,459 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:55,461 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:55,467 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:55,473 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-08 20:30:55,493 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:30:55,498 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:55,499 [Worker-161: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:30:56,599 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:56,601 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:56,603 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:30:56,608 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:56,608 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:30:56,609 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:30:56,613 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:30:56,614 [Worker-159: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:31:10,397 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:10,398 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:10,399 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:10,404 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:31:10,405 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:31:10,406 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:31:10,409 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:31:10,409 [Worker-153: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:31:13,042 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:13,044 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:13,045 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:31:13,049 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:31:13,050 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:31:13,052 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:31:13,056 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:31:13,056 [Worker-160: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:37:41,821 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:37:41,823 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:37:41,824 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:37:41,829 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:37:41,830 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:37:41,831 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:37:41,835 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:37:41,836 [Worker-162: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:40:09,496 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:40:09,498 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:40:09,500 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:40:09,508 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:40:09,509 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:40:09,512 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:40:09,520 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:40:09,521 [Worker-165: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:43:17,009 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:17,011 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:17,012 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:17,018 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:43:17,019 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:43:17,021 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:43:17,025 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:43:17,026 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:43:18,150 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:18,152 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:18,152 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:43:18,155 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:43:18,156 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:43:18,156 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:43:18,159 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:43:18,159 [Worker-167: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:45:29,508 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:29,510 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:29,511 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:29,516 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:45:29,517 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:45:29,518 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:45:29,523 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:45:29,523 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:45:33,880 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:33,882 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:33,883 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-08 20:45:33,887 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:45:33,888 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:45:33,889 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:45:33,893 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:45:33,893 [Worker-174: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:46:58,028 [Worker-170: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-08 20:47:04,208 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:47:04,213 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:47:04,214 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:47:04,219 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:47:04,220 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:52:33,210 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:52:33,210 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:52:33,210 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:52:33,214 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:52:33,214 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-08 20:52:34,381 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:52:34,381 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:52:34,382 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-08 20:52:34,385 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-08 20:52:34,386 [Worker-170: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:03:06,114 [Worker-196: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-13 11:03:13,576 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:13,582 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:13,582 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:13,585 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:13,586 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:03:18,648 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:18,649 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:18,650 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:18,652 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:18,652 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:03:35,633 [Worker-196: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:562) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:571) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:559) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:515) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+Caused by: org.apache.maven.model.io.ModelParseException: end tag name </build> must match start tag name <plugins> from line 109 (position: TEXT seen ...</plugins> -->\r\n\t</build>... @190:10) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117) ~[na:na]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:85) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:560) ~[na:na]
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag name </build> must match start tag name <plugins> from line 109 (position: TEXT seen ...</plugins> -->\r\n\t</build>... @190:10) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.parseEndTag(MXParser.java:2090) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1361) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1319) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1305) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseBuild(MavenXpp3Reader.java:984) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2281) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595) ~[na:na]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:112) ~[na:na]
+	... 26 common frames omitted
+2020-06-13 11:03:38,545 [Worker-196: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:562) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:571) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:559) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:515) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
+Caused by: org.apache.maven.model.io.ModelParseException: end tag name </build> must match start tag name <plugins> from line 109 (position: TEXT seen ...</plugins> -->\r\n\t</build>... @190:10) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:117) ~[na:na]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:85) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readModel(MavenImpl.java:560) ~[na:na]
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag name </build> must match start tag name <plugins> from line 109 (position: TEXT seen ...</plugins> -->\r\n\t</build>... @190:10) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.parseEndTag(MXParser.java:2090) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1361) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1319) ~[na:na]
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1305) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseBuild(MavenXpp3Reader.java:984) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2281) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:3872) ~[na:na]
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:595) ~[na:na]
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:112) ~[na:na]
+	... 26 common frames omitted
+2020-06-13 11:03:47,192 [Worker-196: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-13 11:03:48,769 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:48,772 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:48,772 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:48,775 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:48,775 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:03:53,744 [Worker-195: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:53,748 [Worker-195: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-06-13 11:03:53,772 [Worker-195: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:03:53,775 [Worker-195: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:03:53,775 [Worker-195: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:05:29,912 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:29,913 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:29,914 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:29,916 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:29,916 [Worker-196: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:05:30,998 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:30,999 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:30,999 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:31,001 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:31,002 [Worker-199: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 11:05:46,205 [Worker-194: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.sfofana:ImgRecApp:0.0.1-SNAPSHOT @ C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\pom.xml.
+2020-06-13 11:05:48,560 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 11:05:48,561 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 11:05:48,660 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:48,663 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:48,664 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 11:05:48,666 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 11:05:48,667 [Worker-194: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources

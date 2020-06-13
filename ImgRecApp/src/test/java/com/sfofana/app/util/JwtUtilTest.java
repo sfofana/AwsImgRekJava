@@ -2,6 +2,7 @@ package com.sfofana.app.util;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.sfofana.app.controller.UserController;
-import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.User;
 
 import io.jsonwebtoken.ExpiredJwtException;

@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">43.75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,27 +107,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
@@ -144,27 +144,27 @@ import { User } from '../models/user';
 })
 export class UserService {
 &nbsp;
-  private <span class="cstat-no" title="statement not covered" >sessionUrl = environment.session;</span>
-  private <span class="cstat-no" title="statement not covered" >eUrl = environment.emailUrl;</span>
-  private <span class="cstat-no" title="statement not covered" >compUrl = environment.compare;</span>
-  private <span class="cstat-no" title="statement not covered" >upUrl = environment.upload;</span>
+  private sessionUrl = environment.session;
+  private eUrl = environment.emailUrl;
+  private compUrl = environment.compare;
+  private upUrl = environment.upload;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" >h</span>ttp: H</span>ttpClient) { }
+  constructor(private http: HttpClient) { }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public g</span>etAccess(user: User): Observable&lt;User&gt; {
-<span class="cstat-no" title="statement not covered" >    return this.http.post&lt;User&gt;(this.sessionUrl, user);</span>
+  public getAccess(user: User): Observable&lt;User&gt; {
+    return this.http.post&lt;User&gt;(this.sessionUrl, user);
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public s</span>endEmail(message: FormData): Observable&lt;Email&gt;{
-<span class="cstat-no" title="statement not covered" >    return this.http.post&lt;Email&gt;(this.eUrl,message);</span>
+  public sendEmail(message: FormData): Observable&lt;Email&gt;{
+    return this.http.post&lt;Email&gt;(this.eUrl,message);
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public u</span>pload(fileName: string, file: FormData): Observable&lt;Upload&gt;{
-<span class="cstat-no" title="statement not covered" >    return this.http.post&lt;Upload&gt;(this.upUrl+"/"+fileName, file);</span>
+  public upload(fileName: string, file: FormData): Observable&lt;Upload&gt;{
+    return this.http.post&lt;Upload&gt;(this.upUrl+"/"+fileName, file);
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public c</span>ompareFaces(faces: Compare) : Observable&lt;Compare&gt; {
-<span class="cstat-no" title="statement not covered" >    return this.http.post&lt;Compare&gt;(this.compUrl,faces);</span>
+  public compareFaces(faces: Compare) : Observable&lt;Compare&gt; {
+    return this.http.post&lt;Compare&gt;(this.compUrl,faces);
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -174,7 +174,7 @@ export class UserService {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jun 06 2020 09:28:45 GMT-0400 (Eastern Daylight Time)
+                at Sat Jun 13 2020 10:48:44 GMT-0400 (Eastern Daylight Time)
             </div>
         </div>
         <script src="..\..\..\prettify.js"></script>
