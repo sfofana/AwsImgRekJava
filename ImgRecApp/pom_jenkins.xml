@@ -138,15 +138,12 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>npm install typescript and angular</id>
+						<id>npm install angular</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
 						<configuration>
-							<arguments>
-							install 
-							-g @angular/compiler-cli
-							</arguments>			
+							<arguments>install -g @angular/cli</arguments>			
 						</configuration>
 					</execution>
 					<execution>

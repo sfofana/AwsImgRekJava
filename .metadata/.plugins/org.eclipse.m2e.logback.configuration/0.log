@@ -7700,3 +7700,17 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag nam
 2020-06-13 12:46:12,723 [Worker-220: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-06-13 12:46:12,725 [Worker-220: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-06-13 12:46:12,725 [Worker-220: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 12:50:53,893 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 12:50:53,894 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 12:50:53,896 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 12:50:53,896 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 12:50:53,896 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 12:50:53,898 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 12:50:53,898 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
+2020-06-13 13:04:55,082 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 13:04:55,083 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Skipping npm install as package.json unchanged
+2020-06-13 13:04:55,085 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 13:04:55,085 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 13:04:55,085 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-06-13 13:04:55,088 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-13 13:04:55,089 [Worker-226: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sufya\Documents\Repository\ImgRecApp\Java\AwsImgRekJava\ImgRecApp\src\test\resources
