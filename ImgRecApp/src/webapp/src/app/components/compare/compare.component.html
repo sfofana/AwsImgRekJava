@@ -19,7 +19,7 @@
         <div class="col-xl-6 col-md-8">
 
           <div class="aws mask rgba-white-light">
-            <img src="assets/images/awslogo.PNG" class="img-fluid">
+            <img src="assets/images/awslogo.PNG" class="img-fluid" alt="">
           </div>   
 
           <p class="text-muted">Compare faces and review the results</p>
@@ -33,7 +33,7 @@
             class="form-control" type="text">
             <label for="img2">2nd Image</label>
           </div> 
-          <a class="btn waves-light" 
+          <a class="btn waves-light" id="btn"
           [@animator]="button" (@animator.done)="btnAnimate('stop')" 
           (click)="compareFaces(); btnAnimate('start')" role="button">Compare
           </a>
@@ -48,15 +48,15 @@
           <h5 *ngIf="message" class="invalid" [@animator]="shaker">{{message}}</h5>
 
           <div *ngIf="details.length > 0" [@animator]="zoomIn">
-            <table mdbTable class="view display overlay z-depth-1-half">
+            <table mdbTable class="view display overlay z-depth-1-half" aria-describedby="compared">
               <thead>
                 <tr>
-                  <th *ngFor="let detail of details" class="success">{{detail | titlecase}}</th>
+                  <th id="detail" *ngFor="let detail of details" class="success">{{detail | titlecase}}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th *ngFor="let image of images"><img [src]="image" class="img-fluid"></th>
+                  <th id="image" *ngFor="let image of images"><img [src]="image" class="img-fluid" alt=""></th>
                 </tr>             
               </tbody>
             </table>
@@ -75,9 +75,9 @@
 
         <!--Second column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-chart-area fa-3x green-text"
+            <em class="fas fa-chart-area fa-3x green-text"
             [@animator]="chart" (@animator.done)="chartAnimate('stop')" 
-            (mouseover)="chartAnimate('start')"></i>
+            (mouseover)="chartAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Microservices</p>
   
@@ -87,9 +87,9 @@
 
         <!--Third column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-cogs fa-3x grey-text"
+            <em class="fas fa-cogs fa-3x grey-text"
             [@animator]="cog" (@animator.done)="cogAnimate('stop')" 
-            (mouseover)="cogAnimate('start')"></i>
+            (mouseover)="cogAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Rekognition</p>
   
@@ -99,9 +99,9 @@
 
         <!--Fourth column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-cloud-upload-alt fa-3x blue-text"
+            <em class="fas fa-cloud-upload-alt fa-3x blue-text"
             [@animator]="cloud" (@animator.done)="cloudAnimate('stop')" 
-            (mouseover)="cloudAnimate('start')"></i>
+            (mouseover)="cloudAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Cloud</p>
   

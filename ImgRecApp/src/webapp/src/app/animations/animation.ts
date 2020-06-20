@@ -1,4 +1,4 @@
-import { keyframes, style } from "@angular/animations";
+import { style } from "@angular/animations";
 
 export const pulse = [
     style({transform: 'scale3d(1, 1, 1)', offset: 0}),

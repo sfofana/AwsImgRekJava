@@ -1,9 +1,5 @@
 package com.sfofana.app.model;
 
-import java.io.File;
-
-import org.springframework.web.multipart.MultipartFile;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,7 @@
 package com.sfofana.app.service;
 
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -10,7 +11,6 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +43,7 @@ public class UserServiceTest {
 		assertTrue(test.getResults() > 0);	
 		assertTrue(exception.getResults() > 0);
 		exception.getDetails().forEach(ex -> {
-			assertTrue(ex.equals("There is no image with the name: mal"));
+			assertEquals("There is no image with the name: mal", ex);
 		});
 		
 	}
@@ -54,9 +54,9 @@ public class UserServiceTest {
 		String fileName = "testFile";
 		MultipartFile file = new MockMultipartFile("testFile.txt", new FileInputStream(new File(path+"testFile.txt")));
 		Upload test = userService.processImageUpload(fileName, file);
-		assertTrue(test.getName() != null);
-		assertTrue(test.getImage() != null);
-		assertTrue(test.getProcess() != null);		
+		assertNotNull(test.getName());
+		assertNotNull(test.getImage());
+		assertNotNull(test.getProcess());		
 		
 	}
 }

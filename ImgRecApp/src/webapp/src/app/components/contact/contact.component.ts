@@ -21,7 +21,7 @@ import { trigger, keyframes, animate, transition } from '@angular/animations';
 export class ContactComponent implements OnInit, OnDestroy {
 
   /**
-   * Attributes need for I/O of the Email UI
+   * Attributes needed for I/O of the Email UI
    */
   private name: string;
   private email: string;
@@ -102,6 +102,9 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.formData = new FormData();
   }
 
+  /**
+   * Rests email form
+   */
   reset(){
     this.name="";
     this.email="";
@@ -112,12 +115,20 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.invalid="";
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   btnAnimate(state: string){
     if(!this.button){
       this.button = state;
     }
   }
 
+  /**
+   * Resets button animation
+   */
   btnReset(){
     this.button = "";
   }

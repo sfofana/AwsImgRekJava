@@ -24,22 +24,22 @@ import { User } from 'src/app/models/user';
 import { TestBedProvider } from 'src/app/specs/testbed-provider';
 
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+  let malComponent: HomeComponent;
+  let error: ComponentFixture<HomeComponent>;
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    fixture = provider.homeFixtureBuilder();
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    error = provider.homeErrorComponentBuilder();
+    malComponent = error.componentInstance;
+    error.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(malComponent).toBeTruthy();
   });
 
   it('should grant access for application', () => {
-    expect(component.getAccess()).toBeUndefined();
+    expect(malComponent.getAccess()).toBeUndefined();
   });
 
 });

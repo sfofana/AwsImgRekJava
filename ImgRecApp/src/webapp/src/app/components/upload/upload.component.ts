@@ -27,6 +27,9 @@ import { trigger, keyframes, animate, transition } from '@angular/animations';
 })
 export class UploadComponent implements OnInit, OnDestroy {
 
+  /**
+   * Attributes needed for I/O of the Upload UI
+   */
   private name: string;
   formData = new FormData();
   private valid: string;
@@ -38,6 +41,9 @@ export class UploadComponent implements OnInit, OnDestroy {
   private readonly fileType: string = "data:image/png;base64,";
   private upload: Upload;
 
+  /**
+   * Attributes needed for the animations and transitions
+   */
   private button = "";
   private bouncer = "bounce";
   private zoomIn = "zoom";
@@ -63,6 +69,11 @@ export class UploadComponent implements OnInit, OnDestroy {
     this.dotLoader = false;
   }
 
+  /**
+   * From UI files selected are set into the form data
+   * object
+   * @param files The file uploaded
+   */
   fileChange(files:any[]) {
     if (files && files.length > 0) {
      let file = files[0];
@@ -70,6 +81,15 @@ export class UploadComponent implements OnInit, OnDestroy {
     }  
   }
 
+  /**
+   * News all elements, adds file name and form data, validates 
+   * name using ValidationService, sets spinner to true only if 
+   * file name is valid, subscribes to http post request using 
+   * UserService, sets all subscription data with its coresponding 
+   * elements and spinner is set to false. In case off error, 
+   * dot loader is set to true, local storage is cleared and the 
+   * UI is redirected to the home page based on the timer set number. 
+   */
   uploadFiles(){ 
     this.display = "";
     this.image = "";
@@ -105,18 +125,38 @@ export class UploadComponent implements OnInit, OnDestroy {
     this.formData = new FormData();
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   btnAnimate(state: string){
     this.button = this.animation.btnAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   chartAnimate(state: string){
     this.chart = this.animation.chartAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   cogAnimate(state: string){
     this.cog = this.animation.cogAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   cloudAnimate(state: string){
     this.cloud = this.animation.cloudAnimate(state);
   }

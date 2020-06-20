@@ -11,17 +11,17 @@
     <div class="container">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link waves-light text-light" routerLink="/upload" mdbWavesEffect
+            <a class="nav-link waves-light text-light" id="upload" routerLink="/upload" mdbWavesEffect
             [@animator]="upload" (@animator.done)="upAnimate('stop')" 
             (mouseover)="upAnimate('start')">Upload</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-light text-light" routerLink="/compare" mdbWavesEffect
+          <a class="nav-link waves-light text-light"id="compare" routerLink="/compare" mdbWavesEffect
           [@animator]="compare" (@animator.done)="compAnimate('stop')" 
           (mouseover)="compAnimate('start')">Compare Faces</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light text-light" routerLink="/contact" mdbWavesEffect
+        <a class="nav-link waves-light text-light" id="contact" routerLink="/contact" mdbWavesEffect
         [@animator]="contact" (@animator.done)="contAnimate('stop')" 
         (mouseover)="contAnimate('start')">Contact <mdb-icon fas icon="envelope" class="white-text"></mdb-icon></a>
     </li>
@@ -49,16 +49,16 @@
       <div class="col-md-12 py-5">
         <div class="mb-5 flex-center">
           <!--Linkedin -->
-          <a class="li-ic" href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <a class="li-ic" rel="noopener noreferrer" href="http://linkedin.com/in/sufyan-fofana-2a743584" target="_blank">
+            <em class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </em>
           </a>
           <!--GitHub-->
-          <a class="ins-ic" href="https://github.com/sfofana/AwsImgRekJava" target="_blank">
-            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <a class="ins-ic" rel="noopener noreferrer" href="https://github.com/sfofana/AwsImgRekJava" target="_blank">
+            <em class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </em>
           </a>
           <!--Youtube-->
-          <a class="pin-ic" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
-            <i class="fab fa-youtube fa-lg white-text fa-2x"> </i>
+          <a class="pin-ic" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCQlhey4SbBsnpIRtrvaEJ6g" target="_blank">
+            <em class="fab fa-youtube fa-lg white-text fa-2x"> </em>
           </a>
         </div>
       </div>

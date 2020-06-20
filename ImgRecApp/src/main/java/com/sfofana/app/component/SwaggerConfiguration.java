@@ -17,12 +17,10 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.AuthorizationScope;
 import springfox.documentation.service.BasicAuth;
 import springfox.documentation.service.GrantType;
-import springfox.documentation.service.SecurityReference;
 import springfox.documentation.service.SecurityScheme;
 import springfox.documentation.service.TokenEndpoint;
 import springfox.documentation.service.TokenRequestEndpoint;
 import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
 /**
@@ -48,7 +46,6 @@ public class SwaggerConfiguration {
 				.apis(RequestHandlerSelectors.basePackage("com.sfofana.app"))
 				.build()
 		        .securitySchemes(securityScheme())
-		        //.securityContexts(Arrays.asList(securityContext()))
 		        ;
 	}
 	
@@ -66,7 +63,7 @@ public class SwaggerConfiguration {
 	}
 	
 	private List<SecurityScheme> securityScheme() {
-		List<SecurityScheme> scheme = new ArrayList<SecurityScheme>();
+		List<SecurityScheme> scheme = new ArrayList<>();
 		 GrantType grantType = new AuthorizationCodeGrantBuilder()
 			        .tokenEndpoint(new TokenEndpoint("swagger-ui.html#/", "oauthtoken"))
 			        .tokenRequestEndpoint(
@@ -91,11 +88,4 @@ public class SwaggerConfiguration {
 	    return scopes;
 	}
 	
-//	private SecurityContext securityContext() {
-//	    return SecurityContext.builder()
-//	      .securityReferences(
-//	        Arrays.asList(new SecurityReference("spring_oauth", scopes())))
-//	      .forPaths(PathSelectors.ant("/*"))
-//	      .build();
-//	}
 }

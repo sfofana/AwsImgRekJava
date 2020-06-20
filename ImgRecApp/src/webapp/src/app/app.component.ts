@@ -21,8 +21,11 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
 })
 export class AppComponent {
   
-  title = "AWS Image Rekognition";
+  title = "Bio Unique";
 
+  /**
+   * Attributes needed for the animations and transitions
+   */
   private upload = "";
   private compare = "";
   private contact = "";
@@ -31,20 +34,41 @@ export class AppComponent {
  
   }
 
+  /**
+   * Determines route animation based on router outlet
+   * data
+   * @param outlet The data contained in the router 
+   * outlet
+   */
   preparedRoute(outlet: RouterOutlet){
     return outlet && 
     outlet.activatedRouteData &&
     outlet.activatedRouteData['animation'];
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   upAnimate(state: string){
     this.upload = this.animation.dashAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   compAnimate(state: string){
     this.compare = this.animation.dashAnimate(state);
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   contAnimate(state: string){
     this.contact = this.animation.dashAnimate(state);
   }

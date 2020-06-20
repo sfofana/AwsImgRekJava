@@ -28,7 +28,7 @@ import { trigger, transition, animate, keyframes } from '@angular/animations';
 export class CompareComponent implements OnInit, OnDestroy {
 
   /**
-   * Attributes need for I/O of the Compare UI
+   * Attributes needed for I/O of the Compare UI
    */
   private img1: string;
   private img2: string;
@@ -77,8 +77,8 @@ export class CompareComponent implements OnInit, OnDestroy {
    * News all elements, adds image names to Compare object
    * names attribute, validates names using ValidationService,
    * sets spinner to true only if names are valid, subscribes
-   * to hhtp post using UserService, sets all subscription data 
-   * with its coresponding elements and spinner is set to false. 
+   * to http post request using UserService, sets all subscription
+   * data with its coresponding elements and spinner is set to false. 
    * In case off error, dot loader is set to true, local storage 
    * is cleared and the UI is redirected to the home page based
    * on the timer set number. 

@@ -20,7 +20,7 @@
         <div class="col-xl-6 col-md-8">
 
           <div class="aws mask rgba-white-light">
-            <img src="assets/images/awslogo.PNG" class="img-fluid">
+            <img src="assets/images/awslogo.PNG" class="img-fluid" alt="">
           </div>  
 
                 <p class="text-muted">Upload the images you wish to compare faces with</p>
@@ -44,7 +44,7 @@
                   </div>         
                 </div>
 
-                <a class="btn waves-light" 
+                <a class="btn waves-light" id="btn"
                 [@animator]="button" (@animator.done)="btnReset('stop')"
                 (click)="uploadFiles(); btnAnimate('start')" role="button">Upload</a>
 
@@ -52,15 +52,16 @@
 
                   <h5 *ngIf="results" class="success" [@animator]="bouncer">{{results}}</h5> 
                    <h5 *ngIf="message" class="invalid" [@animator]="shaker">{{message}}</h5> 
-                   <table *ngIf="image" mdbTable class="view display overlay z-depth-1-half" [@animator]="zoomIn">
+                   <table *ngIf="image" mdbTable class="view display overlay z-depth-1-half" 
+                   [@animator]="zoomIn" aria-describedby="uploaded">
                     <thead>
                       <tr>
-                        <th class="success">{{display | titlecase}}</th>
+                        <th id="display" class="success">{{display | titlecase}}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th><img [src]="image" class="img-fluid"></th>
+                        <th id="image"><img [src]="image" class="img-fluid" alt=""></th>
                       </tr>             
                     </tbody>
                   </table>                                     
@@ -77,9 +78,9 @@
 
         <!--Second column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-chart-area fa-3x deep-purple-text"
+            <em class="fas fa-chart-area fa-3x deep-purple-text"
             [@animator]="chart" (@animator.done)="chartAnimate('stop')"
-            (mouseover)="chartAnimate('start')"></i>
+            (mouseover)="chartAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Microservices</p>
   
@@ -89,9 +90,9 @@
 
         <!--Third column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-cogs fa-3x red-text"
+            <em class="fas fa-cogs fa-3x red-text"
             [@animator]="cog" (@animator.done)="cogAnimate('stop')"
-            (mouseover)="cogAnimate('start')"></i>
+            (mouseover)="cogAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Upload</p>
   
@@ -101,9 +102,9 @@
 
         <!--Fourth column-->
         <div class="col-lg-4 col-md-6">
-            <i class="fas fa-cloud-upload-alt fa-3x teal-text"
+            <em class="fas fa-cloud-upload-alt fa-3x teal-text"
             [@animator]="cloud" (@animator.done)="cloudAnimate('stop')"
-            (mouseover)="cloudAnimate('start')"></i>
+            (mouseover)="cloudAnimate('start')"></em>
 
             <p class="font-weight-bold my-3">Cloud</p>
   

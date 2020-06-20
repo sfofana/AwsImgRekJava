@@ -7,6 +7,11 @@ export class AnimationService {
 
   constructor() { }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   public dashAnimate(state: string) : string {
     if(state == "start"){
       return "pulse";
@@ -16,6 +21,11 @@ export class AnimationService {
     }
   }
   
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   public btnAnimate(state: string) : string {
     if(state == "start"){
       return "heartBeat";
@@ -25,6 +35,11 @@ export class AnimationService {
     }
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   public chartAnimate(state: string) : string {
     if(state == "start"){
       return "tada";
@@ -34,6 +49,11 @@ export class AnimationService {
     }
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   public cogAnimate(state: string) : string {
     if(state == "start"){
       return "rotate";
@@ -43,6 +63,11 @@ export class AnimationService {
     }
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   public cloudAnimate(state: string) : string {
     if(state == "start"){
       return "popup";

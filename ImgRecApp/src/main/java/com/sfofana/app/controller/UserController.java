@@ -1,12 +1,9 @@
 package com.sfofana.app.controller;
 
-import java.io.File;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,11 +14,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
-import com.sfofana.app.model.Credentials;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.service.UserService;
-import com.sfofana.app.util.VaultUtil;
 /**
  * @author Sufyan Fofana
  * @version 1.0

@@ -19,6 +19,20 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.host.url>https://sonarcloud.io/</sonar.host.url>
+				<sonar.organization>sfofana</sonar.organization>
+				<sonar.login>cc035a76b3bba9a497cf7711d888cbb448e112d1</sonar.login>
+			</properties>
+		</profile>
+	</profiles>
+
 	<dependencies>
 
 		<dependency>
@@ -115,7 +129,7 @@
 				</configuration>
 			</plugin>
 
-	 		<plugin>
+			<plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
 				<version>1.7.6</version>
@@ -132,13 +146,25 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>npm install</id>
+						<id>npm install compodoc and sonarqube</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
+						<configuration>
+							<arguments>install @compodoc/compodoc sonarqube-scanner</arguments>
+						</configuration>
 					</execution>
 					<execution>
-						<id>npm run build</id>
+						<id>test</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>test</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>build with compodoc and sonarqube</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
@@ -147,7 +173,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>  
+			</plugin>
 
 			<plugin>
 				<groupId>org.jacoco</groupId>
@@ -185,8 +211,23 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> 
-		</plugins> 
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.3.0.603</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>sonar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
 	</build>
 
 </project>

@@ -5,28 +5,26 @@ import { BrowserModule, By } from '@angular/platform-browser';
 import { TestBedProvider } from 'src/app/specs/testbed-provider'
 
 describe('ContactComponent', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+  let malComponent: ContactComponent;
+  let error: ComponentFixture<ContactComponent>;
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider()
-    fixture = provider.contactFixtureBuilder();
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    error = provider.contactErrorComponentBuilder();
+    malComponent = error.componentInstance;
+    error.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(malComponent).toBeTruthy();
   });
 
   it('should send email only if it is valid', () => {
-    expect(component.submit()).toBeUndefined();
-    const name = fixture.debugElement.query(By.css('input[id=name]')).nativeElement;
-    const email = fixture.debugElement.query(By.css('input[id=email]')).nativeElement;
-    const phone = fixture.debugElement.query(By.css('input[id=phone]')).nativeElement;
-    const subject = fixture.debugElement.query(By.css('input[id=subject]')).nativeElement;
-    const message = fixture.debugElement.query(By.css('textarea[id=message]')).nativeElement;
-
+    const name = error.debugElement.query(By.css('input[id=name]')).nativeElement;
+    const email = error.debugElement.query(By.css('input[id=email]')).nativeElement;
+    const phone = error.debugElement.query(By.css('input[id=phone]')).nativeElement;
+    const subject = error.debugElement.query(By.css('input[id=subject]')).nativeElement;
+    const message = error.debugElement.query(By.css('textarea[id=message]')).nativeElement;
 
     name.value = "Spec";
     email.value = "test@gmail.com";
@@ -40,16 +38,15 @@ describe('ContactComponent', () => {
     subject.dispatchEvent(new Event('input'));
     message.dispatchEvent(new Event('textarea'));
 
-    component.setBlob({
+    malComponent.setBlob({
       name: "spec",
       email: "email",
       phone: "num",
       subject: "subj",
       message: "stub"
     });
-    component.btnAnimate('start');
-    fixture.detectChanges();
-    expect(component.submit()).toBeUndefined();
+    error.detectChanges();
+    expect(malComponent.submit()).toBeUndefined();
   });
 
 });

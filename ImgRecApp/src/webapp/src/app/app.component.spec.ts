@@ -20,49 +20,23 @@ import { User } from './models/user';
 import { Email } from './models/email';
 import { Upload } from './models/upload';
 import { Compare } from './models/compare';
+import { TestBedProvider } from './specs/testbed-provider';
 
 describe('AppComponent', () => { 
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(() => {
-
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        ContactComponent,
-        UploadComponent,
-        CompareComponent,
-        HomeComponent,
-      ],
-      imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MDBBootstrapModule.forRoot(),
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        NavbarModule,
-        WavesModule,
-        ButtonsModule,
-        CardsModule,
-        ModalModule
-      ],
-      providers: [
-        UserService,
-        ValidationService,
-        SubjectService,
-        AnimationService,
-        {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-      ]
-    }).compileComponents();
-    fixture = TestBed.createComponent(AppComponent);
+    const provider: TestBedProvider = new TestBedProvider();
+    fixture = provider.appFixtureBuilder();
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create the app', () => {
-     expect(component).toBeTruthy();
+    expect(component.compAnimate('start')).toBeUndefined();
+
+    expect(component).toBeTruthy();
   });
 });
 

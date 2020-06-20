@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Email } from '../models/email';
-import { Observable, observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Upload } from '../models/upload';
 import { Compare } from '../models/compare';
 import { User } from '../models/user';
@@ -19,18 +19,39 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Observable http post request, retrieves JWT tokens
+   * and allows for access to full backend with tokens
+   * @param user The user details to send
+   */
   public getAccess(user: User): Observable<User> {
     return this.http.post<User>(this.sessionUrl, user);
   }
 
+  /**
+   * Observable http post request, sends a request to 
+   * sfofana email service
+   * @param message The messge details to send
+   */
   public sendEmail(message: FormData): Observable<Email>{
     return this.http.post<Email>(this.eUrl,message);
   }
 
+  /**
+   * Observable http post request for uploading images
+   * @param fileName The name of file
+   * @param file The image to upload
+   * @returns Results of file upload
+   */
   public upload(fileName: string, file: FormData): Observable<Upload>{
     return this.http.post<Upload>(this.upUrl+"/"+fileName, file);
   }
 
+  /**
+   * Observable http post request for comparing faces
+   * @param faces The faces to compare
+   * @returns Similarity results of faces compared
+   */
   public compareFaces(faces: Compare) : Observable<Compare> {
     return this.http.post<Compare>(this.compUrl,faces);
   }

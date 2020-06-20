@@ -1,62 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture } from '@angular/core/testing';
 
-import { AnimationService } from 'src/app/services/animation.service';
-import { SubjectService } from 'src/app/services/subject.service';
-import { ValidationService } from 'src/app/services/validation.service';
-import { UserService } from 'src/app/services/user.service';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { HttpInterceptorService } from 'src/app/services/http-interceptor.service';
-import { BrowserModule, By } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MDBBootstrapModule, NavbarModule, WavesModule, ButtonsModule, CardsModule, ModalModule } from 'projects/angular-bootstrap-md/src/public_api';
-import { AppRoutingModule } from 'src/app/app-routing.module';
-import { AppComponent } from '../../app.component';
-import { FormsModule } from '@angular/forms';
 import { CompareComponent } from '../compare/compare.component';
-import { HomeComponent } from '../home/home.component';
-import { UploadComponent } from '../upload/upload.component';
-import { ContactComponent } from '../contact/contact.component';
-import { of, Observable } from 'rxjs';
-import { Compare } from 'src/app/models/compare';
-import { Upload } from 'src/app/models/upload';
-import { User } from 'src/app/models/user';
-import { Email } from 'src/app/models/email';
+import { TestBedProvider } from 'src/app/specs/testbed-provider';
+import { By } from '@angular/platform-browser';
 
 describe('CompareComponent', () => {
   let component: CompareComponent;
+  let malComponent: CompareComponent;
   let fixture: ComponentFixture<CompareComponent>;
+  let error: ComponentFixture<CompareComponent>;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        ContactComponent,
-        UploadComponent,
-        CompareComponent,
-        HomeComponent,
-      ],
-      imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MDBBootstrapModule.forRoot(),
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        NavbarModule,
-        WavesModule,
-        ButtonsModule,
-        CardsModule,
-        ModalModule
-      ],
-      providers: [
-        {provide: UserService, useClass: UserServiceStub},
-        ValidationService,
-        SubjectService,
-        AnimationService,
-        {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-      ]
-    }).compileComponents();
-    fixture = TestBed.createComponent(CompareComponent);
+    const provider: TestBedProvider = new TestBedProvider();
+    fixture = provider.compareComponentBuilder();
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -73,45 +29,10 @@ describe('CompareComponent', () => {
     img1.dispatchEvent(new Event('input'));
     img2.dispatchEvent(new Event('input'));
     fixture.detectChanges();
+    expect(component.chartAnimate('start')).toBeUndefined();
+    expect(component.cogAnimate('start')).toBeUndefined();
+    expect(component.cloudAnimate('start')).toBeUndefined();
     expect(component.compareFaces()).toBeUndefined();
   });
 
 });
-
-class UserServiceStub {
-
-  public getAccess(user: User): Observable<User> {
-    return of({
-      role: "spec",
-      cToken: "cToken",
-      jToken: "jToken"
-    });
-  }
- 
-  public sendEmail(message: FormData): Observable<Email>{
-    return of({
-      name: "spec",
-      email: "email",
-      phone: "num",
-      subject: "subj",
-      message: "stub"
-    });
-  }
- 
-  public upload(fileName: string, file: FormData): Observable<Upload>{
-    return of({
-      name: "spec",
-      process: "success",
-      image: "image"
-    });
-  }
- 
-  public compareFaces(faces: Compare) : Observable<Compare> {
-    return of({
-      names: ["spec","test"],
-      images: ["image1","image2"],
-      details: ["detail1","detail2"],
-      results: 50
-    });
-  }
-}

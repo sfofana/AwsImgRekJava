@@ -1,0 +1,11 @@
+[0614/144003.384:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0614/144003.389:ERROR:exception_snapshot_win.cc(98)] thread ID 12620 not found in process
+[0614/144003.415:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0614/144003.416:ERROR:exception_snapshot_win.cc(98)] thread ID 4944 not found in process
+[0618/094931.908:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0618/094931.915:ERROR:exception_snapshot_win.cc(98)] thread ID 25144 not found in process
+[0618/094931.958:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0618/094931.958:ERROR:exception_snapshot_win.cc(98)] thread ID 20088 not found in process
+[0618/173659.952:ERROR:file_io_win.cc(161)] CreateFile C:\Users\sufya\AppData\Local\Temp\karma-1677930\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0618/173659.954:ERROR:file_io_win.cc(170)] CreateFile C:\Users\sufya\AppData\Local\Temp\karma-1677930\Crashpad\reports\9a6bb12a-448f-41e4-a5d1-80a5ecf47d07.dmp: The system cannot find the path specified. (0x3)
+[0618/173659.954:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed

@@ -1,10 +1,7 @@
 package com.sfofana.app.service;
 
-import java.io.File;
-
 import org.springframework.web.multipart.MultipartFile;
 
-import com.amazonaws.services.rekognition.model.Image;
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Upload;

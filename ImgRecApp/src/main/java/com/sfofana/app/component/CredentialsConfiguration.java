@@ -22,7 +22,7 @@ import com.sfofana.app.util.VaultUtil;
  */
 @Configuration
 public class CredentialsConfiguration {
-
+	
 	@Autowired
 	private VaultUtil vaultUtil;
 	

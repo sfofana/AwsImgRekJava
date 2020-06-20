@@ -1,16 +1,14 @@
 package com.sfofana.app.service;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,17 +21,9 @@ import com.amazonaws.services.rekognition.model.Image;
 import com.amazonaws.services.rekognition.model.S3Object;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.rekognition.model.BoundingBox;
 import com.amazonaws.services.rekognition.model.CompareFacesMatch;
 import com.amazonaws.services.rekognition.model.CompareFacesRequest;
 import com.amazonaws.services.rekognition.model.CompareFacesResult;
-import com.amazonaws.services.rekognition.model.ComparedFace;
-import java.util.List;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
 
 import com.amazonaws.util.Base64;
 import com.amazonaws.util.IOUtils;
@@ -53,12 +43,16 @@ import com.sfofana.app.util.JwtUtil;
 @Service
 public class UserServiceImpl implements UserService {
 
+	private static Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+	
 	@Autowired
 	private Credentials credentials;
 	@Autowired
 	private JwtUtil jwtUtil;
 	
-	Float similarityThreshold = 70F;	
+	Float similarityThreshold = 70F;
+	private String region = "us-east-2";
+	private String userDir = "user.dir";
 	
 	@Override
 	public Compare compareFacesResults(Compare faces) {
@@ -69,11 +63,11 @@ public class UserServiceImpl implements UserService {
 		AmazonRekognition client = AmazonRekognitionClientBuilder
 												.standard()
 												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-												.withRegion("us-east-2").build();
+												.withRegion(region).build();
 		
-		List<String> names = new ArrayList<String>();
+		List<String> names = new ArrayList<>();
 		faces.getNames().forEach(data -> {
-			names.add("temp" + System.getProperty("user.dir") + "/" + data +".jpg");
+			names.add("temp" + System.getProperty(userDir) + "/" + data +".jpg");
 		});
 		try {
 			CompareFacesRequest compareFacesRequest = new CompareFacesRequest()
@@ -96,14 +90,14 @@ public class UserServiceImpl implements UserService {
 			if(!resList.isEmpty()) {
 				for(CompareFacesMatch match : resList) {
 					faces.setResults(match.getSimilarity());
-					System.out.println("Similarity is: " + match.getSimilarity());
+					log.info("Similarity is: " + match.getSimilarity());
 				}
 			} else {
-				System.out.println("Faces don't match");
+				log.info("Faces don't match");
 				faces.setResults(69);
 			}
 		} catch (Exception e) {
-			System.out.println("Faces don't match");
+			log.info("Internal server error when comparing faces");
 			faces.setResults(50);
 		}
 		return getImageData(faces);
@@ -118,12 +112,12 @@ public class UserServiceImpl implements UserService {
 		AmazonS3 s3 = AmazonS3ClientBuilder
 												.standard()
 												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-												.withRegion("us-east-2").build();
+												.withRegion(region).build();
 		
-		List<String> images = new ArrayList<String>();
-		List<String> details = new ArrayList<String>();
+		List<String> images = new ArrayList<>();
+		List<String> details = new ArrayList<>();
 		faces.getNames().forEach(data ->{
-			String file = System.getProperty("user.dir") + "/" + data +".jpg";
+			String file = System.getProperty(userDir) + "/" + data +".jpg";
 			com.amazonaws.services.s3.model.S3Object content = null;			
 			try {
 				content = s3.getObject(credentials.getBucket(), "temp"+file);
@@ -132,9 +126,9 @@ public class UserServiceImpl implements UserService {
 				details.add(data);
 			} catch (AmazonServiceException e) {
 				details.add("There is no image with the name: " + data);
-				System.out.println("Internal Server Error");
+				log.info("There is no image with the name: " + data);
 			} catch (IOException e) {
-				System.out.println("Internal Server Error");
+				log.info("Internal S3 Bucket Server Error");
 				e.printStackTrace();
 			}
 		});
@@ -153,14 +147,13 @@ public class UserServiceImpl implements UserService {
 		AmazonS3 s3 = AmazonS3ClientBuilder
 												.standard()
 												.withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-												.withRegion("us-east-2").build();
+												.withRegion(region).build();
 		
 		Upload upload = new Upload(fileName, "Image was not successully uploaded.. try agian", null);
 		if(file.isEmpty()) {
 			upload.setProcess("Please choose a image you wish to upload");
 		} else {
-			String filePath = System.getProperty("user.dir") + "/" +fileName +".jpg";
-			System.out.println(System.getProperty("user.dir"));
+			String filePath = System.getProperty(userDir) + "/" +fileName +".jpg";
 			try {
 				file.transferTo(new File(filePath));
 				File output = new File(filePath);
@@ -170,10 +163,10 @@ public class UserServiceImpl implements UserService {
 					upload.setProcess("File successfully uploaded");
 					upload.setImage(image);
 				} catch (AmazonServiceException e) {
-					System.out.println("Internal Server Error");
+					log.info("Internal Amazon Web Service Server Error");
 				}
 			} catch (IllegalStateException | IOException e1) {
-				// TODO Auto-generated catch block
+				log.info("Internal Upload Server Error");
 				e1.printStackTrace();
 			}
 		}

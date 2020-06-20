@@ -4,12 +4,9 @@ import { HttpInterceptorService } from './http-interceptor.service';
 import { UserService } from './user.service';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { User } from '../models/user';
-import { error } from 'protractor';
 
 describe('HttpInterceptorService', () => {
-  let interceptor: HttpInterceptorService
   let service: UserService;
-  let http: HttpClient;
 
   beforeEach(() => {
     TestBed.configureTestingModule({

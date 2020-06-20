@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="springfox.documentation.swagger.web.SecurityConfiguration"/>
-    <fullyQualifiedTypeName name="springfox.documentation.swagger.web.SecurityConfigurationBuilder"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.SecurityScheme"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.GrantType"/>
-    <fullyQualifiedTypeName name="springfox.documentation.builders.AuthorizationCodeGrantBuilder"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.TokenRequestEndpoint"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.TokenEndpoint"/>
-    <fullyQualifiedTypeName name="springfox.documentation.builders.OAuthBuilder"/>
-    <fullyQualifiedTypeName name="springfox.documentation.spi.service.contexts.SecurityContext"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.AuthorizationScope"/>
-    <fullyQualifiedTypeName name="springfox.documentation.service.SecurityReference"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="springfox.documentation.service.BasicAuth"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.client.MockRestServiceServer"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
@@ -20,14 +8,11 @@
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
     <fullyQualifiedTypeName name="org.mockito.Mockito"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.MvcResult"/>
     <fullyQualifiedTypeName name="org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc"/>
     <fullyQualifiedTypeName name="com.sfofana.app.service.UserService"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
-    <fullyQualifiedTypeName name="com.sfofana.app.controller.UserController"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.User"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
@@ -39,8 +24,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="com.sfofana.app.ImgRecAppApplication"/>
     <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.Compare"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
@@ -59,5 +42,22 @@
     <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
     <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringRunner"/>
+    <fullyQualifiedTypeName name="org.springframework.test.web.servlet.request.MockMultipartHttpServletRequestBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.test.web.servlet.request.RequestPostProcessor"/>
+    <fullyQualifiedTypeName name="org.springframework.mock.web.MockHttpServletRequest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.sfofana.app.controller.UserController"/>
+    <fullyQualifiedTypeName name="io.jsonwebtoken.ExpiredJwtException"/>
+    <fullyQualifiedTypeName name="org.assertj.core.api.Assertions"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
+    <fullyQualifiedTypeName name="com.amazonaws.AmazonServiceException"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="pl.pojo.tester.internal.GetOrSetValueException"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+    <fullyQualifiedTypeName name="java.lang.System.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 </qualifiedTypeNameHistroy>

@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="test"/>
+		<item key="selection" value="profi"/>
 		<list key="findhistory">
+			<item value="profi"/>
+			<item value="bas"/>
 			<item value="test"/>
 			<item value="springrun"/>
 			<item value="tes"/>

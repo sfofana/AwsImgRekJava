@@ -14,8 +14,7 @@ export class ValidationService {
    * @returns Validated email object 
    */
   public validRequest(message: Email): Email{
-    let validMessage = new Email();
-    validMessage = null;
+    let validMessage: Email = null;
 
     if(!(message.name || message.email || message.phone || message.subject || message.message)){
       validMessage = null;
@@ -29,7 +28,7 @@ export class ValidationService {
   /**
    * 
    * @param faces Compare object to be validated
-   * @returns Returns validated Compare object
+   * @returns Validated Compare object
    */
   public validCompare(faces: Compare) : Compare {
     if(faces.names[0] && faces.names[1]){
@@ -42,7 +41,7 @@ export class ValidationService {
   /**
    * 
    * @param name String to be validated
-   * @returns Returns validate string
+   * @returns Validate string
    */
   public validUpload(name: string) : string{
     if(name){
@@ -54,7 +53,8 @@ export class ValidationService {
 
   /**
    * 
-   * @param file 
+   * @param file The file set in form data
+   * @returns Validated file
    */
   public validFile(file: FormData) : FormData {
     if(file){

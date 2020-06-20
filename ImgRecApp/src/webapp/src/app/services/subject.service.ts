@@ -8,6 +8,9 @@ export class SubjectService {
 
   constructor() { }
 
+  /**
+   * Used to watch subscriptions in place
+   */
   public unsubscribe = new Subject();
 
 

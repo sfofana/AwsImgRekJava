@@ -1,6 +1,7 @@
 package com.sfofana.app.exception;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ public class ErrorDetailTest {
 		ErrorDetail error = new ErrorDetail("test","test");
 		error.setDetail(detail);
 		error.setMessage(message);
-		assertTrue(noArg.getDetail() == null);
-		assertTrue(error.getMessage().equals("test"));
+		assertNull(noArg.getDetail());
+		assertEquals("test", error.getMessage());
 	}
 }

@@ -26,11 +26,17 @@ import { trigger, keyframes, animate, transition } from '@angular/animations';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
+  /**
+   * Attributes needed getting access from the backend
+   */
   private role: string;
   private user: User;
   private success: string;
   private message: string;
 
+  /**
+   * Attributes needed for the animations and transitions
+   */
   private isSpinning: boolean;
   private shaker: string;
   private bouncer: string;
@@ -49,11 +55,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.shaker = "shake";
   }
 
+  /**
+   * Resets user hints
+   */
   reset(){
     this.success = "";
     this.message = "";
   }
 
+  /**
+   * Subscribes to backend API, retreives JWT tokens from the
+   * Java backend as well as the C# backend, and stores tokens 
+   * in local storage.
+   */
   getAccess(){
     this.isSpinning = true;
     this.reset();
@@ -73,6 +87,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * 
+   * @param state Sets the state in animation using the AnimationService, 
+   * in this case either stop or start
+   */
   btnAnimate(state: string){
     this.button = this.animation.btnAnimate(state);
   }
