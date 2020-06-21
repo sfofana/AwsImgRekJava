@@ -6,6 +6,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
 import { AnimationService } from '../../services/animation.service';
+import { LoggingService } from '../../services/logging.service';
 import { Router } from '@angular/router';
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 
@@ -40,6 +41,7 @@ export class UploadComponent implements OnInit, OnDestroy {
   private image: string;
   private readonly fileType: string = "data:image/png;base64,";
   private upload: Upload;
+  private component: string;
 
   /**
    * Attributes needed for the animations and transitions
@@ -57,6 +59,7 @@ export class UploadComponent implements OnInit, OnDestroy {
 
   constructor(
     private service: UserService, 
+    private log: LoggingService,
     private router: Router,
     private memory: SubjectService,
     private validate: ValidationService,
@@ -67,6 +70,7 @@ export class UploadComponent implements OnInit, OnDestroy {
     this.name = "";
     this.time = 10000;
     this.dotLoader = false;
+    this.component = "UploadComponent";
   }
 
   /**
@@ -107,20 +111,32 @@ export class UploadComponent implements OnInit, OnDestroy {
         this.results = data.process;
         this.image = this.fileType+data.image;
         this.isSpinning = false;
+        this.log.info(`[${this.component}] === successfully processed upload`);
       }, 
       error => {
         this.message = "Internal error.. retry or contact me";
         this.isSpinning = false;
         this.dotLoader = true;
+        this.log.info(`[${this.component}] === error either server not running or JWT token is expired`);
         localStorage.clear();
         setTimeout(()=>this.router.navigate(['/home']),this.time);
       });
     } 
     if(!this.name){
       this.message = "Please enter name for image";
+      this.log.info(`[${this.component}] === user did not enter a name`);
     } else{
       this.message = "";
     }
+
+    this.log.post()
+    .pipe(takeUntil(this.memory.unsubscribe))
+    .subscribe(() => {
+      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+    }, error => {
+      this.log.info(`[${this.component}] === error when updating frontend logs`);
+    });
+    
     this.name = "";    
     this.formData = new FormData();
   }

@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
+import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.service.UserService;
@@ -63,6 +64,15 @@ public class UserController {
 	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
 		service.tokenAuthenticated(getToken());
 		return service.processImageUpload(fileName, file);
+	}
+	
+	/**
+	 * @param logging The logs from request body
+	 * @return Success message
+	 */
+	@PostMapping("logging")
+	public Logging frontEndLogging(@RequestBody Logging logging) {
+		return service.frontendLogTofile(logging);
 	}
 	
 	/**

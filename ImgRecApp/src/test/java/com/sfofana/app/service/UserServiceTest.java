@@ -13,6 +13,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockMultipartFile;
@@ -25,12 +27,16 @@ import com.sfofana.app.model.Upload;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class UserServiceTest {
+	
+	private static Logger log = LoggerFactory.getLogger(UserServiceTest.class);
 
 	@Autowired
 	UserService userService;
 	
 	@Test
 	public void compareFacesResultsTest() {
+		log.info("======================= [ CompareFacesResultsTest Start ] =======================");
+		
 		List<String> names = Arrays.asList("joe1","joe2");
 		List<String> malNames = Arrays.asList("mal","mal");
 		Compare faces = new Compare(names, null, null, 0);
@@ -46,10 +52,13 @@ public class UserServiceTest {
 			assertEquals("There is no image with the name: mal", ex);
 		});
 		
+		log.info("======================= [ CompareFacesResultsTest End ] =======================");		
 	}
 	
 	@Test
 	public void processImageUploadTest() throws FileNotFoundException, IOException {
+		log.info("======================= [ ProcessImageUploadTest Start ] =======================");
+
 		String path = System.getProperty("user.dir") + "/";
 		String fileName = "testFile";
 		MultipartFile file = new MockMultipartFile("testFile.txt", new FileInputStream(new File(path+"testFile.txt")));
@@ -58,5 +67,6 @@ public class UserServiceTest {
 		assertNotNull(test.getImage());
 		assertNotNull(test.getProcess());		
 		
+		log.info("======================= [ ProcessImageUploadTest End ] =======================");
 	}
 }

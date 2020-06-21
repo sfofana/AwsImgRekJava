@@ -17,6 +17,7 @@ import { CompareComponent } from './components/compare/compare.component';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import { AnimationService } from './services/animation.service';
 import { HomeComponent } from './components/home/home.component';
+import { LoggingService } from './services/logging.service';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { HomeComponent } from './components/home/home.component';
   ],
   providers: [
     UserService,
+    LoggingService,
     ValidationService,
     SubjectService,
     AnimationService,

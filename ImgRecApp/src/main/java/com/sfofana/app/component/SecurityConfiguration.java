@@ -39,6 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		.password(passwordEncoder().encode(credentials.getPassword()))
 		.roles("User");
 		log.info(System.getProperty("user.dir"));
+		log.info(" Username : " +credentials.getUsername() + "Password : " + credentials.getPassword() +"");
 	}
 	
 	/**

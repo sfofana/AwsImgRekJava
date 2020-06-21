@@ -22,6 +22,7 @@ import { Upload } from '../models/upload';
 import { Email } from '../models/email';
 import { User } from '../models/user';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { LoggingService } from '../services/logging.service';
 
 export class TestBedProvider{
 
@@ -49,6 +50,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -83,6 +85,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -117,6 +120,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -151,6 +155,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -185,6 +190,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -219,6 +225,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceErrorStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -253,6 +260,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceErrorStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -287,6 +295,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceErrorStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,
@@ -321,6 +330,7 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceErrorStub},
+          LoggingService,
           ValidationService,
           SubjectService,
           AnimationService,

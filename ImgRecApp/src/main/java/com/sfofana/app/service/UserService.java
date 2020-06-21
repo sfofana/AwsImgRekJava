@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
+import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 
@@ -51,4 +52,9 @@ public interface UserService {
 	 * 
 	 */
 	public User getAccess();
+	/**
+	 * @param logging The logs from the frontend
+	 * @return Success message
+	 */
+	public Logging frontendLogTofile(Logging logging);
 }

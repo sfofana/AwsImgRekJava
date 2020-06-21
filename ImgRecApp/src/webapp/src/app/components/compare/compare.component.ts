@@ -6,6 +6,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
 import { AnimationService } from '../../services/animation.service';
+import { LoggingService } from '../../services/logging.service';
 import { Router } from '@angular/router';
 import { trigger, transition, animate, keyframes } from '@angular/animations';
 
@@ -39,6 +40,7 @@ export class CompareComponent implements OnInit, OnDestroy {
   private results: number;
   private valid: Compare;
   private message: string;
+  private component: string;
 
   /**
    * Attributes needed for the animations and transitions
@@ -59,7 +61,8 @@ export class CompareComponent implements OnInit, OnDestroy {
   private readonly fileType: string = "data:image/png;base64,";
 
   constructor(
-    private service: UserService, 
+    private service: UserService,
+    private log: LoggingService, 
     private router: Router,
     private memory: SubjectService,
     private validate: ValidationService,
@@ -71,6 +74,7 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.img2 = "";
     this.time = 10000;
     this.dotLoader = false;
+    this.component = "CompareComponent";
   }
 
   /**
@@ -107,19 +111,31 @@ export class CompareComponent implements OnInit, OnDestroy {
         this.details = data.details;
         this.results = data.results;
         this.isSpinning = false;
+        this.log.info(`[${this.component}] === successfully retrieved results`);
       }, error => {
         this.message = "Internal error.. retry or contact me";
         this.isSpinning = false;
         this.dotLoader = true;
+        this.log.info(`[${this.component}] === error either server not running or JWT token is expired`);
         localStorage.clear();
         setTimeout(()=>this.router.navigate(['/home']),this.time);       
       });
     } 
     if(!this.img1 || !this.img2){
       this.message = "Please enter both names of faces to compare";
+      this.log.info(`[${this.component}] === user did not enter 2 names`);
     } else{
       this.message = "";
     }
+
+    this.log.post()
+    .pipe(takeUntil(this.memory.unsubscribe))
+    .subscribe(() => {
+      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+    }, error => {
+      this.log.info(`[${this.component}] === error when updating frontend logs`);
+    });
+
     this.img1 = "";
     this.img2 = "";
     

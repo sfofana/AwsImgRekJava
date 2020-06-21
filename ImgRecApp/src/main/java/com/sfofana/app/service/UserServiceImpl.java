@@ -3,9 +3,11 @@ package com.sfofana.app.service;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,7 @@ import com.amazonaws.util.IOUtils;
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Credentials;
+import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.Upload;
 import com.sfofana.app.model.User;
 import com.sfofana.app.util.JwtUtil;
@@ -153,7 +156,7 @@ public class UserServiceImpl implements UserService {
 		if(file.isEmpty()) {
 			upload.setProcess("Please choose a image you wish to upload");
 		} else {
-			String filePath = System.getProperty(userDir) + "/" +fileName +".jpg";
+			String filePath = System.getProperty(userDir) + "/" + fileName +".jpg";
 			try {
 				file.transferTo(new File(filePath));
 				File output = new File(filePath);
@@ -204,6 +207,26 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getAccess() {
 		return new User(null, null, "user", null);
+	}
+
+	@Override
+	public Logging frontendLogTofile(Logging logging) {
+		String path = System.getProperty(userDir) + "/frontend.txt";
+		File file = new File(path);
+		String data = null;
+		String message = null;
+		try {
+			data = Files.readAllBytes(file.toPath()).toString();
+			data = data + logging.getMessage();
+			Files.write(Paths.get(path), data.getBytes());
+			message = "Successfully saved fronent logs";
+		} catch (IOException e) {
+			log.info("Error with retrieving file data");
+			message = "Error with saving frontend logs";
+		}
+		
+		logging.setMessage(message);
+		return logging;
 	}
 	
 }

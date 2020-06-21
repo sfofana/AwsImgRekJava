@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="springfox.documentation.service.BasicAuth"/>
-    <fullyQualifiedTypeName name="org.springframework.test.web.client.MockRestServiceServer"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpMethod"/>
     <fullyQualifiedTypeName name="com.google.common.net.HttpHeaders"/>
@@ -10,7 +8,6 @@
     <fullyQualifiedTypeName name="org.mockito.Mockito"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.MvcResult"/>
     <fullyQualifiedTypeName name="org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc"/>
-    <fullyQualifiedTypeName name="com.sfofana.app.service.UserService"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
     <fullyQualifiedTypeName name="com.sfofana.app.model.User"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.lang.System.Logger"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="com.sfofana.app.service.UserService"/>
+    <fullyQualifiedTypeName name="com.sfofana.app.model.Logging"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileUtils"/>
 </qualifiedTypeNameHistroy>

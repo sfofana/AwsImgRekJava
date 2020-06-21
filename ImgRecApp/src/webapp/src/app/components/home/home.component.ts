@@ -6,6 +6,7 @@ import { AnimationService } from 'src/app/services/animation.service';
 import { User } from '../../models/user';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
+import { LoggingService } from '../../services/logging.service';
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 
 @Component({
@@ -33,6 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   private user: User;
   private success: string;
   private message: string;
+  private component: string;
 
   /**
    * Attributes needed for the animations and transitions
@@ -44,6 +46,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private service: UserService, 
+    private log: LoggingService,
     private memory: SubjectService,
     private validate: ValidationService,
     private animation: AnimationService) { }
@@ -53,6 +56,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.isSpinning = false;
     this.bouncer = "bounce";
     this.shaker = "shake";
+    this.component = "HomeComponent";
   }
 
   /**
@@ -81,9 +85,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       localStorage.setItem("cToken", data.cToken);
       localStorage.setItem("jToken", data.jToken);
       this.isSpinning = false;
+      this.log.info(`[${this.component}] === access granted and JWT set in local storage`);
     }, error => {
       this.message = "Internal error.. retry or contact me";
       this.isSpinning = false;
+      this.log.info(`[${this.component}] === error either server is down or not running`);
+    });
+
+    this.log.post()
+    .pipe(takeUntil(this.memory.unsubscribe))
+    .subscribe(() => {
+      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+    }, error => {
+      this.log.info(`[${this.component}] === error when updating frontend logs`);
     });
   }
 

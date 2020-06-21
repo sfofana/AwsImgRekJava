@@ -5,6 +5,7 @@ import { ValidationService } from 'src/app/services/validation.service';
 import { Email } from 'src/app/models/email';
 import { takeUntil } from 'rxjs/operators';
 import * as keyframe from '../../animations/animation';
+import { LoggingService } from '../../services/logging.service';
 import { trigger, keyframes, animate, transition } from '@angular/animations';
 
 @Component({
@@ -34,6 +35,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   private invalid: string;
   private mail = new Email();
   private validMail = new Email();
+  private component: string;
 
   /**
    * Attributes needed for the animations and transitions
@@ -44,6 +46,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   constructor(
     private service: UserService, 
+    private log: LoggingService,
     private memory: SubjectService,
     private validate: ValidationService
     ) { }
@@ -51,6 +54,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.override = new Blob();
     this.formData = new FormData();
+    this.component = "ContactComponent";
   }
 
   /**
@@ -96,6 +100,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       .subscribe(()=>{
         this.success="Message Sent";
         this.isSpinning = false;
+        this.log.info(`[${this.component}] === message successfully sent`);
       });
     } 
     this.override = new Blob();
