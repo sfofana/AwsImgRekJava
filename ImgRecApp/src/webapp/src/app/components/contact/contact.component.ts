@@ -55,6 +55,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.override = new Blob();
     this.formData = new FormData();
     this.component = "ContactComponent";
+    this.log.debug(`[${this.component}] === page loaded`);
   }
 
   /**
@@ -100,7 +101,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       .subscribe(()=>{
         this.success="Message Sent";
         this.isSpinning = false;
-        this.log.info(`[${this.component}] === message successfully sent`);
+        this.log.debug(`[${this.component}] === message successfully sent`);
       });
     } 
     this.override = new Blob();
@@ -118,6 +119,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.message="";
     this.success="";
     this.invalid="";
+    this.log.debug(`[${this.component}] === form reset`);
   }
 
   /**

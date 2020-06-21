@@ -6,18 +6,20 @@ import { Observable } from 'rxjs';
 import { Upload } from '../models/upload';
 import { Compare } from '../models/compare';
 import { User } from '../models/user';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
+  private service = "UserService";
   private sessionUrl = environment.session;
   private eUrl = environment.emailUrl;
   private compUrl = environment.compare;
   private upUrl = environment.upload;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private log: LoggingService) { }
 
   /**
    * Observable http post request, retrieves JWT tokens
@@ -25,6 +27,7 @@ export class UserService {
    * @param user The user details to send
    */
   public getAccess(user: User): Observable<User> {
+    this.log.debug(`[${this.service}] === getAccess envoked`);
     return this.http.post<User>(this.sessionUrl, user);
   }
 
@@ -34,6 +37,7 @@ export class UserService {
    * @param message The messge details to send
    */
   public sendEmail(message: FormData): Observable<Email>{
+    this.log.debug(`[${this.service}] === sendEmail envoked`);
     return this.http.post<Email>(this.eUrl,message);
   }
 
@@ -44,6 +48,7 @@ export class UserService {
    * @returns Results of file upload
    */
   public upload(fileName: string, file: FormData): Observable<Upload>{
+    this.log.debug(`[${this.service}] === upload envoked`);
     return this.http.post<Upload>(this.upUrl+"/"+fileName, file);
   }
 
@@ -53,6 +58,7 @@ export class UserService {
    * @returns Similarity results of faces compared
    */
   public compareFaces(faces: Compare) : Observable<Compare> {
+    this.log.debug(`[${this.service}] === compareFaces envoked`);
     return this.http.post<Compare>(this.compUrl,faces);
   }
 }

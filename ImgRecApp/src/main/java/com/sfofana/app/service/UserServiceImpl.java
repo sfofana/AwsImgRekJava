@@ -216,7 +216,7 @@ public class UserServiceImpl implements UserService {
 		String data = null;
 		String message = null;
 		try {
-			data = Files.readAllBytes(file.toPath()).toString();
+			data = new String(Files.readAllBytes(file.toPath()));
 			data = data + logging.getMessage();
 			Files.write(Paths.get(path), data.getBytes());
 			message = "Successfully saved fronent logs";

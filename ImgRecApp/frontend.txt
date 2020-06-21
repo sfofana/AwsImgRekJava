@@ -1,0 +1,20 @@
+Jun 21, 2020, 12:12:45 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 12:13:35 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 12:13:35 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 12:13:39 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 12:13:39 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 12:13:42 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 12:13:47 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 12:13:47 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 12:13:54 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 12:13:57 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 12:13:58 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 12:13:59 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 12:14:02 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 12:14:03 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 12:14:12 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 12:14:15 PM : [HomeComponent] === unsubscribed from get access API 
+Jun 21, 2020, 12:14:15 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 12:14:16 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 12:14:18 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 12:14:20 PM : [CompareComponent] === user did not enter 2 names 

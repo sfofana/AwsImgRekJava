@@ -75,6 +75,7 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.time = 10000;
     this.dotLoader = false;
     this.component = "CompareComponent";
+    this.log.info(`[${this.component}] === page loaded`);
   }
 
   /**
@@ -131,9 +132,9 @@ export class CompareComponent implements OnInit, OnDestroy {
     this.log.post()
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(() => {
-      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+      this.log.debug(`[${this.component}] === successfully updated frontend logs`);
     }, error => {
-      this.log.info(`[${this.component}] === error when updating frontend logs`);
+      this.log.debug(`[${this.component}] === error when updating frontend logs`);
     });
 
     this.img1 = "";
@@ -180,6 +181,7 @@ export class CompareComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.memory.unsubscribe.next();
     this.memory.unsubscribe.complete();
+    this.log.info(`[${this.component}] === unsubscribe from compareFaces API`);
   }
 
 }

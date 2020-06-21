@@ -57,6 +57,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.bouncer = "bounce";
     this.shaker = "shake";
     this.component = "HomeComponent";
+    this.log.info(`[${this.component}] === page loaded`);
   }
 
   /**
@@ -95,9 +96,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.log.post()
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(() => {
-      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+      this.log.debug(`[${this.component}] === successfully updated frontend logs`);
     }, error => {
-      this.log.info(`[${this.component}] === error when updating frontend logs`);
+      this.log.debug(`[${this.component}] === error when updating frontend logs`);
     });
   }
 

@@ -132,11 +132,11 @@ export class UploadComponent implements OnInit, OnDestroy {
     this.log.post()
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(() => {
-      this.log.info(`[${this.component}] === successfully updated frontend logs`);
+      this.log.debug(`[${this.component}] === successfully updated frontend logs`);
     }, error => {
-      this.log.info(`[${this.component}] === error when updating frontend logs`);
+      this.log.debug(`[${this.component}] === error when updating frontend logs`);
     });
-    
+
     this.name = "";    
     this.formData = new FormData();
   }
