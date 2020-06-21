@@ -121,6 +121,14 @@ export class UploadComponent implements OnInit, OnDestroy {
         localStorage.clear();
         setTimeout(()=>this.router.navigate(['/home']),this.time);
       });
+
+      this.log.post()
+      .pipe(takeUntil(this.memory.unsubscribe))
+      .subscribe(() => {
+        this.log.debug(`[${this.component}] === successfully updated frontend logs`);
+      }, error => {
+        this.log.debug(`[${this.component}] === error when updating frontend logs`);
+      });
     } 
     if(!this.name){
       this.message = "Please enter name for image";
@@ -128,14 +136,6 @@ export class UploadComponent implements OnInit, OnDestroy {
     } else{
       this.message = "";
     }
-
-    this.log.post()
-    .pipe(takeUntil(this.memory.unsubscribe))
-    .subscribe(() => {
-      this.log.debug(`[${this.component}] === successfully updated frontend logs`);
-    }, error => {
-      this.log.debug(`[${this.component}] === error when updating frontend logs`);
-    });
 
     this.name = "";    
     this.formData = new FormData();

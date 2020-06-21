@@ -87,12 +87,19 @@ export class HomeComponent implements OnInit, OnDestroy {
       localStorage.setItem("jToken", data.jToken);
       this.isSpinning = false;
       this.log.info(`[${this.component}] === access granted and JWT set in local storage`);
+      this.updateLogs();
     }, error => {
       this.message = "Internal error.. retry or contact me";
       this.isSpinning = false;
       this.log.info(`[${this.component}] === error either server is down or not running`);
     });
 
+  }
+
+  /**
+   * Execution wrapper for logging service post request
+   */
+  updateLogs() {
     this.log.post()
     .pipe(takeUntil(this.memory.unsubscribe))
     .subscribe(() => {

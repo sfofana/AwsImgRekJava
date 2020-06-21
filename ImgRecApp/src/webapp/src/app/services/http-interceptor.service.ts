@@ -11,8 +11,8 @@ export class HttpInterceptorService implements HttpInterceptor {
 
   private message="";
   private service = "HttpInterceptorService";
-  private username = "jenkins";
-  private password = "password123";
+  private username = "sfofana";
+  private password = "UofH2011";
   private bearer = "Bearer ";
   private cToken = "cToken";
   private jToken = "jToken";

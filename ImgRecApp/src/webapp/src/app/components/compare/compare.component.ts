@@ -121,6 +121,14 @@ export class CompareComponent implements OnInit, OnDestroy {
         localStorage.clear();
         setTimeout(()=>this.router.navigate(['/home']),this.time);       
       });
+
+      this.log.post()
+      .pipe(takeUntil(this.memory.unsubscribe))
+      .subscribe(() => {
+        this.log.debug(`[${this.component}] === successfully updated frontend logs`);
+      }, error => {
+        this.log.debug(`[${this.component}] === error when updating frontend logs`);
+      });
     } 
     if(!this.img1 || !this.img2){
       this.message = "Please enter both names of faces to compare";
@@ -128,14 +136,6 @@ export class CompareComponent implements OnInit, OnDestroy {
     } else{
       this.message = "";
     }
-
-    this.log.post()
-    .pipe(takeUntil(this.memory.unsubscribe))
-    .subscribe(() => {
-      this.log.debug(`[${this.component}] === successfully updated frontend logs`);
-    }, error => {
-      this.log.debug(`[${this.component}] === error when updating frontend logs`);
-    });
 
     this.img1 = "";
     this.img2 = "";
