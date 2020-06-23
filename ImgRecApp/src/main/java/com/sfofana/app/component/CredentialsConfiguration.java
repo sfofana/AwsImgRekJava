@@ -9,6 +9,8 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +25,8 @@ import com.sfofana.app.util.VaultUtil;
 @Configuration
 public class CredentialsConfiguration {
 	
+	private Logger log = LoggerFactory.getLogger(CredentialsConfiguration.class);
+
 	@Autowired
 	private VaultUtil vaultUtil;
 	
@@ -38,6 +42,8 @@ public class CredentialsConfiguration {
 	 */
 	@Bean
 	public Credentials getCredentials() throws InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, IOException {
+		log.info("========= [ GetCredentials Envoked ]");
+
 		return vaultUtil.decrypt();
 	}
 }

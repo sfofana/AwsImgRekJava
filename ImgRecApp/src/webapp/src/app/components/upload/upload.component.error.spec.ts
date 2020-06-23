@@ -10,7 +10,7 @@ describe('UploadComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    error = provider.uploadErrorComponentBuilder();
+    error = provider.errorFixtureBuilder(UploadComponent);
     malComponent = error.componentInstance;
     error.detectChanges();
   });

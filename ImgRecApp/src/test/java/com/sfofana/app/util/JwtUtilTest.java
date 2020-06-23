@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,6 +20,8 @@ import io.jsonwebtoken.ExpiredJwtException;
 @RunWith(SpringRunner.class)
 public class JwtUtilTest {
 
+	private static Logger log = LoggerFactory.getLogger(JwtUtilTest.class);
+
 	@Autowired
 	JwtUtil jwtUtil;
 	@Autowired
@@ -27,7 +31,9 @@ public class JwtUtilTest {
 
 	
 	@Test
-	public void Test() {
+	public void validateTokenTest() {
+		log.info("======================= [ ValidateTokenTest Start ] =======================");
+
 		User token = userController.authenticate(user);
 		assertTrue(jwtUtil.validateToken(token.getJToken(), user));
 		assertThrows(ExpiredJwtException.class, () ->{
@@ -36,5 +42,7 @@ public class JwtUtilTest {
 					+ "1OTE0NDcwODl9.eHGS_GnWuxYjF0z_DfQ1ChIFLTDhzEsCri"
 					+ "l5dAWTsvs", user);
 			});	
+		
+		log.info("======================= [ ValidateTokenTest End ] =======================");
 	}
 }

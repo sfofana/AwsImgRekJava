@@ -51,5 +51,13 @@ public class PojoTest {
 			assertPojoMethodsFor(pojoTest).areWellImplemented();
 		});
 	}
+	
+	@Test
+	public void loggingTest() {
+		Class<?> pojoTest = Logging.class;
+		assertThrows(GetOrSetValueException.class, () -> {
+			assertPojoMethodsFor(pojoTest).areWellImplemented();
+		});
+	}
 
 }

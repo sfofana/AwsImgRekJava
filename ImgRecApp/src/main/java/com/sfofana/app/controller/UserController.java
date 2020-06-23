@@ -2,6 +2,8 @@ package com.sfofana.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +30,8 @@ import com.sfofana.app.service.UserService;
 @RequestMapping("/api/v1")
 public class UserController {
 
+	private static Logger log = LoggerFactory.getLogger(UserController.class);
+
 	@Autowired
 	private HttpServletRequest request;
 	@Autowired
@@ -40,6 +44,8 @@ public class UserController {
 	 */
 	@PostMapping("authenticate")
 	public User authenticate(@RequestBody User user) throws BusinessException {
+		log.info("========= [ Authenticate Envoked ]");
+
 		return service.initiateSession(user);
 	}
 	
@@ -50,6 +56,8 @@ public class UserController {
 	 */
 	@PostMapping("compare")
 	public Compare compareFaces(@RequestBody Compare faces) throws Exception {
+		log.info("========= [ CompareFaces Envoked ]");
+
 		service.tokenAuthenticated(getToken());
 		return service.compareFacesResults(faces);
 	}
@@ -62,6 +70,8 @@ public class UserController {
 	 */
 	@PostMapping("upload/{name}")
 	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
+		log.info("========= [ UploadImage Envoked ]");
+
 		service.tokenAuthenticated(getToken());
 		return service.processImageUpload(fileName, file);
 	}
@@ -72,6 +82,8 @@ public class UserController {
 	 */
 	@PostMapping("logging")
 	public Logging frontEndLogging(@RequestBody Logging logging) {
+		log.info("========= [ FrontEndLogging Envoked ]");
+
 		return service.frontendLogTofile(logging);
 	}
 	
@@ -79,6 +91,8 @@ public class UserController {
 	 * @return Returns jToken from header which is needed for token validation
 	 */
 	private String getToken() {
+		log.info("========= [ GetToken Envoked ]");
+
 		return request.getHeader("jToken");
 	}
 }

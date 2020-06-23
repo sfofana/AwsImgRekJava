@@ -8,21 +8,16 @@ import { HttpClient } from '@angular/common/http';
 import { Compare } from '../models/compare';
 import { User } from '../models/user';
 import { environment } from '../../environments/environment';
+import { LoggingService } from './logging.service';
+import { TestBedProvider } from '../specs/testbed-provider';
 
 describe('UserService', () => {
   let mockService: UserService;
   let mockHttp: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule
-      ],
-      providers: [
-        UserService
-      ]
-    });
-    mockService = TestBed.get(UserService);
+    const provider: TestBedProvider = new TestBedProvider();
+    mockService = provider.serviceTestBed(UserService);
     mockHttp = TestBed.get(HttpTestingController);
   });
 

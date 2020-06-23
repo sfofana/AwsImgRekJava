@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +25,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtUtil {
 
+	private Logger log = LoggerFactory.getLogger(JwtUtil.class);
+
 	@Autowired
 	private Credentials credentials;
 	
@@ -32,6 +36,8 @@ public class JwtUtil {
 	 * @throws BusinessException
 	 */
 	public String extractUser(String token) throws BusinessException {
+		log.info("========= [ ExtractUser Envoked ]");
+
 		return extractClaim(token, Claims::getSubject);
 	}
 	
@@ -40,6 +46,8 @@ public class JwtUtil {
 	 * @return Returns date if not expired
 	 */
 	public Date extractExpiration(String token) {
+		log.info("========= [ ExtractExpiration Envoked ]");
+
 		return extractClaim(token, Claims::getExpiration);
 	}
 	
@@ -50,6 +58,8 @@ public class JwtUtil {
 	 * @return Returns claims functionality on request
 	 */
 	public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
+		log.info("========= [ ExtractClaim Envoked ]");
+
 		final Claims claims = extractAllClaims(token);
 		return claimsResolver.apply(claims);
 	}
@@ -59,6 +69,8 @@ public class JwtUtil {
 	 * @return Claims extracted from token
 	 */
 	public Claims extractAllClaims(String token) {
+		log.info("========= [ ExtractAllClaims Envoked ]");
+
 		return Jwts.parser().setSigningKey(credentials.getKey()).parseClaimsJws(token).getBody();
 	}
 	
@@ -67,6 +79,8 @@ public class JwtUtil {
 	 * @return True when expiration is within timeframe
 	 */
 	private Boolean isTokenExpired(String token) {
+		log.info("========= [ IsTokenExpired Envoked ]");
+
 		return extractExpiration(token).before(new Date());
 	}
 
@@ -75,6 +89,8 @@ public class JwtUtil {
 	 * @return Token generated based on user role
 	 */
 	public String generateToken(User user) {
+		log.info("========= [ GenerateToken Envoked ]");
+
 		Map<String, Object> claims = new HashMap<>();
 		return createToken(claims, user.getRole());
 	}
@@ -85,6 +101,8 @@ public class JwtUtil {
 	 * @return Token set with claims expiration date and user as subject
 	 */
 	public String createToken(Map<String, Object> claims, String subject) {
+		log.info("========= [ CreateToken Envoked ]");
+
 		return Jwts.builder().setClaims(claims).setSubject(subject)
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
@@ -98,6 +116,8 @@ public class JwtUtil {
 	 * @throws BusinessException
 	 */
 	public Boolean validateToken(String token, User user) throws BusinessException{
+		log.info("========= [ ValidateToken Envoked ]");
+
 		String email = extractUser(token);
 		return (email.equals(user.getRole()) && !isTokenExpired(token));
 	}

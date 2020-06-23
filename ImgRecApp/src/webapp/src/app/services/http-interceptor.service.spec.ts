@@ -4,21 +4,15 @@ import { HttpInterceptorService } from './http-interceptor.service';
 import { UserService } from './user.service';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { User } from '../models/user';
+import { LoggingService } from './logging.service';
+import { TestBedProvider } from '../specs/testbed-provider';
 
 describe('HttpInterceptorService', () => {
   let service: UserService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule
-      ],
-      providers: [
-        UserService,
-        {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-      ]
-    });
-    service = TestBed.get(UserService);
+    const provider: TestBedProvider = new TestBedProvider();
+    service = provider.serviceTestBed(UserService);
   });
 
   it('should intercept error', () => {

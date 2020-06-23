@@ -521,6 +521,7 @@ var CompareComponent = /** @class */ (function () {
         this.time = 10000;
         this.dotLoader = false;
         this.component = "CompareComponent";
+        this.log.info("[" + this.component + "] === page loaded");
     };
     /**
      * News all elements, adds image names to Compare object
@@ -563,6 +564,13 @@ var CompareComponent = /** @class */ (function () {
                 _this.log.info("[" + _this.component + "] === error either server not running or JWT token is expired");
                 localStorage.clear();
                 setTimeout(function () { return _this.router.navigate(['/home']); }, _this.time);
+            });
+            this.log.post()
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.memory.unsubscribe))
+                .subscribe(function () {
+                _this.log.debug("[" + _this.component + "] === successfully updated frontend logs");
+            }, function (error) {
+                _this.log.debug("[" + _this.component + "] === error when updating frontend logs");
             });
         }
         if (!this.img1 || !this.img2) {
@@ -610,6 +618,7 @@ var CompareComponent = /** @class */ (function () {
     CompareComponent.prototype.ngOnDestroy = function () {
         this.memory.unsubscribe.next();
         this.memory.unsubscribe.complete();
+        this.log.info("[" + this.component + "] === unsubscribe from compareFaces API");
     };
     CompareComponent.ctorParameters = function () { return [
         { type: _services_user_service__WEBPACK_IMPORTED_MODULE_0__["UserService"] },
@@ -717,6 +726,7 @@ var ContactComponent = /** @class */ (function () {
         this.override = new Blob();
         this.formData = new FormData();
         this.component = "ContactComponent";
+        this.log.debug("[" + this.component + "] === page loaded");
     };
     /**
      * Resets all values to empty
@@ -758,7 +768,7 @@ var ContactComponent = /** @class */ (function () {
                 .subscribe(function () {
                 _this.success = "Message Sent";
                 _this.isSpinning = false;
-                _this.log.info("[" + _this.component + "] === message successfully sent");
+                _this.log.debug("[" + _this.component + "] === message successfully sent");
             });
         }
         this.override = new Blob();
@@ -775,6 +785,7 @@ var ContactComponent = /** @class */ (function () {
         this.message = "";
         this.success = "";
         this.invalid = "";
+        this.log.debug("[" + this.component + "] === form reset");
     };
     /**
      *
@@ -888,6 +899,7 @@ var HomeComponent = /** @class */ (function () {
         this.bouncer = "bounce";
         this.shaker = "shake";
         this.component = "HomeComponent";
+        this.log.info("[" + this.component + "] === page loaded");
     };
     /**
      * Resets user hints
@@ -916,10 +928,24 @@ var HomeComponent = /** @class */ (function () {
             localStorage.setItem("jToken", data.jToken);
             _this.isSpinning = false;
             _this.log.info("[" + _this.component + "] === access granted and JWT set in local storage");
+            _this.updateLogs();
         }, function (error) {
             _this.message = "Internal error.. retry or contact me";
             _this.isSpinning = false;
             _this.log.info("[" + _this.component + "] === error either server is down or not running");
+        });
+    };
+    /**
+     * Execution wrapper for logging service post request
+     */
+    HomeComponent.prototype.updateLogs = function () {
+        var _this = this;
+        this.log.post()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeUntil"])(this.memory.unsubscribe))
+            .subscribe(function () {
+            _this.log.debug("[" + _this.component + "] === successfully updated frontend logs");
+        }, function (error) {
+            _this.log.debug("[" + _this.component + "] === error when updating frontend logs");
         });
     };
     /**
@@ -1095,6 +1121,13 @@ var UploadComponent = /** @class */ (function () {
                 localStorage.clear();
                 setTimeout(function () { return _this.router.navigate(['/home']); }, _this.time);
             });
+            this.log.post()
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.memory.unsubscribe))
+                .subscribe(function () {
+                _this.log.debug("[" + _this.component + "] === successfully updated frontend logs");
+            }, function (error) {
+                _this.log.debug("[" + _this.component + "] === error when updating frontend logs");
+            });
         }
         if (!this.name) {
             this.message = "Please enter name for image";
@@ -1215,6 +1248,7 @@ var Email = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnimationService", function() { return AnimationService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _logging_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logging.service */ "./src/app/services/logging.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1225,8 +1259,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AnimationService = /** @class */ (function () {
-    function AnimationService() {
+    function AnimationService(log) {
+        this.log = log;
+        this.service = "AnimationService";
     }
     /**
      *
@@ -1234,6 +1271,7 @@ var AnimationService = /** @class */ (function () {
      * in this case either stop or start
      */
     AnimationService.prototype.dashAnimate = function (state) {
+        this.log.debug("[" + this.service + "] === dashAnimate envoked");
         if (state == "start") {
             return "pulse";
         }
@@ -1247,6 +1285,7 @@ var AnimationService = /** @class */ (function () {
      * in this case either stop or start
      */
     AnimationService.prototype.btnAnimate = function (state) {
+        this.log.debug("[" + this.service + "] === btnAnimate envoked");
         if (state == "start") {
             return "heartBeat";
         }
@@ -1260,6 +1299,7 @@ var AnimationService = /** @class */ (function () {
      * in this case either stop or start
      */
     AnimationService.prototype.chartAnimate = function (state) {
+        this.log.debug("[" + this.service + "] === chartAnimate envoked");
         if (state == "start") {
             return "tada";
         }
@@ -1273,6 +1313,7 @@ var AnimationService = /** @class */ (function () {
      * in this case either stop or start
      */
     AnimationService.prototype.cogAnimate = function (state) {
+        this.log.debug("[" + this.service + "] === cogAnimate envoked");
         if (state == "start") {
             return "rotate";
         }
@@ -1286,6 +1327,7 @@ var AnimationService = /** @class */ (function () {
      * in this case either stop or start
      */
     AnimationService.prototype.cloudAnimate = function (state) {
+        this.log.debug("[" + this.service + "] === cloudAnimate envoked");
         if (state == "start") {
             return "popup";
         }
@@ -1293,11 +1335,14 @@ var AnimationService = /** @class */ (function () {
             return "";
         }
     };
+    AnimationService.ctorParameters = function () { return [
+        { type: _logging_service__WEBPACK_IMPORTED_MODULE_1__["LoggingService"] }
+    ]; };
     AnimationService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_logging_service__WEBPACK_IMPORTED_MODULE_1__["LoggingService"]])
     ], AnimationService);
     return AnimationService;
 }());
@@ -1320,19 +1365,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _logging_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./logging.service */ "./src/app/services/logging.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 
 
 var HttpInterceptorService = /** @class */ (function () {
-    function HttpInterceptorService() {
+    function HttpInterceptorService(log) {
+        this.log = log;
         this.message = "";
+        this.service = "HttpInterceptorService";
         this.username = "sfofana";
         this.password = "UofH2011";
         this.bearer = "Bearer ";
@@ -1340,6 +1392,7 @@ var HttpInterceptorService = /** @class */ (function () {
         this.jToken = "jToken";
     }
     HttpInterceptorService.prototype.intercept = function (req, next) {
+        var _this = this;
         req = req.clone({
             setHeaders: {
                 Authorization: 'Basic ' + btoa(this.username + ":" + this.password),
@@ -1347,19 +1400,26 @@ var HttpInterceptorService = /** @class */ (function () {
                 jToken: this.bearer + localStorage.getItem(this.jToken)
             }
         });
+        this.log.info("[" + this.service + "] === http headers set");
         return next.handle(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(function (error) {
             if (error instanceof _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpErrorResponse"]) {
+                _this.log.info("[" + _this.service + "] === Internal Error");
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Internal Error');
             }
             else {
+                _this.log.info("[" + _this.service + "] === Server Error");
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Server Error');
             }
         }));
     };
+    HttpInterceptorService.ctorParameters = function () { return [
+        { type: _logging_service__WEBPACK_IMPORTED_MODULE_4__["LoggingService"] }
+    ]; };
     HttpInterceptorService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
-        })
+        }),
+        __metadata("design:paramtypes", [_logging_service__WEBPACK_IMPORTED_MODULE_4__["LoggingService"]])
     ], HttpInterceptorService);
     return HttpInterceptorService;
 }());
@@ -1378,7 +1438,10 @@ var HttpInterceptorService = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoggingService", function() { return LoggingService; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1389,18 +1452,59 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var LoggingService = /** @class */ (function () {
-    function LoggingService() {
+    function LoggingService(http) {
+        this.http = http;
+        this.logUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].logUrl;
     }
+    /**
+     * Sets log message to local storage
+     * @param message The logged message
+     */
     LoggingService.prototype.info = function (message) {
-        var date = new Date();
-        console.log(date.toDateString() + " : " + message);
+        var rawData = new Date();
+        var date = Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["formatDate"])(rawData, 'medium', 'en-us');
+        var logs = localStorage.getItem('log');
+        if (logs) {
+            localStorage.setItem("log", logs + (date + " : " + message + " \n"));
+        }
+        else {
+            localStorage.setItem("log", date + " : " + message + " \n");
+        }
+        console.log(date + " : " + message);
     };
+    /**
+     * Sets log to the console
+     * @param message The logged message
+     */
+    LoggingService.prototype.debug = function (message) {
+        var rawData = new Date();
+        var date = Object(_angular_common__WEBPACK_IMPORTED_MODULE_1__["formatDate"])(rawData, 'medium', 'en-us');
+        console.log(date + " : " + message);
+    };
+    /**
+     * Observable http post request, sends all existing logs
+     * during front end session
+     */
+    LoggingService.prototype.post = function () {
+        var logs = localStorage.getItem("log");
+        var logging = {
+            message: logs
+        };
+        localStorage.removeItem("log");
+        return this.http.post(this.logUrl, logging);
+    };
+    LoggingService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+    ]; };
     LoggingService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], LoggingService);
     return LoggingService;
 }());
@@ -1465,6 +1569,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _logging_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logging.service */ "./src/app/services/logging.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1477,9 +1582,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var UserService = /** @class */ (function () {
-    function UserService(http) {
+    function UserService(http, log) {
         this.http = http;
+        this.log = log;
+        this.service = "UserService";
         this.sessionUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].session;
         this.eUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].emailUrl;
         this.compUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].compare;
@@ -1491,6 +1599,7 @@ var UserService = /** @class */ (function () {
      * @param user The user details to send
      */
     UserService.prototype.getAccess = function (user) {
+        this.log.debug("[" + this.service + "] === getAccess envoked");
         return this.http.post(this.sessionUrl, user);
     };
     /**
@@ -1499,6 +1608,7 @@ var UserService = /** @class */ (function () {
      * @param message The messge details to send
      */
     UserService.prototype.sendEmail = function (message) {
+        this.log.debug("[" + this.service + "] === sendEmail envoked");
         return this.http.post(this.eUrl, message);
     };
     /**
@@ -1508,6 +1618,7 @@ var UserService = /** @class */ (function () {
      * @returns Results of file upload
      */
     UserService.prototype.upload = function (fileName, file) {
+        this.log.debug("[" + this.service + "] === upload envoked");
         return this.http.post(this.upUrl + "/" + fileName, file);
     };
     /**
@@ -1516,16 +1627,18 @@ var UserService = /** @class */ (function () {
      * @returns Similarity results of faces compared
      */
     UserService.prototype.compareFaces = function (faces) {
+        this.log.debug("[" + this.service + "] === compareFaces envoked");
         return this.http.post(this.compUrl, faces);
     };
     UserService.ctorParameters = function () { return [
-        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] },
+        { type: _logging_service__WEBPACK_IMPORTED_MODULE_3__["LoggingService"] }
     ]; };
     UserService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _logging_service__WEBPACK_IMPORTED_MODULE_3__["LoggingService"]])
     ], UserService);
     return UserService;
 }());
@@ -1545,6 +1658,7 @@ var UserService = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ValidationService", function() { return ValidationService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _logging_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logging.service */ "./src/app/services/logging.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1555,8 +1669,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ValidationService = /** @class */ (function () {
-    function ValidationService() {
+    function ValidationService(log) {
+        this.log = log;
+        this.service = "ValidationService";
     }
     /**
      *
@@ -1567,9 +1684,11 @@ var ValidationService = /** @class */ (function () {
         var validMessage = null;
         if (!(message.name || message.email || message.phone || message.subject || message.message)) {
             validMessage = null;
+            this.log.debug("[" + this.service + "] === user input invalid email details");
         }
         if (message.name && message.email && message.subject && message.message) {
             validMessage = message;
+            this.log.debug("[" + this.service + "] === user input valid email details");
         }
         return validMessage;
     };
@@ -1580,9 +1699,11 @@ var ValidationService = /** @class */ (function () {
      */
     ValidationService.prototype.validCompare = function (faces) {
         if (faces.names[0] && faces.names[1]) {
+            this.log.debug("[" + this.service + "] === user input valid amount of names");
             return faces;
         }
         else {
+            this.log.debug("[" + this.service + "] === user input invalid amount of names to faces");
             return null;
         }
     };
@@ -1593,9 +1714,11 @@ var ValidationService = /** @class */ (function () {
      */
     ValidationService.prototype.validUpload = function (name) {
         if (name) {
+            this.log.debug("[" + this.service + "] === user input valid name");
             return name;
         }
         else {
+            this.log.debug("[" + this.service + "] === user input invalid name");
             return null;
         }
     };
@@ -1605,18 +1728,23 @@ var ValidationService = /** @class */ (function () {
      * @returns Validated file
      */
     ValidationService.prototype.validFile = function (file) {
-        if (file) {
+        if (file.get('file')) {
+            this.log.debug("[" + this.service + "] === user input valid file");
             return file;
         }
         else {
+            this.log.debug("[" + this.service + "] === user input invalid file");
             return null;
         }
     };
+    ValidationService.ctorParameters = function () { return [
+        { type: _logging_service__WEBPACK_IMPORTED_MODULE_1__["LoggingService"] }
+    ]; };
     ValidationService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_logging_service__WEBPACK_IMPORTED_MODULE_1__["LoggingService"]])
     ], ValidationService);
     return ValidationService;
 }());
@@ -1641,6 +1769,7 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     emailUrl: 'https://node-jsfofana-bank-v2.herokuapp.com/api/v1/email/send',
+    logUrl: 'http://3.17.152.168/api/v1/logging',
     session: 'http://3.17.152.168/api/v1/authenticate',
     upload: 'http://3.17.152.168/api/v1/upload',
     compare: 'http://3.17.152.168/api/v1/compare'

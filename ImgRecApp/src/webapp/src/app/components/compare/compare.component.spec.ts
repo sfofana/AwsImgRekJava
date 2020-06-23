@@ -12,7 +12,7 @@ describe('CompareComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    fixture = provider.compareComponentBuilder();
+    fixture = provider.fixtureBuilder(CompareComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

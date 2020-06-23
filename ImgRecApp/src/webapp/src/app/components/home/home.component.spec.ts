@@ -29,7 +29,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    fixture = provider.homeFixtureBuilder();
+    fixture = provider.fixtureBuilder(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -40,6 +40,10 @@ describe('HomeComponent', () => {
 
   it('should grant access for application', () => {
     expect(component.getAccess()).toBeUndefined();
+  });
+
+  it('should post logs', () => {
+    expect(component.updateLogs()).toBeUndefined();
   });
 
 });

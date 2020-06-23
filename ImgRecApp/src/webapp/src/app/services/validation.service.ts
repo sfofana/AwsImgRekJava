@@ -66,7 +66,7 @@ export class ValidationService {
    * @returns Validated file
    */
   public validFile(file: FormData) : FormData {
-    if(file){
+    if(file.get('file')){
       this.log.debug(`[${this.service}] === user input valid file`);
       return file;
     } else{

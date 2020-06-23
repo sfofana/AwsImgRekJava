@@ -35,11 +35,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	 */
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		log.info("========= [ ConfigureGlobal Envoked ]");
+
 		auth.inMemoryAuthentication().withUser(credentials.getUsername())
 		.password(passwordEncoder().encode(credentials.getPassword()))
 		.roles("User");
-		log.info(System.getProperty("user.dir"));
-		log.info(" Username : " +credentials.getUsername() + "Password : " + credentials.getPassword() +"");
 	}
 	
 	/**
@@ -47,6 +47,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		log.info("========= [ Configure Envoked ]");
+
 		http.csrf().disable().authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**")
 		.permitAll().anyRequest().authenticated()
 		.and().httpBasic();
@@ -57,6 +59,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	 */
 	@Bean
 	public PasswordEncoder passwordEncoder() {
+		log.info("========= [ PasswordEncoder Envoked ]");
+
 		return new BCryptPasswordEncoder();
 	}
 }

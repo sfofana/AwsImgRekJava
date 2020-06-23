@@ -10,7 +10,7 @@ describe('ContactComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider()
-    fixture = provider.contactFixtureBuilder();
+    fixture = provider.fixtureBuilder(ContactComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -27,7 +27,6 @@ describe('ContactComponent', () => {
     const subject = fixture.debugElement.query(By.css('input[id=subject]')).nativeElement;
     const message = fixture.debugElement.query(By.css('textarea[id=message]')).nativeElement;
 
-
     name.value = "Spec";
     email.value = "test@gmail.com";
     phone.value = "12223333145";
@@ -40,13 +39,6 @@ describe('ContactComponent', () => {
     subject.dispatchEvent(new Event('input'));
     message.dispatchEvent(new Event('textarea'));
 
-    component.setBlob({
-      name: "spec",
-      email: "email",
-      phone: "num",
-      subject: "subj",
-      message: "stub"
-    });
     component.btnAnimate('start');
     fixture.detectChanges();
     expect(component.submit()).toBeUndefined();

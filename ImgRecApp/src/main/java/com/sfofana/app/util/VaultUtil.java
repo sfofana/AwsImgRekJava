@@ -16,6 +16,8 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,12 +34,14 @@ import com.sfofana.app.model.Credentials;
 @Component
 public class VaultUtil {
 
+	private Logger log = LoggerFactory.getLogger(VaultUtil.class);
+
 	@Autowired
 	ObjectMapper objectMapper;
 	
 	private String keyName = "/secret/key";
 	private String encryption = "/secret/vault";
-	private String path = System.getProperty("user.dir");//
+	private String path = System.getProperty("user.dir");
 	
 	/**
 	 * @return Decrypts file converts to string and returns that as a pojo
@@ -50,6 +54,8 @@ public class VaultUtil {
 	 * @throws BadPaddingException
 	 */
 	public Credentials decrypt() throws IOException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
+		log.info("========= [ Decrypt Envoked ]");
+
 		File keyFile = new File(path+keyName);
 		File encrypted = new File(path+encryption);
 		byte[] key = Files.readAllBytes(keyFile.toPath());
@@ -74,6 +80,8 @@ public class VaultUtil {
 	 * @throws JsonProcessingException
 	 */
 	private <T> T jsonStringToObject(String json, Class<T> clazz) throws JsonMappingException, JsonProcessingException{
+		log.info("========= [ JsonStringToObject Envoked ]");
+
 		return objectMapper.readValue(json, clazz);
 	}
 }

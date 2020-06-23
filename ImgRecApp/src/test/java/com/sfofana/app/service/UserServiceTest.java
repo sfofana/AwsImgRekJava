@@ -22,6 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.sfofana.app.model.Compare;
+import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.Upload;
 
 @SpringBootTest
@@ -68,5 +69,16 @@ public class UserServiceTest {
 		assertNotNull(test.getProcess());		
 		
 		log.info("======================= [ ProcessImageUploadTest End ] =======================");
+	}
+	
+	@Test
+	public void frontendLogToFileTest() {
+		log.info("======================= [ FrontendLogToFile Start ] =======================");
+
+		Logging logging = new Logging("Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt \n");
+		Logging test = userService.frontendLogTofile(logging);
+		assertNotNull(test.getMessage());	
+		
+		log.info("======================= [ FrontendLogToFile End ] =======================");
 	}
 }

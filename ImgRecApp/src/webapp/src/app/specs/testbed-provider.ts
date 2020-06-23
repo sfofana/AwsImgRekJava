@@ -23,10 +23,12 @@ import { Email } from '../models/email';
 import { User } from '../models/user';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { LoggingService } from '../services/logging.service';
+import { Logging } from '../models/logging';
+import { Type } from '@angular/core';
 
 export class TestBedProvider{
 
-  public appFixtureBuilder(): ComponentFixture<AppComponent> {
+  public fixtureBuilder<T>(component: Type<T>): ComponentFixture<T> {
     TestBed.configureTestingModule({
         declarations: [
           AppComponent,
@@ -50,158 +52,18 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceStub},
-          LoggingService,
+          {provide: LoggingService, useClass: LoggingServiceStub},
           ValidationService,
           SubjectService,
           AnimationService,
           {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
         ]
       }).compileComponents();
-      const fixture = TestBed.createComponent(AppComponent);
+      const fixture = TestBed.createComponent(component);
       return fixture;
   }
 
-  public homeFixtureBuilder(): ComponentFixture<HomeComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(HomeComponent);
-      return fixture;
-  }
-
-  public compareComponentBuilder(): ComponentFixture<CompareComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(CompareComponent);
-      return fixture;
-  }
-
-  public contactFixtureBuilder(): ComponentFixture<ContactComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(ContactComponent);
-      return fixture;
-  }
-
-  public uploadFixtureBuilder(): ComponentFixture<UploadComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(UploadComponent);
-      return fixture;
-  }
-
-  public compareErrorComponentBuilder(): ComponentFixture<CompareComponent> {
+  public errorFixtureBuilder<T>(component: Type<T>): ComponentFixture<T> {
     TestBed.configureTestingModule({
         declarations: [
           AppComponent,
@@ -225,134 +87,33 @@ export class TestBedProvider{
         ],
         providers: [
           {provide: UserService, useClass: UserServiceErrorStub},
-          LoggingService,
+          {provide: LoggingService, useClass: LoggingServiceErrorStub},
           ValidationService,
           SubjectService,
           AnimationService,
           {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
         ]
       }).compileComponents();
-      const fixture = TestBed.createComponent(CompareComponent);
-      return fixture;
-  }
-
-  public contactErrorComponentBuilder(): ComponentFixture<ContactComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceErrorStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(ContactComponent);
-      return fixture;
-  }
-
-  public uploadErrorComponentBuilder(): ComponentFixture<UploadComponent> {
-    TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceErrorStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(UploadComponent);
+      const fixture = TestBed.createComponent(component);
       return fixture;
   }
   
-  public homeErrorComponentBuilder(): ComponentFixture<HomeComponent> {
+  public serviceTestBed<T>(service: Type<T>): T {
     TestBed.configureTestingModule({
-        declarations: [
-          AppComponent,
-          ContactComponent,
-          UploadComponent,
-          CompareComponent,
-          HomeComponent,
-        ],
-        imports: [
-          BrowserModule,
-          BrowserAnimationsModule,
-          MDBBootstrapModule.forRoot(),
-          AppRoutingModule,
-          HttpClientModule,
-          FormsModule,
-          NavbarModule,
-          WavesModule,
-          ButtonsModule,
-          CardsModule,
-          ModalModule
-        ],
-        providers: [
-          {provide: UserService, useClass: UserServiceErrorStub},
-          LoggingService,
-          ValidationService,
-          SubjectService,
-          AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
-        ]
-      }).compileComponents();
-      const fixture = TestBed.createComponent(HomeComponent);
-      return fixture;
-  }
-
-  public serviceTestBed(): TestBed {
-    const testBed: TestBed = new TestBed();
-    testBed.configureTestingModule({
       imports: [
         HttpClientTestingModule
       ],
       providers: [
         UserService,
+        LoggingService,
+        ValidationService,
+        SubjectService,
+        AnimationService,
         {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
       ]
     });
-    return testBed;
+    const bed: T = TestBed.get(service)
+    return bed;
   }
 
 }
@@ -410,6 +171,30 @@ class UserServiceErrorStub {
   }
   
   public compareFaces(faces: Compare) : Observable<Compare> {
+    return throwError("Method not implemented.");
+  }
+}
+
+class LoggingServiceStub {
+  
+  public info(message: string): void { }
+
+  public debug(message: string): void { }
+
+  public post(): Observable<Logging> {    
+    return of({
+      message: "message stub"
+    });
+  }
+}
+
+class LoggingServiceErrorStub {
+
+  public info(message: string): void { }
+
+  public debug(message: string): void { }
+
+  public post(): Observable<Logging> {    
     return throwError("Method not implemented.");
   }
 }

@@ -28,7 +28,7 @@ describe('AppComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    fixture = provider.appFixtureBuilder();
+    fixture = provider.fixtureBuilder(AppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

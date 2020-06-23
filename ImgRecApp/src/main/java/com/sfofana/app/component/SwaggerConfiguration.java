@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -31,6 +33,8 @@ import springfox.documentation.swagger.web.SecurityConfigurationBuilder;
 @Component
 public class SwaggerConfiguration {
 
+	private Logger log = LoggerFactory.getLogger(SwaggerConfiguration.class);
+
 	@Autowired
 	private Credentials credentials;
 	
@@ -39,7 +43,9 @@ public class SwaggerConfiguration {
 	 * also including a custom security scheme
 	 */
 	@Bean
-	public Docket swagerConfig() {
+	public Docket swaggerConfig() {
+		log.info("========= [ SwaggerConfig Envoked ]");
+
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.paths(PathSelectors.ant("/**"))
@@ -54,6 +60,8 @@ public class SwaggerConfiguration {
 	 */
 	@Bean
 	public springfox.documentation.swagger.web.SecurityConfiguration security(){
+		log.info("========= [ SecurityConfiguration Envoked ]");
+
 		return SecurityConfigurationBuilder.builder()
 		        .clientId(credentials.getUsername())
 		        .clientSecret(credentials.getPassword())
@@ -63,6 +71,8 @@ public class SwaggerConfiguration {
 	}
 	
 	private List<SecurityScheme> securityScheme() {
+		log.info("========= [ SecurityScheme Envoked ]");
+
 		List<SecurityScheme> scheme = new ArrayList<>();
 		 GrantType grantType = new AuthorizationCodeGrantBuilder()
 			        .tokenEndpoint(new TokenEndpoint("swagger-ui.html#/", "oauthtoken"))
@@ -81,6 +91,8 @@ public class SwaggerConfiguration {
 	}
 	
 	private AuthorizationScope[] scopes() {
+		log.info("========= [ AuthorizationScope Envoked ]");
+
 	    AuthorizationScope[] scopes = { 
 	      new AuthorizationScope("read", "for read operations"), 
 	      new AuthorizationScope("write", "for write operations"), 

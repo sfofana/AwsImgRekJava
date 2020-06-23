@@ -10,7 +10,7 @@ describe('ContactComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider()
-    error = provider.contactErrorComponentBuilder();
+    error = provider.errorFixtureBuilder(ContactComponent);
     malComponent = error.componentInstance;
     error.detectChanges();
   });

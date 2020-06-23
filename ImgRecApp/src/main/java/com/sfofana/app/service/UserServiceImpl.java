@@ -59,6 +59,8 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public Compare compareFacesResults(Compare faces) {
+		log.info("========= [ CompareFacesResults Envoked ]");
+
 		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
 				credentials.getAccessKey(), 
 				credentials.getSecretKey()
@@ -108,6 +110,8 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public Compare getImageData(Compare faces) {
+		log.info("========= [ GetImageData Envoked ]");
+
 		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
 				credentials.getAccessKey(), 
 				credentials.getSecretKey()
@@ -143,6 +147,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Upload processImageUpload(String fileName, MultipartFile file) {
+		log.info("========= [ ProcessImageUpload Envoked ]");
+
 		BasicAWSCredentials awsCredentials = new BasicAWSCredentials(
 				credentials.getAccessKey(), 
 				credentials.getSecretKey()
@@ -179,6 +185,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Boolean tokenAuthenticated(String token)  throws BusinessException {
+		log.info("========= [ TokenAuthenticated Envoked ]");
+
 		String role = null;
 		String jwt = null;
 		Boolean flag = false;
@@ -199,6 +207,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User initiateSession(User user) {
+		log.info("========= [ InitiateSession Envoked ]");
+
 		final String jwt = jwtUtil.generateToken(user);
 		user.setJToken(jwt);
 		return user;
@@ -206,11 +216,15 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public User getAccess() {
+		log.info("========= [ GetAccess Envoked ]");
+
 		return new User(null, null, "user", null);
 	}
 
 	@Override
 	public Logging frontendLogTofile(Logging logging) {
+		log.info("========= [ FrontendLogToFile Envoked ]");
+
 		String path = System.getProperty(userDir) + "/frontend.txt";
 		File file = new File(path);
 		String data = null;

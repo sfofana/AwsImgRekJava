@@ -10,7 +10,7 @@ describe('UploadComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    fixture = provider.uploadFixtureBuilder();
+    fixture = provider.fixtureBuilder(UploadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

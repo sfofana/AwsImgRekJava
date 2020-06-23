@@ -10,7 +10,7 @@ describe('CompareComponent', () => {
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    error = provider.compareErrorComponentBuilder();
+    error = provider.errorFixtureBuilder(CompareComponent);
     malComponent = error.componentInstance;
     error.detectChanges();
   });

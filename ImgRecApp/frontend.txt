@@ -18,3 +18,59 @@ Jun 21, 2020, 12:14:15 PM : [CompareComponent] === page loaded
 Jun 21, 2020, 12:14:16 PM : [CompareComponent] === unsubscribe from compareFaces API 
 Jun 21, 2020, 12:14:18 PM : [CompareComponent] === page loaded 
 Jun 21, 2020, 12:14:20 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:57:18 PM : [HttpInterceptorService] === Internal Error 
+Jun 21, 2020, 9:57:27 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:57:27 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 9:59:05 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 9:59:21 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:22 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:59:23 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:26 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:26 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:26 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:27 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:27 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:28 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:59:30 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:31 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:59:32 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:33 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:59:35 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:35 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:36 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:36 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:36 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:36 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:37 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:37 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:38 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:39 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:41 PM : [CompareComponent] === user did not enter 2 names 
+Jun 21, 2020, 9:59:42 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 9:59:44 PM : [UploadComponent] === user did not enter a name 
+Jun 21, 2020, 9:59:46 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 9:59:51 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 10:00:02 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:00:02 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 10:05:04 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:05:11 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 10:05:21 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:05:21 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 10:11:37 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:11:38 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:11:39 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:11:44 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 10:11:54 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:11:54 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 10:14:03 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:14:10 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 10:14:20 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:14:20 PM : [HomeComponent] === page loaded 
+Jun 21, 2020, 10:15:43 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:15:44 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:15:47 PM : [CompareComponent] === page loaded 
+Jun 21, 2020, 10:15:53 PM : [CompareComponent] === unsubscribe from compareFaces API 
+Jun 21, 2020, 10:15:55 PM : [HttpInterceptorService] === http headers set 
+Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt 
+Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt 
+Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt 

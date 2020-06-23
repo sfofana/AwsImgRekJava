@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,6 +36,8 @@ import com.sfofana.app.model.User;
 @AutoConfigureMockMvc
 public class UserControllerTest {
 
+	private static Logger log = LoggerFactory.getLogger(UserControllerTest.class);
+	
 	@Autowired
 	Credentials credentials;
 	@Autowired
@@ -47,6 +51,8 @@ public class UserControllerTest {
 	
 	@Test
 	public void authenticateTest() throws Exception {
+		log.info("======================= [ AuthenticateTest Start ] =======================");
+
 		String json = objectMapper.writeValueAsString(user);
 		String basicAuth = credentials.getUsername()+":"+credentials.getPassword();
 		byte[] basic = basicAuth.getBytes();
@@ -54,11 +60,15 @@ public class UserControllerTest {
 				.content(json)
 				.contentType(MediaType.APPLICATION_JSON)
 		.header("Authorization", "Basic " + Base64.encodeAsString(basic)))
-		.andExpect(MockMvcResultMatchers.status().isOk());		
+		.andExpect(MockMvcResultMatchers.status().isOk());
+		
+		log.info("======================= [ AuthenticateTest End ] =======================");
 	}
 	
 	@Test
 	public void compareFacesTest() throws Exception {
+		log.info("======================= [ CompareFacesTest Start ] =======================");
+
 		User token = userController.authenticate(user);
 		
 		List<String> names = Arrays.asList("joe1","joe2");
@@ -83,10 +93,14 @@ public class UserControllerTest {
 		.header("Authorization", "Basic " + Base64.encodeAsString(basic))
 		.header("jToken", "Bearer malToken" + token.getJToken()))
 		.andExpect(MockMvcResultMatchers.status().isNotFound());
+		
+		log.info("======================= [ CompareFacesTest End ] =======================");
 	}
 	
 	@Test
 	public void uploadImageTest() throws Exception {
+		log.info("======================= [ UploadImageTest Start ] =======================");
+
 		User token = userController.authenticate(user);
 		
 		String path = System.getProperty("user.dir") + "/";
@@ -113,5 +127,8 @@ public class UserControllerTest {
 		assertThrows(BusinessException.class, () ->{
 			userController.uploadImage(fileName, file);
 		});
+		
+		log.info("======================= [ UploadImageTest End ] =======================");
+
 	}
 }
