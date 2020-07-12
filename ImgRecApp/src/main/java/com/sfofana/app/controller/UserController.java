@@ -55,7 +55,7 @@ public class UserController {
 	 * @throws BusinessException Handles exception with message "Access Denied"
 	 */
 	@PostMapping("compare")
-	public Compare compareFaces(@RequestBody Compare faces) throws Exception {
+	public Compare compareFaces(@RequestBody Compare faces) throws BusinessException {
 		log.info("========= [ CompareFaces Envoked ]");
 
 		service.tokenAuthenticated(getToken());
@@ -69,7 +69,7 @@ public class UserController {
 	 * @throws BusinessException Handles exception with message "Access Denied"
 	 */
 	@PostMapping("upload/{name}")
-	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws Exception {
+	public Upload uploadImage(@PathVariable("name") String fileName, @RequestParam("file") MultipartFile file) throws BusinessException {
 		log.info("========= [ UploadImage Envoked ]");
 
 		service.tokenAuthenticated(getToken());

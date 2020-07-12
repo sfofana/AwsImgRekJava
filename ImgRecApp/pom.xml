@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sfofana</groupId>
-	<artifactId>ImgRecApp</artifactId>
+	<artifactId>ImgRecApp-Java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ImgRecApp</name>
+	<name>ImgRecApp-Java</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -155,21 +155,21 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>test</id>
+						<id>clean</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
 						<configuration>
-							<arguments>test</arguments>
+							<arguments>run clean</arguments>
 						</configuration>
 					</execution>
 					<execution>
-						<id>build with compodoc and sonarqube</id>
+						<id>test and build with compodoc and sonarqube</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
 						<configuration>
-							<arguments>run build</arguments>
+							<arguments>run install</arguments>
 						</configuration>
 					</execution>
 				</executions>

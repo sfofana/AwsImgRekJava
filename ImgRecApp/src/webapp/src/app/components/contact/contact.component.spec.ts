@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
-import { BrowserModule, By } from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 import { TestBedProvider } from 'src/app/specs/testbed-provider'
 
 describe('ContactComponent', () => {

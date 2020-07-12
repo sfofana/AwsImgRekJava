@@ -56,7 +56,7 @@ export class TestBedProvider{
           ValidationService,
           SubjectService,
           AnimationService,
-          {provide: HTTP_INTERCEPTORS,useClass: HttpInterceptorService, multi: true}
+          {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}
         ]
       }).compileComponents();
       const fixture = TestBed.createComponent(component);

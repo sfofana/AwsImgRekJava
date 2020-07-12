@@ -38,6 +38,7 @@ export class UploadComponent implements OnInit, OnDestroy {
   private display: string;
   private results: string;
   private message: string;
+  private alert: string;
   private image: string;
   private readonly fileType: string = "data:image/png;base64,";
   private upload: Upload;
@@ -130,14 +131,22 @@ export class UploadComponent implements OnInit, OnDestroy {
         this.log.debug(`[${this.component}] === error when updating frontend logs`);
       });
     } 
+
+    if (!this.formData.get('file')) {
+      this.alert = "Please choose a image to upload";
+      this.log.info(`[${this.component}] === user did not choose a image to upload`);
+    } else {
+      this.alert = "";
+    }
+
     if(!this.name){
       this.message = "Please enter name for image";
       this.log.info(`[${this.component}] === user did not enter a name`);
-    } else{
+    } else {
       this.message = "";
     }
 
-    this.name = "";    
+    this.name = ""; 
     this.formData = new FormData();
   }
 

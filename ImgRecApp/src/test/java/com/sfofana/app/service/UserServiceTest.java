@@ -3,6 +3,7 @@ package com.sfofana.app.service;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,6 +22,7 @@ import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.Upload;
@@ -69,16 +71,5 @@ public class UserServiceTest {
 		assertNotNull(test.getProcess());		
 		
 		log.info("======================= [ ProcessImageUploadTest End ] =======================");
-	}
-	
-	@Test
-	public void frontendLogToFileTest() {
-		log.info("======================= [ FrontendLogToFile Start ] =======================");
-
-		Logging logging = new Logging("Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt \n");
-		Logging test = userService.frontendLogTofile(logging);
-		assertNotNull(test.getMessage());	
-		
-		log.info("======================= [ FrontendLogToFile End ] =======================");
 	}
 }

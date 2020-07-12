@@ -29,6 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sfofana.app.exception.BusinessException;
 import com.sfofana.app.model.Compare;
 import com.sfofana.app.model.Credentials;
+import com.sfofana.app.model.Logging;
 import com.sfofana.app.model.User;
 
 @SpringBootTest
@@ -48,6 +49,7 @@ public class UserControllerTest {
 	ObjectMapper objectMapper;
 	
 	private User user = new User("test","test","user","test");
+	private Logging logging = new Logging("Jun 21, 2020, 10:11:39 PM : [JavaTest] === should write to frontend.txt \n");
 	
 	@Test
 	public void authenticateTest() throws Exception {
@@ -130,5 +132,21 @@ public class UserControllerTest {
 		
 		log.info("======================= [ UploadImageTest End ] =======================");
 
+	}
+	
+	@Test
+	public void frontEndLoggingTest() throws Exception {
+		log.info("======================= [ FrontEndLoggingTest Start ] =======================");
+
+		String json = objectMapper.writeValueAsString(logging);
+		String basicAuth = credentials.getUsername()+":"+credentials.getPassword();
+		byte[] basic = basicAuth.getBytes();
+		mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/logging")
+				.content(json)
+				.contentType(MediaType.APPLICATION_JSON)
+		.header("Authorization", "Basic " + Base64.encodeAsString(basic)))
+		.andExpect(MockMvcResultMatchers.status().isOk());
+		
+		log.info("======================= [ FrontEndLoggingTest End ] =======================");
 	}
 }

@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean": "rm -r dist && rm -r coverage && rm -r documentation",
+    "install": "ng test && npm run build",
     "copy-scss": "cp -r projects/angular-bootstrap-md/src/lib/assets dist/angular-bootstrap-md/assets",
     "copy-files": "cp projects/angular-bootstrap-md/src/lib/changelog projects/angular-bootstrap-md/src/lib/License.pdf README.md dist/angular-bootstrap-md",
     "pack-archive": "cd dist/angular-bootstrap-md && npm pack . && cp angular-bootstrap-md-8.*.tgz ../..",
@@ -41,7 +42,7 @@
     "firebase": "^7.9.3",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.5.2",
-    "sonarqube-scanner": "^2.6.0",
+    "sonarqube-scanner": "^2.7.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

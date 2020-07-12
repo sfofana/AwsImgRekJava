@@ -1,29 +1,33 @@
-import { TestBed } from '@angular/core/testing';
-
 import { HttpInterceptorService } from './http-interceptor.service';
-import { UserService } from './user.service';
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { User } from '../models/user';
-import { LoggingService } from './logging.service';
+import { HttpRequest } from '@angular/common/http';
 import { TestBedProvider } from '../specs/testbed-provider';
+import { throwError } from 'rxjs';
 
 describe('HttpInterceptorService', () => {
-  let service: UserService;
+  let service: HttpInterceptorService;
 
   beforeEach(() => {
     const provider: TestBedProvider = new TestBedProvider();
-    service = provider.serviceTestBed(UserService);
+    service = provider.serviceTestBed(HttpInterceptorService);
   });
 
   it('should intercept error', () => {
-    const user: User = {
-      role: "spec",
-      cToken: "cToken",
-      jToken: "jToken"
-    };
+    let httpRequest: HttpRequest<any> = new HttpRequest<any>('GET',"https://www.google.com/");
+    let httpHandlerSpy: any;
+    const error = {status: 401, statusText: 'error'};
+
+    httpHandlerSpy = jasmine.createSpyObj('HttpHandler', ['handle']);
+    httpHandlerSpy.handle.and.returnValue(throwError(
+        {error: 
+            {message: 'test-error'}
+        }
+    ));
     
-    service.getAccess(user).subscribe(data => console.log('no error'), error => {
-      expect(error).toBeTruthy();
-    });
+    service.intercept(httpRequest, httpHandlerSpy)
+    .subscribe(data => console.log('no error'), 
+      error => expect(error).toEqual('Server Error')
+  );
+
   });
+
 });
